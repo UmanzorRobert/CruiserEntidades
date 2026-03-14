@@ -3,156 +3,100 @@
   "WorkspaceRootPath": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\configuracion\\configuraciondespliegue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\configuracion\\configuraciondespliegue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\catalogo\\fichaseguridad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\catalogo\\fichaseguridad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\configuracion\\configuracionjsonbcampo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\configuracion\\configuracionjsonbcampo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\catalogo\\loteproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\catalogo\\loteproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\configuracion\\configuracionfrontend.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\configuracion\\configuracionfrontend.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\catalogo\\productosustituto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\catalogo\\productosustituto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\configuracion\\dispositivopwa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\configuracion\\dispositivopwa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\catalogo\\imagenproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\catalogo\\imagenproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\configuracion\\configuracionpwa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\configuracion\\configuracionpwa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\catalogo\\codigobarraproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\catalogo\\codigobarraproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\configuracion\\colaprocesamiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\configuracion\\colaprocesamiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\catalogo\\valoratributoproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\catalogo\\valoratributoproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\configuracion\\alertavencimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\configuracion\\alertavencimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\catalogo\\atributoproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\catalogo\\atributoproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\configuracion\\configuracionnotificacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\configuracion\\configuracionnotificacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\catalogo\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\catalogo\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\configuracion\\logemail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\configuracion\\logemail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\catalogo\\unidadmedida.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\catalogo\\unidadmedida.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\configuracion\\configuracionemail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\configuracion\\configuracionemail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\catalogo\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\catalogo\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\configuracion\\plantilladocumento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\configuracion\\plantilladocumento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\geografia\\direccioncompleta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\geografia\\direccioncompleta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\configuracion\\plantillaemail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\configuracion\\plantillaemail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\geografia\\pais.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\geografia\\pais.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\configuracion\\parametrosistema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\configuracion\\parametrosistema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\geografia\\provincia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\geografia\\provincia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\configuracion\\tipodocumento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\configuracion\\tipodocumento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\geografia\\ciudad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\geografia\\ciudad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\configuracion\\impuesto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\configuracion\\impuesto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\geografia\\codigopostal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\geografia\\codigopostal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\configuracion\\moneda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\configuracion\\moneda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\enums\\regimenfiscalespecial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\enums\\regimenfiscalespecial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\configuracion\\configuracionsistema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\configuracion\\configuracionsistema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\enums\\tipounidadmedida.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\enums\\tipounidadmedida.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\gdpr\\firmaelectronica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\gdpr\\firmaelectronica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\enums\\tiporelacionproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\enums\\tiporelacionproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\gdpr\\registroanonimizaciongdpr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\gdpr\\registroanonimizaciongdpr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\enums\\estadolote.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\enums\\estadolote.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\gdpr\\solicitudgdpr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\gdpr\\solicitudgdpr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\enums\\tipocodigobarras.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\enums\\tipocodigobarras.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\gdpr\\consentimientogdpr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\gdpr\\consentimientogdpr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\enums\\tipoatributoproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\enums\\tipoatributoproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\gdpr\\politicagdpr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\gdpr\\politicagdpr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\enums\\tipodireccion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\enums\\tipodireccion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\enums\\ambientedespliegue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\enums\\ambientedespliegue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\enums\\tipozonapostal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\enums\\tipozonapostal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\enums\\plataformapwa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\enums\\plataformapwa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\enums\\estrategiacache.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\enums\\estrategiacache.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\enums\\estadologemail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\enums\\estadologemail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\enums\\canalenvionotificacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\enums\\canalenvionotificacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\enums\\tipofrontend.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\enums\\tipofrontend.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\enums\\tipoparametro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\enums\\tipoparametro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\enums\\prioridadcola.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\enums\\prioridadcola.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\enums\\estadocolaprocesamiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\enums\\estadocolaprocesamiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\enums\\nivelalertavencimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\enums\\nivelalertavencimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\enums\\tipoproveedorfirma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\enums\\tipoproveedorfirma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\enums\\metodoanonimizacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\enums\\metodoanonimizacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\enums\\estadosolicitudgdpr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\enums\\estadosolicitudgdpr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\enums\\tiposolicitudgdpr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\enums\\tiposolicitudgdpr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\enums\\tipoconsentimientogdpr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\enums\\tipoconsentimientogdpr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\auditoria\\auditoriaparametrosistema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\auditoria\\auditoriaparametrosistema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\enums\\continente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\enums\\continente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -179,495 +123,313 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ConfiguracionDespliegue.cs",
-              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Configuracion\\ConfiguracionDespliegue.cs",
-              "RelativeDocumentMoniker": "Cruiser.Entities\\Configuracion\\ConfiguracionDespliegue.cs",
-              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Configuracion\\ConfiguracionDespliegue.cs",
-              "RelativeToolTip": "Cruiser.Entities\\Configuracion\\ConfiguracionDespliegue.cs",
-              "ViewState": "AgIAAF8AAAAAAAAAAAAswH4AAAABAAAAAAAAAA==",
+              "Title": "FichaSeguridad.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Catalogo\\FichaSeguridad.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\Catalogo\\FichaSeguridad.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Catalogo\\FichaSeguridad.cs",
+              "RelativeToolTip": "Cruiser.Entities\\Catalogo\\FichaSeguridad.cs",
+              "ViewState": "AgIAAHYAAAAAAAAAAAAmwJEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-14T22:11:01.192Z",
+              "WhenOpened": "2026-03-14T22:45:56.798Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ConfiguracionJsonbCampo.cs",
-              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Configuracion\\ConfiguracionJsonbCampo.cs",
-              "RelativeDocumentMoniker": "Cruiser.Entities\\Configuracion\\ConfiguracionJsonbCampo.cs",
-              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Configuracion\\ConfiguracionJsonbCampo.cs",
-              "RelativeToolTip": "Cruiser.Entities\\Configuracion\\ConfiguracionJsonbCampo.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAswDQAAAABAAAAAAAAAA==",
+              "Title": "LoteProducto.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Catalogo\\LoteProducto.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\Catalogo\\LoteProducto.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Catalogo\\LoteProducto.cs",
+              "RelativeToolTip": "Cruiser.Entities\\Catalogo\\LoteProducto.cs",
+              "ViewState": "AgIAAGUAAAAAAAAAAAAswIQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-14T22:10:21.85Z",
+              "WhenOpened": "2026-03-14T22:42:53.415Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ConfiguracionFrontend.cs",
-              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Configuracion\\ConfiguracionFrontend.cs",
-              "RelativeDocumentMoniker": "Cruiser.Entities\\Configuracion\\ConfiguracionFrontend.cs",
-              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Configuracion\\ConfiguracionFrontend.cs",
-              "RelativeToolTip": "Cruiser.Entities\\Configuracion\\ConfiguracionFrontend.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAswEIAAAABAAAAAAAAAA==",
+              "Title": "ProductoSustituto.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Catalogo\\ProductoSustituto.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\Catalogo\\ProductoSustituto.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Catalogo\\ProductoSustituto.cs",
+              "RelativeToolTip": "Cruiser.Entities\\Catalogo\\ProductoSustituto.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAswFEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-14T22:09:41.039Z",
+              "WhenOpened": "2026-03-14T22:42:22.104Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "DispositivoPWA.cs",
-              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Configuracion\\DispositivoPWA.cs",
-              "RelativeDocumentMoniker": "Cruiser.Entities\\Configuracion\\DispositivoPWA.cs",
-              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Configuracion\\DispositivoPWA.cs",
-              "RelativeToolTip": "Cruiser.Entities\\Configuracion\\DispositivoPWA.cs",
-              "ViewState": "AgIAAFYAAAAAAAAAAAAswHUAAAABAAAAAAAAAA==",
+              "Title": "ImagenProducto.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Catalogo\\ImagenProducto.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\Catalogo\\ImagenProducto.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Catalogo\\ImagenProducto.cs",
+              "RelativeToolTip": "Cruiser.Entities\\Catalogo\\ImagenProducto.cs",
+              "ViewState": "AgIAAEgAAAAAAAAAAAA7wGcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-14T22:08:50.045Z",
+              "WhenOpened": "2026-03-14T22:41:42.985Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "ConfiguracionPWA.cs",
-              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Configuracion\\ConfiguracionPWA.cs",
-              "RelativeDocumentMoniker": "Cruiser.Entities\\Configuracion\\ConfiguracionPWA.cs",
-              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Configuracion\\ConfiguracionPWA.cs",
-              "RelativeToolTip": "Cruiser.Entities\\Configuracion\\ConfiguracionPWA.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAswFUAAAABAAAAAAAAAA==",
+              "Title": "CodigoBarraProducto.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Catalogo\\CodigoBarraProducto.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\Catalogo\\CodigoBarraProducto.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Catalogo\\CodigoBarraProducto.cs",
+              "RelativeToolTip": "Cruiser.Entities\\Catalogo\\CodigoBarraProducto.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAswEIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-14T22:08:17.319Z",
+              "WhenOpened": "2026-03-14T22:41:03.64Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "ColaProcesamiento.cs",
-              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Configuracion\\ColaProcesamiento.cs",
-              "RelativeDocumentMoniker": "Cruiser.Entities\\Configuracion\\ColaProcesamiento.cs",
-              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Configuracion\\ColaProcesamiento.cs",
-              "RelativeToolTip": "Cruiser.Entities\\Configuracion\\ColaProcesamiento.cs",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAswGUAAAABAAAAAAAAAA==",
+              "Title": "ValorAtributoProducto.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Catalogo\\ValorAtributoProducto.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\Catalogo\\ValorAtributoProducto.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Catalogo\\ValorAtributoProducto.cs",
+              "RelativeToolTip": "Cruiser.Entities\\Catalogo\\ValorAtributoProducto.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAswEoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-14T22:07:41.569Z",
+              "WhenOpened": "2026-03-14T22:40:21.839Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "AlertaVencimiento.cs",
-              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Configuracion\\AlertaVencimiento.cs",
-              "RelativeDocumentMoniker": "Cruiser.Entities\\Configuracion\\AlertaVencimiento.cs",
-              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Configuracion\\AlertaVencimiento.cs",
-              "RelativeToolTip": "Cruiser.Entities\\Configuracion\\AlertaVencimiento.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAswFUAAAABAAAAAAAAAA==",
+              "Title": "AtributoProducto.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Catalogo\\AtributoProducto.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\Catalogo\\AtributoProducto.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Catalogo\\AtributoProducto.cs",
+              "RelativeToolTip": "Cruiser.Entities\\Catalogo\\AtributoProducto.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAswEwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-14T22:07:01.902Z",
+              "WhenOpened": "2026-03-14T22:39:42.111Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "ConfiguracionNotificacion.cs",
-              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Configuracion\\ConfiguracionNotificacion.cs",
-              "RelativeDocumentMoniker": "Cruiser.Entities\\Configuracion\\ConfiguracionNotificacion.cs",
-              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Configuracion\\ConfiguracionNotificacion.cs",
-              "RelativeToolTip": "Cruiser.Entities\\Configuracion\\ConfiguracionNotificacion.cs",
-              "ViewState": "AgIAADcAAAAAAAAAAAAswFYAAAABAAAAAAAAAA==",
+              "Title": "Producto.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Catalogo\\Producto.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\Catalogo\\Producto.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Catalogo\\Producto.cs",
+              "RelativeToolTip": "Cruiser.Entities\\Catalogo\\Producto.cs",
+              "ViewState": "AgIAAPgAAAAAAAAAAAAIwBEBAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-14T22:06:19.67Z",
+              "WhenOpened": "2026-03-14T22:38:52.446Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "LogEmail.cs",
-              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Configuracion\\LogEmail.cs",
-              "RelativeDocumentMoniker": "Cruiser.Entities\\Configuracion\\LogEmail.cs",
-              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Configuracion\\LogEmail.cs",
-              "RelativeToolTip": "Cruiser.Entities\\Configuracion\\LogEmail.cs",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAswGEAAAABAAAAAAAAAA==",
+              "Title": "UnidadMedida.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Catalogo\\UnidadMedida.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\Catalogo\\UnidadMedida.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Catalogo\\UnidadMedida.cs",
+              "RelativeToolTip": "Cruiser.Entities\\Catalogo\\UnidadMedida.cs",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAmwGQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-14T22:03:35.04Z",
+              "WhenOpened": "2026-03-14T22:38:20.431Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "ConfiguracionEmail.cs",
-              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Configuracion\\ConfiguracionEmail.cs",
-              "RelativeDocumentMoniker": "Cruiser.Entities\\Configuracion\\ConfiguracionEmail.cs",
-              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Configuracion\\ConfiguracionEmail.cs",
-              "RelativeToolTip": "Cruiser.Entities\\Configuracion\\ConfiguracionEmail.cs",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAswGMAAAABAAAAAAAAAA==",
+              "Title": "Categoria.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Catalogo\\Categoria.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\Catalogo\\Categoria.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Catalogo\\Categoria.cs",
+              "RelativeToolTip": "Cruiser.Entities\\Catalogo\\Categoria.cs",
+              "ViewState": "AgIAAFYAAAAAAAAAAAA4wHEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-14T22:02:20.283Z",
+              "WhenOpened": "2026-03-14T22:37:40.758Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "PlantillaDocumento.cs",
-              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Configuracion\\PlantillaDocumento.cs",
-              "RelativeDocumentMoniker": "Cruiser.Entities\\Configuracion\\PlantillaDocumento.cs",
-              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Configuracion\\PlantillaDocumento.cs",
-              "RelativeToolTip": "Cruiser.Entities\\Configuracion\\PlantillaDocumento.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAA7wFcAAAABAAAAAAAAAA==",
+              "Title": "DireccionCompleta.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Geografia\\DireccionCompleta.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\Geografia\\DireccionCompleta.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Geografia\\DireccionCompleta.cs",
+              "RelativeToolTip": "Cruiser.Entities\\Geografia\\DireccionCompleta.cs",
+              "ViewState": "AgIAAJMAAAAAAAAAAAAcwK0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-14T22:01:02.781Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "PlantillaEmail.cs",
-              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Configuracion\\PlantillaEmail.cs",
-              "RelativeDocumentMoniker": "Cruiser.Entities\\Configuracion\\PlantillaEmail.cs",
-              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Configuracion\\PlantillaEmail.cs",
-              "RelativeToolTip": "Cruiser.Entities\\Configuracion\\PlantillaEmail.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAswEwAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-14T22:00:22.433Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ParametroSistema.cs",
-              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Configuracion\\ParametroSistema.cs",
-              "RelativeDocumentMoniker": "Cruiser.Entities\\Configuracion\\ParametroSistema.cs",
-              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Configuracion\\ParametroSistema.cs",
-              "RelativeToolTip": "Cruiser.Entities\\Configuracion\\ParametroSistema.cs",
-              "ViewState": "AgIAAEkAAAAAAAAAAAAswGgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-14T21:59:45.941Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "TipoDocumento.cs",
-              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Configuracion\\TipoDocumento.cs",
-              "RelativeDocumentMoniker": "Cruiser.Entities\\Configuracion\\TipoDocumento.cs",
-              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Configuracion\\TipoDocumento.cs",
-              "RelativeToolTip": "Cruiser.Entities\\Configuracion\\TipoDocumento.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAswD8AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-14T21:58:46.102Z",
+              "WhenOpened": "2026-03-14T22:35:57.367Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 14,
-              "Title": "Impuesto.cs",
-              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Configuracion\\Impuesto.cs",
-              "RelativeDocumentMoniker": "Cruiser.Entities\\Configuracion\\Impuesto.cs",
-              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Configuracion\\Impuesto.cs",
-              "RelativeToolTip": "Cruiser.Entities\\Configuracion\\Impuesto.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAswE4AAAABAAAAAAAAAA==",
+              "Title": "CodigoPostal.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Geografia\\CodigoPostal.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\Geografia\\CodigoPostal.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Geografia\\CodigoPostal.cs",
+              "RelativeToolTip": "Cruiser.Entities\\Geografia\\CodigoPostal.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAAAFkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-14T21:57:39.341Z",
+              "WhenOpened": "2026-03-14T22:35:11.149Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Ciudad.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Geografia\\Ciudad.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\Geografia\\Ciudad.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Geografia\\Ciudad.cs",
+              "RelativeToolTip": "Cruiser.Entities\\Geografia\\Ciudad.cs",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAAAGIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-14T22:34:38.017Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Provincia.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Geografia\\Provincia.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\Geografia\\Provincia.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Geografia\\Provincia.cs",
+              "RelativeToolTip": "Cruiser.Entities\\Geografia\\Provincia.cs",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAAAGsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-14T22:34:06.73Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Pais.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Geografia\\Pais.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\Geografia\\Pais.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Geografia\\Pais.cs",
+              "RelativeToolTip": "Cruiser.Entities\\Geografia\\Pais.cs",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAAAGcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-14T22:33:34.434Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 15,
-              "Title": "Moneda.cs",
-              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Configuracion\\Moneda.cs",
-              "RelativeDocumentMoniker": "Cruiser.Entities\\Configuracion\\Moneda.cs",
-              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Configuracion\\Moneda.cs",
-              "RelativeToolTip": "Cruiser.Entities\\Configuracion\\Moneda.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAswFAAAAABAAAAAAAAAA==",
+              "Title": "RegimenFiscalEspecial.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\RegimenFiscalEspecial.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\Enums\\RegimenFiscalEspecial.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\RegimenFiscalEspecial.cs",
+              "RelativeToolTip": "Cruiser.Entities\\Enums\\RegimenFiscalEspecial.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-14T21:57:00.914Z",
+              "WhenOpened": "2026-03-14T22:31:52.095Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 16,
-              "Title": "ConfiguracionSistema.cs",
-              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Configuracion\\ConfiguracionSistema.cs",
-              "RelativeDocumentMoniker": "Cruiser.Entities\\Configuracion\\ConfiguracionSistema.cs",
-              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Configuracion\\ConfiguracionSistema.cs",
-              "RelativeToolTip": "Cruiser.Entities\\Configuracion\\ConfiguracionSistema.cs",
-              "ViewState": "AgIAALsAAAAAAAAAAAA8wNcAAAABAAAAAAAAAA==",
+              "Title": "TipoUnidadMedida.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\TipoUnidadMedida.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\Enums\\TipoUnidadMedida.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\TipoUnidadMedida.cs",
+              "RelativeToolTip": "Cruiser.Entities\\Enums\\TipoUnidadMedida.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-14T21:56:18.76Z",
+              "WhenOpened": "2026-03-14T22:30:49.96Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 17,
-              "Title": "FirmaElectronica.cs",
-              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\GDPR\\FirmaElectronica.cs",
-              "RelativeDocumentMoniker": "Cruiser.Entities\\GDPR\\FirmaElectronica.cs",
-              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\GDPR\\FirmaElectronica.cs",
-              "RelativeToolTip": "Cruiser.Entities\\GDPR\\FirmaElectronica.cs",
-              "ViewState": "AgIAAGQAAAAAAAAAAAA7wIMAAAABAAAAAAAAAA==",
+              "Title": "TipoRelacionProducto.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\TipoRelacionProducto.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\Enums\\TipoRelacionProducto.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\TipoRelacionProducto.cs",
+              "RelativeToolTip": "Cruiser.Entities\\Enums\\TipoRelacionProducto.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAkwB8AAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-14T21:55:01.687Z",
+              "WhenOpened": "2026-03-14T22:29:31.721Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 18,
-              "Title": "RegistroAnonimizacionGDPR.cs",
-              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\GDPR\\RegistroAnonimizacionGDPR.cs",
-              "RelativeDocumentMoniker": "Cruiser.Entities\\GDPR\\RegistroAnonimizacionGDPR.cs",
-              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\GDPR\\RegistroAnonimizacionGDPR.cs",
-              "RelativeToolTip": "Cruiser.Entities\\GDPR\\RegistroAnonimizacionGDPR.cs",
-              "ViewState": "AgIAAGIAAAAAAAAAAAAmwH0AAAABAAAAAAAAAA==",
+              "Title": "EstadoLote.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\EstadoLote.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\Enums\\EstadoLote.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\EstadoLote.cs",
+              "RelativeToolTip": "Cruiser.Entities\\Enums\\EstadoLote.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-14T21:53:52.054Z",
+              "WhenOpened": "2026-03-14T22:27:49.927Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 19,
-              "Title": "SolicitudGDPR.cs",
-              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\GDPR\\SolicitudGDPR.cs",
-              "RelativeDocumentMoniker": "Cruiser.Entities\\GDPR\\SolicitudGDPR.cs",
-              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\GDPR\\SolicitudGDPR.cs",
-              "RelativeToolTip": "Cruiser.Entities\\GDPR\\SolicitudGDPR.cs",
-              "ViewState": "AgIAAGUAAAAAAAAAAAA7wIQAAAABAAAAAAAAAA==",
+              "Title": "TipoCodigoBarras.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\TipoCodigoBarras.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\Enums\\TipoCodigoBarras.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\TipoCodigoBarras.cs",
+              "RelativeToolTip": "Cruiser.Entities\\Enums\\TipoCodigoBarras.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-14T21:52:52.576Z",
+              "WhenOpened": "2026-03-14T22:24:28.586Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 20,
-              "Title": "ConsentimientoGDPR.cs",
-              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\GDPR\\ConsentimientoGDPR.cs",
-              "RelativeDocumentMoniker": "Cruiser.Entities\\GDPR\\ConsentimientoGDPR.cs",
-              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\GDPR\\ConsentimientoGDPR.cs",
-              "RelativeToolTip": "Cruiser.Entities\\GDPR\\ConsentimientoGDPR.cs",
-              "ViewState": "AgIAAFMAAAAAAAAAAAA7wHIAAAABAAAAAAAAAA==",
+              "Title": "TipoAtributoProducto.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\TipoAtributoProducto.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\Enums\\TipoAtributoProducto.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\TipoAtributoProducto.cs",
+              "RelativeToolTip": "Cruiser.Entities\\Enums\\TipoAtributoProducto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-14T21:52:14.116Z",
+              "WhenOpened": "2026-03-14T22:19:29.773Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 21,
-              "Title": "PoliticaGDPR.cs",
-              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\GDPR\\PoliticaGDPR.cs",
-              "RelativeDocumentMoniker": "Cruiser.Entities\\GDPR\\PoliticaGDPR.cs",
-              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\GDPR\\PoliticaGDPR.cs",
-              "RelativeToolTip": "Cruiser.Entities\\GDPR\\PoliticaGDPR.cs",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAAAFgAAAABAAAAAAAAAA==",
+              "Title": "TipoDireccion.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\TipoDireccion.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\Enums\\TipoDireccion.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\TipoDireccion.cs",
+              "RelativeToolTip": "Cruiser.Entities\\Enums\\TipoDireccion.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-14T21:51:26.234Z",
+              "WhenOpened": "2026-03-14T22:18:09.165Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 22,
-              "Title": "AmbienteDespliegue.cs",
-              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\AmbienteDespliegue.cs",
-              "RelativeDocumentMoniker": "Cruiser.Entities\\Enums\\AmbienteDespliegue.cs",
-              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\AmbienteDespliegue.cs",
-              "RelativeToolTip": "Cruiser.Entities\\Enums\\AmbienteDespliegue.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAWAAAAAAAAAA==",
+              "Title": "TipoZonaPostal.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\TipoZonaPostal.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\Enums\\TipoZonaPostal.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\TipoZonaPostal.cs",
+              "RelativeToolTip": "Cruiser.Entities\\Enums\\TipoZonaPostal.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-14T21:50:02.241Z",
+              "WhenOpened": "2026-03-14T22:17:06.928Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 23,
-              "Title": "PlataformaPWA.cs",
-              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\PlataformaPWA.cs",
-              "RelativeDocumentMoniker": "Cruiser.Entities\\Enums\\PlataformaPWA.cs",
-              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\PlataformaPWA.cs",
-              "RelativeToolTip": "Cruiser.Entities\\Enums\\PlataformaPWA.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAASAAAAAAAAAA==",
+              "Title": "Continente.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\Continente.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\Enums\\Continente.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\Continente.cs",
+              "RelativeToolTip": "Cruiser.Entities\\Enums\\Continente.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAiwBkAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-14T21:48:47.136Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "EstrategiaCache.cs",
-              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\EstrategiaCache.cs",
-              "RelativeDocumentMoniker": "Cruiser.Entities\\Enums\\EstrategiaCache.cs",
-              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\EstrategiaCache.cs",
-              "RelativeToolTip": "Cruiser.Entities\\Enums\\EstrategiaCache.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-14T21:47:37.627Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "EstadoLogEmail.cs",
-              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\EstadoLogEmail.cs",
-              "RelativeDocumentMoniker": "Cruiser.Entities\\Enums\\EstadoLogEmail.cs",
-              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\EstadoLogEmail.cs",
-              "RelativeToolTip": "Cruiser.Entities\\Enums\\EstadoLogEmail.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-14T21:46:32.646Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "CanalEnvioNotificacion.cs",
-              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\CanalEnvioNotificacion.cs",
-              "RelativeDocumentMoniker": "Cruiser.Entities\\Enums\\CanalEnvioNotificacion.cs",
-              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\CanalEnvioNotificacion.cs",
-              "RelativeToolTip": "Cruiser.Entities\\Enums\\CanalEnvioNotificacion.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-14T21:45:34.356Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "TipoFrontend.cs",
-              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\TipoFrontend.cs",
-              "RelativeDocumentMoniker": "Cruiser.Entities\\Enums\\TipoFrontend.cs",
-              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\TipoFrontend.cs",
-              "RelativeToolTip": "Cruiser.Entities\\Enums\\TipoFrontend.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-14T21:44:42.095Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "TipoParametro.cs",
-              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\TipoParametro.cs",
-              "RelativeDocumentMoniker": "Cruiser.Entities\\Enums\\TipoParametro.cs",
-              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\TipoParametro.cs",
-              "RelativeToolTip": "Cruiser.Entities\\Enums\\TipoParametro.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-14T21:43:36.239Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "PrioridadCola.cs",
-              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\PrioridadCola.cs",
-              "RelativeDocumentMoniker": "Cruiser.Entities\\Enums\\PrioridadCola.cs",
-              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\PrioridadCola.cs",
-              "RelativeToolTip": "Cruiser.Entities\\Enums\\PrioridadCola.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-14T21:42:42.738Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "EstadoColaProcesamiento.cs",
-              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\EstadoColaProcesamiento.cs",
-              "RelativeDocumentMoniker": "Cruiser.Entities\\Enums\\EstadoColaProcesamiento.cs",
-              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\EstadoColaProcesamiento.cs",
-              "RelativeToolTip": "Cruiser.Entities\\Enums\\EstadoColaProcesamiento.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-14T21:21:43.689Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "NivelAlertaVencimiento.cs",
-              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\NivelAlertaVencimiento.cs",
-              "RelativeDocumentMoniker": "Cruiser.Entities\\Enums\\NivelAlertaVencimiento.cs",
-              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\NivelAlertaVencimiento.cs",
-              "RelativeToolTip": "Cruiser.Entities\\Enums\\NivelAlertaVencimiento.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-14T21:16:53.263Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "TipoProveedorFirma.cs",
-              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\TipoProveedorFirma.cs",
-              "RelativeDocumentMoniker": "Cruiser.Entities\\Enums\\TipoProveedorFirma.cs",
-              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\TipoProveedorFirma.cs",
-              "RelativeToolTip": "Cruiser.Entities\\Enums\\TipoProveedorFirma.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-14T21:15:49.63Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "MetodoAnonimizacion.cs",
-              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\MetodoAnonimizacion.cs",
-              "RelativeDocumentMoniker": "Cruiser.Entities\\Enums\\MetodoAnonimizacion.cs",
-              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\MetodoAnonimizacion.cs",
-              "RelativeToolTip": "Cruiser.Entities\\Enums\\MetodoAnonimizacion.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-14T21:14:35.991Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "EstadoSolicitudGDPR.cs",
-              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\EstadoSolicitudGDPR.cs",
-              "RelativeDocumentMoniker": "Cruiser.Entities\\Enums\\EstadoSolicitudGDPR.cs",
-              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\EstadoSolicitudGDPR.cs",
-              "RelativeToolTip": "Cruiser.Entities\\Enums\\EstadoSolicitudGDPR.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-14T21:13:34.835Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "TipoSolicitudGDPR.cs",
-              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\TipoSolicitudGDPR.cs",
-              "RelativeDocumentMoniker": "Cruiser.Entities\\Enums\\TipoSolicitudGDPR.cs",
-              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\TipoSolicitudGDPR.cs",
-              "RelativeToolTip": "Cruiser.Entities\\Enums\\TipoSolicitudGDPR.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-14T21:12:14.941Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "TipoConsentimientoGDPR.cs",
-              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\TipoConsentimientoGDPR.cs",
-              "RelativeDocumentMoniker": "Cruiser.Entities\\Enums\\TipoConsentimientoGDPR.cs",
-              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\TipoConsentimientoGDPR.cs",
-              "RelativeToolTip": "Cruiser.Entities\\Enums\\TipoConsentimientoGDPR.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-14T21:11:02.637Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "AuditoriaParametroSistema.cs",
-              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Auditoria\\AuditoriaParametroSistema.cs",
-              "RelativeDocumentMoniker": "Cruiser.Entities\\Auditoria\\AuditoriaParametroSistema.cs",
-              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Auditoria\\AuditoriaParametroSistema.cs",
-              "RelativeToolTip": "Cruiser.Entities\\Auditoria\\AuditoriaParametroSistema.cs",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAAAAkAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-14T17:52:05.322Z",
+              "WhenOpened": "2026-03-14T22:15:46.153Z",
               "EditorCaption": ""
             }
           ]

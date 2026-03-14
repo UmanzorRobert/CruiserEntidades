@@ -1,1 +1,3 @@
-<Solution />
+<Solution>
+  <Project Path="Cruiser.Entities/Cruiser.Entities.csproj" />
+</Solution>

@@ -1,12 +1,921 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\dominiolimpieza\\plantillachecklist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\dominiolimpieza\\plantillachecklist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\dominiolimpieza\\seguimientoordenservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\dominiolimpieza\\seguimientoordenservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\dominiolimpieza\\empleadoordenservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\dominiolimpieza\\empleadoordenservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\dominiolimpieza\\ordenservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\dominiolimpieza\\ordenservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\dominiolimpieza\\historialestadocontrato.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\dominiolimpieza\\historialestadocontrato.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\dominiolimpieza\\contratoservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\dominiolimpieza\\contratoservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\dominiolimpieza\\protocoloservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\dominiolimpieza\\protocoloservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\dominiolimpieza\\tiposervicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\dominiolimpieza\\tiposervicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\flota\\ordenservicioruta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\flota\\ordenservicioruta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\flota\\rutaservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\flota\\rutaservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\flota\\siniestrovehiculo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\flota\\siniestrovehiculo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\flota\\reabastecimientocombustible.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\flota\\reabastecimientocombustible.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\flota\\gastovehiculo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\flota\\gastovehiculo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\flota\\asignacionvehiculo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\flota\\asignacionvehiculo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\flota\\mantenimientovehiculo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\flota\\mantenimientovehiculo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\flota\\vehiculoempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\flota\\vehiculoempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\rrhh\\colasincronizacionoffline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\rrhh\\colasincronizacionoffline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\rrhh\\sincronizacionoffline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\rrhh\\sincronizacionoffline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\rrhh\\reconocimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\rrhh\\reconocimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\rrhh\\politicarrhh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\rrhh\\politicarrhh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\rrhh\\nominaempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\rrhh\\nominaempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\rrhh\\liquidacioncomision.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\rrhh\\liquidacioncomision.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\rrhh\\epiempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\rrhh\\epiempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\rrhh\\formacionempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\rrhh\\formacionempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\rrhh\\vacacionesempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\rrhh\\vacacionesempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\rrhh\\ausenciaempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\rrhh\\ausenciaempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\rrhh\\festivolaboral.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\rrhh\\festivolaboral.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\enums\\tiporespuestachecklist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\enums\\tiporespuestachecklist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\enums\\niveldificultad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\enums\\niveldificultad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\enums\\severidadincidencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\enums\\severidadincidencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\enums\\tipoincidenciaservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\enums\\tipoincidenciaservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\enums\\rolempleadoorden.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\enums\\rolempleadoorden.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\enums\\modocompleto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\enums\\modocompleto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\enums\\estadoordenservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\enums\\estadoordenservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\enums\\prioridadservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\enums\\prioridadservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\enums\\frecuenciaservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\enums\\frecuenciaservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\enums\\estadocontrato.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\enums\\estadocontrato.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\enums\\estadorutaservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\enums\\estadorutaservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\enums\\tiposiniestro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\enums\\tiposiniestro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\enums\\tipogastovehiculo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\enums\\tipogastovehiculo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\enums\\tipomantenimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\enums\\tipomantenimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\enums\\estadovehiculo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\enums\\estadovehiculo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\enums\\tipovehiculo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\enums\\tipovehiculo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\enums\\tipooperacionoffline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\enums\\tipooperacionoffline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\enums\\estadosincronizacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\enums\\estadosincronizacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\enums\\tipopoliticarrhh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\enums\\tipopoliticarrhh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\enums\\tiporeconocimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\enums\\tiporeconocimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\enums\\estadonomina.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\enums\\estadonomina.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\enums\\estadoliquidacioncomision.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\enums\\estadoliquidacioncomision.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\enums\\estadoepi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\enums\\estadoepi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\enums\\tipoformacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\enums\\tipoformacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\enums\\estadoausencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\enums\\estadoausencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|c:\\proyectos 2026\\claude ai\\cruiserentidades\\cruiser.entities\\enums\\tipoausencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AA449CA-4560-6D3B-47AC-3462D679BDB7}|Cruiser.Entities\\Cruiser.Entities.csproj|solutionrelative:cruiser.entities\\enums\\tipoausencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PlantillaChecklist.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\DominioLimpieza\\PlantillaChecklist.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\DominioLimpieza\\PlantillaChecklist.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\DominioLimpieza\\PlantillaChecklist.cs",
+              "RelativeToolTip": "Cruiser.Entities\\DominioLimpieza\\PlantillaChecklist.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAADAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T16:54:57.337Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SeguimientoOrdenServicio.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\DominioLimpieza\\SeguimientoOrdenServicio.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\DominioLimpieza\\SeguimientoOrdenServicio.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\DominioLimpieza\\SeguimientoOrdenServicio.cs",
+              "RelativeToolTip": "Cruiser.Entities\\DominioLimpieza\\SeguimientoOrdenServicio.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAADwvzkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T16:53:59.761Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EmpleadoOrdenServicio.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\DominioLimpieza\\EmpleadoOrdenServicio.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\DominioLimpieza\\EmpleadoOrdenServicio.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\DominioLimpieza\\EmpleadoOrdenServicio.cs",
+              "RelativeToolTip": "Cruiser.Entities\\DominioLimpieza\\EmpleadoOrdenServicio.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAADwvzwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T16:53:19.16Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "OrdenServicio.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\DominioLimpieza\\OrdenServicio.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\DominioLimpieza\\OrdenServicio.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\DominioLimpieza\\OrdenServicio.cs",
+              "RelativeToolTip": "Cruiser.Entities\\DominioLimpieza\\OrdenServicio.cs",
+              "ViewState": "AgIAAIIAAAAAAAAAAAAcwJoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T16:52:23.904Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HistorialEstadoContrato.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\DominioLimpieza\\HistorialEstadoContrato.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\DominioLimpieza\\HistorialEstadoContrato.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\DominioLimpieza\\HistorialEstadoContrato.cs",
+              "RelativeToolTip": "Cruiser.Entities\\DominioLimpieza\\HistorialEstadoContrato.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAADwvywAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T16:51:09.051Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ContratoServicio.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\DominioLimpieza\\ContratoServicio.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\DominioLimpieza\\ContratoServicio.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\DominioLimpieza\\ContratoServicio.cs",
+              "RelativeToolTip": "Cruiser.Entities\\DominioLimpieza\\ContratoServicio.cs",
+              "ViewState": "AgIAAHQAAAAAAAAAAAAmwI0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T16:49:55.224Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProtocoloServicio.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\DominioLimpieza\\ProtocoloServicio.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\DominioLimpieza\\ProtocoloServicio.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\DominioLimpieza\\ProtocoloServicio.cs",
+              "RelativeToolTip": "Cruiser.Entities\\DominioLimpieza\\ProtocoloServicio.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAA8wFIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T16:48:34.818Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TipoServicio.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\DominioLimpieza\\TipoServicio.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\DominioLimpieza\\TipoServicio.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\DominioLimpieza\\TipoServicio.cs",
+              "RelativeToolTip": "Cruiser.Entities\\DominioLimpieza\\TipoServicio.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAADwv1sAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T16:46:52.597Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "OrdenServicioRuta.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Flota\\OrdenServicioRuta.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\Flota\\OrdenServicioRuta.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Flota\\OrdenServicioRuta.cs",
+              "RelativeToolTip": "Cruiser.Entities\\Flota\\OrdenServicioRuta.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAADwv0sAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T16:44:56.24Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "RutaServicio.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Flota\\RutaServicio.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\Flota\\RutaServicio.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Flota\\RutaServicio.cs",
+              "RelativeToolTip": "Cruiser.Entities\\Flota\\RutaServicio.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAcwF8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T16:43:52.692Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "SiniestroVehiculo.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Flota\\SiniestroVehiculo.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\Flota\\SiniestroVehiculo.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Flota\\SiniestroVehiculo.cs",
+              "RelativeToolTip": "Cruiser.Entities\\Flota\\SiniestroVehiculo.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAADwv1QAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T16:43:05.07Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ReabastecimientoCombustible.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Flota\\ReabastecimientoCombustible.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\Flota\\ReabastecimientoCombustible.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Flota\\ReabastecimientoCombustible.cs",
+              "RelativeToolTip": "Cruiser.Entities\\Flota\\ReabastecimientoCombustible.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAADwv0oAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T16:41:32.255Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "GastoVehiculo.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Flota\\GastoVehiculo.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\Flota\\GastoVehiculo.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Flota\\GastoVehiculo.cs",
+              "RelativeToolTip": "Cruiser.Entities\\Flota\\GastoVehiculo.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAADwv0cAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T16:40:29.154Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AsignacionVehiculo.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Flota\\AsignacionVehiculo.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\Flota\\AsignacionVehiculo.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Flota\\AsignacionVehiculo.cs",
+              "RelativeToolTip": "Cruiser.Entities\\Flota\\AsignacionVehiculo.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAADwv0sAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T16:39:44.804Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "MantenimientoVehiculo.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Flota\\MantenimientoVehiculo.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\Flota\\MantenimientoVehiculo.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Flota\\MantenimientoVehiculo.cs",
+              "RelativeToolTip": "Cruiser.Entities\\Flota\\MantenimientoVehiculo.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAAAE8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T16:38:57.435Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "VehiculoEmpresa.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Flota\\VehiculoEmpresa.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\Flota\\VehiculoEmpresa.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Flota\\VehiculoEmpresa.cs",
+              "RelativeToolTip": "Cruiser.Entities\\Flota\\VehiculoEmpresa.cs",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAswIgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T16:38:01.055Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ColaSincronizacionOffline.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\RRHH\\ColaSincronizacionOffline.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\RRHH\\ColaSincronizacionOffline.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\RRHH\\ColaSincronizacionOffline.cs",
+              "RelativeToolTip": "Cruiser.Entities\\RRHH\\ColaSincronizacionOffline.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAmwGAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T16:35:31.837Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "SincronizacionOffline.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\RRHH\\SincronizacionOffline.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\RRHH\\SincronizacionOffline.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\RRHH\\SincronizacionOffline.cs",
+              "RelativeToolTip": "Cruiser.Entities\\RRHH\\SincronizacionOffline.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAswFEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T16:34:47.642Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Reconocimiento.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\RRHH\\Reconocimiento.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\RRHH\\Reconocimiento.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\RRHH\\Reconocimiento.cs",
+              "RelativeToolTip": "Cruiser.Entities\\RRHH\\Reconocimiento.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAADwvz0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T16:33:58.678Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "PoliticaRRHH.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\RRHH\\PoliticaRRHH.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\RRHH\\PoliticaRRHH.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\RRHH\\PoliticaRRHH.cs",
+              "RelativeToolTip": "Cruiser.Entities\\RRHH\\PoliticaRRHH.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAuwEcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T16:33:09.604Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "NominaEmpleado.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\RRHH\\NominaEmpleado.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\RRHH\\NominaEmpleado.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\RRHH\\NominaEmpleado.cs",
+              "RelativeToolTip": "Cruiser.Entities\\RRHH\\NominaEmpleado.cs",
+              "ViewState": "AgIAAFQAAAAAAAAAAADwv3EAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T16:32:15.631Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "LiquidacionComision.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\RRHH\\LiquidacionComision.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\RRHH\\LiquidacionComision.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\RRHH\\LiquidacionComision.cs",
+              "RelativeToolTip": "Cruiser.Entities\\RRHH\\LiquidacionComision.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAADwv1MAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T16:31:33.353Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "EPIEmpleado.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\RRHH\\EPIEmpleado.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\RRHH\\EPIEmpleado.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\RRHH\\EPIEmpleado.cs",
+              "RelativeToolTip": "Cruiser.Entities\\RRHH\\EPIEmpleado.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAADwv1cAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T16:30:44.871Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "FormacionEmpleado.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\RRHH\\FormacionEmpleado.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\RRHH\\FormacionEmpleado.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\RRHH\\FormacionEmpleado.cs",
+              "RelativeToolTip": "Cruiser.Entities\\RRHH\\FormacionEmpleado.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAADwv1AAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T16:27:32.865Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "VacacionesEmpleado.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\RRHH\\VacacionesEmpleado.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\RRHH\\VacacionesEmpleado.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\RRHH\\VacacionesEmpleado.cs",
+              "RelativeToolTip": "Cruiser.Entities\\RRHH\\VacacionesEmpleado.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAADwv0YAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T16:26:38.657Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "AusenciaEmpleado.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\RRHH\\AusenciaEmpleado.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\RRHH\\AusenciaEmpleado.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\RRHH\\AusenciaEmpleado.cs",
+              "RelativeToolTip": "Cruiser.Entities\\RRHH\\AusenciaEmpleado.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAADwv1EAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T16:25:52.753Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "FestivoLaboral.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\RRHH\\FestivoLaboral.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\RRHH\\FestivoLaboral.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\RRHH\\FestivoLaboral.cs",
+              "RelativeToolTip": "Cruiser.Entities\\RRHH\\FestivoLaboral.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAADwv0QAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T16:25:10.714Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "TipoRespuestaChecklist.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\TipoRespuestaChecklist.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\Enums\\TipoRespuestaChecklist.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\TipoRespuestaChecklist.cs",
+              "RelativeToolTip": "Cruiser.Entities\\Enums\\TipoRespuestaChecklist.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T16:23:11.728Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "NivelDificultad.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\NivelDificultad.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\Enums\\NivelDificultad.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\NivelDificultad.cs",
+              "RelativeToolTip": "Cruiser.Entities\\Enums\\NivelDificultad.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T16:09:27.438Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "SeveridadIncidencia.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\SeveridadIncidencia.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\Enums\\SeveridadIncidencia.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\SeveridadIncidencia.cs",
+              "RelativeToolTip": "Cruiser.Entities\\Enums\\SeveridadIncidencia.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T16:07:26.911Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "TipoIncidenciaServicio.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\TipoIncidenciaServicio.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\Enums\\TipoIncidenciaServicio.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\TipoIncidenciaServicio.cs",
+              "RelativeToolTip": "Cruiser.Entities\\Enums\\TipoIncidenciaServicio.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T16:04:59.774Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "RolEmpleadoOrden.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\RolEmpleadoOrden.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\Enums\\RolEmpleadoOrden.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\RolEmpleadoOrden.cs",
+              "RelativeToolTip": "Cruiser.Entities\\Enums\\RolEmpleadoOrden.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T16:03:30.004Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "ModoCompleto.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\ModoCompleto.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\Enums\\ModoCompleto.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\ModoCompleto.cs",
+              "RelativeToolTip": "Cruiser.Entities\\Enums\\ModoCompleto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T16:02:03.77Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "EstadoOrdenServicio.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\EstadoOrdenServicio.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\Enums\\EstadoOrdenServicio.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\EstadoOrdenServicio.cs",
+              "RelativeToolTip": "Cruiser.Entities\\Enums\\EstadoOrdenServicio.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAswB0AAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T16:00:10.583Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "PrioridadServicio.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\PrioridadServicio.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\Enums\\PrioridadServicio.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\PrioridadServicio.cs",
+              "RelativeToolTip": "Cruiser.Entities\\Enums\\PrioridadServicio.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T15:58:46.501Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "FrecuenciaServicio.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\FrecuenciaServicio.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\Enums\\FrecuenciaServicio.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\FrecuenciaServicio.cs",
+              "RelativeToolTip": "Cruiser.Entities\\Enums\\FrecuenciaServicio.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAswB0AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T15:56:44.778Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "EstadoContrato.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\EstadoContrato.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\Enums\\EstadoContrato.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\EstadoContrato.cs",
+              "RelativeToolTip": "Cruiser.Entities\\Enums\\EstadoContrato.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T15:55:14.489Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "EstadoRutaServicio.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\EstadoRutaServicio.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\Enums\\EstadoRutaServicio.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\EstadoRutaServicio.cs",
+              "RelativeToolTip": "Cruiser.Entities\\Enums\\EstadoRutaServicio.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T15:53:51.896Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "TipoSiniestro.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\TipoSiniestro.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\Enums\\TipoSiniestro.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\TipoSiniestro.cs",
+              "RelativeToolTip": "Cruiser.Entities\\Enums\\TipoSiniestro.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T15:52:24.796Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "TipoGastoVehiculo.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\TipoGastoVehiculo.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\Enums\\TipoGastoVehiculo.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\TipoGastoVehiculo.cs",
+              "RelativeToolTip": "Cruiser.Entities\\Enums\\TipoGastoVehiculo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T15:50:47.397Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "TipoMantenimiento.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\TipoMantenimiento.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\Enums\\TipoMantenimiento.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\TipoMantenimiento.cs",
+              "RelativeToolTip": "Cruiser.Entities\\Enums\\TipoMantenimiento.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T15:48:48.278Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "EstadoVehiculo.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\EstadoVehiculo.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\Enums\\EstadoVehiculo.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\EstadoVehiculo.cs",
+              "RelativeToolTip": "Cruiser.Entities\\Enums\\EstadoVehiculo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T15:46:19.557Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "TipoVehiculo.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\TipoVehiculo.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\Enums\\TipoVehiculo.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\TipoVehiculo.cs",
+              "RelativeToolTip": "Cruiser.Entities\\Enums\\TipoVehiculo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T15:44:17.419Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "TipoOperacionOffline.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\TipoOperacionOffline.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\Enums\\TipoOperacionOffline.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\TipoOperacionOffline.cs",
+              "RelativeToolTip": "Cruiser.Entities\\Enums\\TipoOperacionOffline.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T15:42:56.474Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "EstadoSincronizacion.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\EstadoSincronizacion.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\Enums\\EstadoSincronizacion.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\EstadoSincronizacion.cs",
+              "RelativeToolTip": "Cruiser.Entities\\Enums\\EstadoSincronizacion.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T15:40:50.43Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "TipoPoliticaRRHH.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\TipoPoliticaRRHH.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\Enums\\TipoPoliticaRRHH.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\TipoPoliticaRRHH.cs",
+              "RelativeToolTip": "Cruiser.Entities\\Enums\\TipoPoliticaRRHH.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T15:38:33.014Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "TipoReconocimiento.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\TipoReconocimiento.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\Enums\\TipoReconocimiento.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\TipoReconocimiento.cs",
+              "RelativeToolTip": "Cruiser.Entities\\Enums\\TipoReconocimiento.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T15:36:28.217Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "EstadoNomina.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\EstadoNomina.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\Enums\\EstadoNomina.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\EstadoNomina.cs",
+              "RelativeToolTip": "Cruiser.Entities\\Enums\\EstadoNomina.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T15:35:02.123Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "EstadoLiquidacionComision.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\EstadoLiquidacionComision.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\Enums\\EstadoLiquidacionComision.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\EstadoLiquidacionComision.cs",
+              "RelativeToolTip": "Cruiser.Entities\\Enums\\EstadoLiquidacionComision.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T15:33:38.922Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "EstadoEPI.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\EstadoEPI.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\Enums\\EstadoEPI.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\EstadoEPI.cs",
+              "RelativeToolTip": "Cruiser.Entities\\Enums\\EstadoEPI.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T15:31:57.989Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "TipoFormacion.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\TipoFormacion.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\Enums\\TipoFormacion.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\TipoFormacion.cs",
+              "RelativeToolTip": "Cruiser.Entities\\Enums\\TipoFormacion.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAswCAAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T15:30:11.26Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "EstadoAusencia.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\EstadoAusencia.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\Enums\\EstadoAusencia.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\EstadoAusencia.cs",
+              "RelativeToolTip": "Cruiser.Entities\\Enums\\EstadoAusencia.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T15:28:05.24Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "TipoAusencia.cs",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\TipoAusencia.cs",
+              "RelativeDocumentMoniker": "Cruiser.Entities\\Enums\\TipoAusencia.cs",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Cruiser.Entities\\Enums\\TipoAusencia.cs",
+              "RelativeToolTip": "Cruiser.Entities\\Enums\\TipoAusencia.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAswCAAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T15:25:36.776Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

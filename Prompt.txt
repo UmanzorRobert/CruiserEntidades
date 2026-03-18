@@ -1,0 +1,54 @@
+Quiero comenzar en la creación de sistema web ERP llamado "CruiserSystem"
+En el repositorio de GitHub esta el codigo de la estructura de las entidades que tendrá el sistema. 
+Cada entidad esta dividida en un sistema de carpetas, el cual deseo que respetes.
+El código de cada entidad tiene en sus comentarios de texto, una sugerencia de diseño para sus respectivas
+Fluent API a crear, tomalas en cuenta al momento de diseñarlas. También hay un plan de arquitecturas de múltiples DBContext los cuales se han 
+puesto en el plan de fases y también un plan de principios de estrategia de migraciones.
+En la carpeta Enums estan todas las clases Enums las cuales se usan en la mayoria de entidades, deseo que también las respetes.
+Quiero que analices y ejecutes el archivo "Plan de Fases" ya que ahi he hecho un plan para llevar a cabo este proyecto desde cero 
+y paso a paso.
+El archivo "Stock tecnológico" tiene los programas y elementos a utilizar en este sistema.
+El archivo "Nomenclatura de Commits a Usar", establezco un estandar a la hora de escribir los commits para este proyecto.
+Para la instalación de archivos NuGet y las migraciones, quiero usar el powershell de visual studio y para el resto, usaré el Cmder
+el cual ya tengo instalado.
+Ya que utilizo VS2026, no necesito la terminal para la creación de proyectos, ni referenciar capas.
+He estado utilizando el docker-compose.yml:
+version: '3.8'
+services:
+
+  # Base de datos - Cruiser
+  db_cruiser:
+    image: postgres:15-alpine
+    container_name: Cruiser_DB
+    environment:
+      POSTGRES_USER: umanzor
+      POSTGRES_PASSWORD: maloxmalo
+      POSTGRES_DB: cruiser
+    ports:
+      - "5432:5432"
+    volumes:
+      - cruiser_pg_data:/var/lib/postgresql/data
+    restart: always
+
+  # Base de datos - Nuevo Sistema
+  db_nuevo:
+    image: postgres:15-alpine
+    container_name: cruiser_System
+    environment:
+      POSTGRES_USER: umanzor
+      POSTGRES_PASSWORD: maloxmalo
+      POSTGRES_DB: cruiserDb_One
+    ports:
+      - "5433:5432"        
+    volumes:
+      - system_pg_data:/var/lib/postgresql/data
+    restart: always
+
+volumes:
+  cruiser_pg_data:
+  system_pg_data:           
+
+Espero lo tomes en cuenta a la hora de crear el docker-compose.yml de CruiserSystem.
+También ten en cuenta que uso archivos postgres binarios y que me conecto a través de Cmder. 
+Si has entendido mis instrucciones por favor me dices algo y si todo esta bien o respondo a tus posibles preguntas
+entonces comenzamos con la Fase 1.

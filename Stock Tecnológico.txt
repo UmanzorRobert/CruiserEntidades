@@ -1,0 +1,41 @@
+Sistema Web de Gestión de Limpieza y Servicios Sociales “CruiserSystem”
+
+Stack Tecnológico
+Backend:
+•	Lenguaje / Runtime: C# con AspNetCore 10 – Visual Studio Community 2026
+•	ORM: EntityFrameworkCore 10 con Fluent API – campos JSON mapeados a JSONB de PostgreSQL.
+•	Base de Datos: PostgreSQL 18 + Docker + Railway
+•	Patrón Arquitectura: Repository + Service Layer + DTO + Interfaces – En capas: Entities, DataAccess, Business, Web.
+•	Autenticación: AspNetCore Identity + Cookies + JWT + Refresh Tokens en cookie HttpOnly.
+•	Seguridad Passwords: BCrypt.Net – política fuerte 8 + chars con mayúscula / minúscula / número / especial.
+•	Notificaciones RT: SignalR (Integrado efectivamente con Blazor Server).
+•	Jobs recurrentes: Hangfire con PostgreSQL.
+•	Logging: Serilog con sinks Console/File/PostgreSQL.
+•	Reportes PDF: QuestPdf.
+•	Reportes Excel: ClosedXML.
+•	Validaciones: FluentValidation + DataAnnotations en DTOs.
+•	Email: Mailkit (SMTP: Gmail/Outlook/custom).
+•	Rate Limiting: AspNetCoreRateLimit.
+•	Terminal: Cmder, Powershell integrada Visual Studio.
+•	Pruebas API: Swagger (corto plazo) y Postman (mediano y largo plazo).
+
+Frontend:
+•	Opción A: Blazor Server, SPA en C# puro, sin depender de JavaScript pesado. Integración nativa con SignalR. Ideal para Dashboard, Calendario, módulos complejos.
+•	Opción B: MVC/Razor Pages, para pantallas CRUD estándar con Bootstrap 5 (SB Admin 2). Compatible con Blazor en la misma solución.
+•	Delegación a Vue.js / React: Para sub-componentes muy interactivos (Kanban, Charts en tiempo real), embebibles en Razor o Blazor.
+•	Bootstrap 5 + SB Admin 2: Template base para todas las pantallas (login, dashboard, tablas, formularios).
+•	Chart.js: Gráficas KPIs, ventas, tendencias.
+•	FullCalendar 6.x: Calendario principal con drag-drop y recurrencia.
+•	Leaflet.js: Mapas geolocalización fichajes y zonas de servicio.
+•	QuaggaJS / ZXing-JS: Escáner de códigos de barra vía cámara.
+•	PWA (Progressive Web App): Para módulo de fichaje y órdenes de servicio en campo. Service Worker + manifest.json + estrategia offline-first.
+ 
+Base de Datos y Contenedores:
+•	Contenedor Local (Desarrollo): Docker-compose.yml oficial de PostgreSQL 18.
+•	JSONB en EF Core: Campos JSON (PasosJSON, ReglasJSON, CodigosRespaldo, etc) se mapean con HasColumnType(“jsonb”) para búsquedas GIN nativas.
+•	Índices GIN: Configurados en Fluent API para columnas JSONB que requieren búsqueda: PermisosEspeciales, DatosAdicionales, PuntajeRFM.
+•	Índices Compuestos: Migración dedicada para índices críticos.
+
+Infraestructura y Despliegue:
+•	Entorno Local: Docker Desktop + docker-compose.yml oficial PostgreSQL + Cmder.
+•	Control de versiones y repositorio: Git y GitHub.

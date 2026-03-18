@@ -1,0 +1,40 @@
+Nomenclatura de Commits GIT:
+1.	[SETUP] Configuración inicial del proyecto, herramientas, HTTPS local, Blazor
+2.	[ENTITY] Creación/modificación de entidades (incluye nuevas PWA, GDPR, Railway)
+3.	[MIGRATION] Migraciones EF Core (incluir JSONB y GIN en el mensaje)
+4.	[REPO] Implementación de repositorios
+5.	[SERVICE] Implementación de servicios de negocio
+6.	[DTO] Creación de Data Transfer Objects
+7.	[CONTROLLER] Controladores MVC (para páginas Razor/MVC)
+8.	[VIEW] Vistas Razor Pages y MVC
+9.	[SECURITY] Autenticación, autorización, HTTPS, headers
+10.	[PWA] Service Worker, manifest.json, offline sync, cámara, geolocalización
+11.	[GDPR] Anonimización, políticas, consentimientos, registros de cumplimiento
+12.	[FEATURE] Nueva funcionalidad completa
+13.	[BUGFIX] Corrección de errores
+14.	[REFACTOR] Refactorización de código
+15.	[TEST] Adición de pruebas unitarias/integración
+16.	[DOC] Documentación XML y comentarios
+17.	[NUGET] Instalación de paquetes NuGet
+18.	[JSONB] Configuración de tipos JSONB e índices GIN en EF Core/PostgreSQL
+19.	[DEPLOY] Docker, Railway App Service, Railway PostgreSQL Plugin, Railway Logs
+20.	[BLAZOR] Componentes Blazor Server (.razor) — dashboard, calendario, formularios complejos
+21.	[INTERFACE] Definición de IXxxRepository, IXxxService
+22.	[ENUM] Creación/modificación de enums del proyecto
+23.	[VALIDATION] FluentValidation, DataAnnotations en DTOs
+24.	[MIDDLEWARE] Exception handler, correlación de requests
+25.	[DBCONTEXT] Fluent API, filtros soft-delete, conversores UTC
+26.	[SEED] Datos iniciales en migraciones (roles, módulos)
+27.	[SIGNALR] Hubs, grupos de conexión, eventos RT
+28.	[HANGFIRE] Jobs recurrentes, cron, scheduler
+29.	[REPORT] QuestPDF + ClosedXML: facturas, nóminas, KPIs
+30.	[EMAIL] MailKit, plantillas HTML, cola de envío
+31.	[CALENDAR] FullCalendar 6.x, drag-drop, iCal
+32.	[MAP] Leaflet.js, Google Maps, polígonos de zonas
+33.	[SCANNER] QuaggaJS + ZXing para QR y códigos de barras
+34.	[OUTBOX]Outbox Pattern, consistencia cross-DbContext
+35.	[HOTFIX]Fix urgente en producción (sale de main)
+36.	[PERF]Optimización queries SQL, caché, índices
+37.	[STYLE]CSS/SCSS, Bootstrap, tema SB Admin 2
+38.	[CICD]GitHub Actions, efbundle (≠ [DEPLOY] que es Railway)
+39.	[REVERT]Revertir commit con hash y motivo

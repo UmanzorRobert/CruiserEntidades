@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BD92E6DF-901B-437B-904B-EDFA3DF0859F}|Elementos de la soluci\u00F3n{BD92E6DF-901B-437B-904B-EDFA3DF0859F}|C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Prompt.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{BD92E6DF-901B-437B-904B-EDFA3DF0859F}|Elementos de la soluci\u00F3n{BD92E6DF-901B-437B-904B-EDFA3DF0859F}|solutionrelative:Prompt.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{254AFEB7-0329-AF49-FB51-15B2E337EB20}|Elementos de la soluci\u00F3n{254AFEB7-0329-AF49-FB51-15B2E337EB20}|C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Entidades.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{254AFEB7-0329-AF49-FB51-15B2E337EB20}|Elementos de la soluci\u00F3n{254AFEB7-0329-AF49-FB51-15B2E337EB20}|solutionrelative:Entidades.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BD92E6DF-901B-437B-904B-EDFA3DF0859F}|Elementos de la soluci\u00F3n{BD92E6DF-901B-437B-904B-EDFA3DF0859F}|C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Plan de Fases.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{BD92E6DF-901B-437B-904B-EDFA3DF0859F}|Elementos de la soluci\u00F3n{BD92E6DF-901B-437B-904B-EDFA3DF0859F}|solutionrelative:Plan de Fases.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{254AFEB7-0329-AF49-FB51-15B2E337EB20}|Elementos de la soluci\u00F3n{254AFEB7-0329-AF49-FB51-15B2E337EB20}|C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Plan de Fases.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{254AFEB7-0329-AF49-FB51-15B2E337EB20}|Elementos de la soluci\u00F3n{254AFEB7-0329-AF49-FB51-15B2E337EB20}|solutionrelative:Plan de Fases.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{254AFEB7-0329-AF49-FB51-15B2E337EB20}|Elementos de la soluci\u00F3n{254AFEB7-0329-AF49-FB51-15B2E337EB20}|C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Prompt.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{254AFEB7-0329-AF49-FB51-15B2E337EB20}|Elementos de la soluci\u00F3n{254AFEB7-0329-AF49-FB51-15B2E337EB20}|solutionrelative:Prompt.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{254AFEB7-0329-AF49-FB51-15B2E337EB20}|Elementos de la soluci\u00F3n{254AFEB7-0329-AF49-FB51-15B2E337EB20}|C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Nomenclatura de Commits a Usar.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{254AFEB7-0329-AF49-FB51-15B2E337EB20}|Elementos de la soluci\u00F3n{254AFEB7-0329-AF49-FB51-15B2E337EB20}|solutionrelative:Nomenclatura de Commits a Usar.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,15 +31,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Entidades.txt",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Entidades.txt",
+              "RelativeDocumentMoniker": "Entidades.txt",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Entidades.txt",
+              "RelativeToolTip": "Entidades.txt",
+              "ViewState": "AgIAAClAAAAAAAAAAAAQwEZAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2026-03-20T15:48:50.83Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Prompt.txt",
               "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Prompt.txt",
               "RelativeDocumentMoniker": "Prompt.txt",
               "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Prompt.txt",
               "RelativeToolTip": "Prompt.txt",
-              "ViewState": "AgIAABUAAAAAAAAAAAAcwDUAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2026-03-18T16:53:19.44Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-18T18:02:20.001Z"
             },
             {
               "$type": "Document",
@@ -43,8 +63,20 @@
               "RelativeToolTip": "Plan de Fases.txt",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2026-03-18T16:46:30.936Z",
+              "WhenOpened": "2026-03-18T18:00:17.024Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Nomenclatura de Commits a Usar.txt",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Nomenclatura de Commits a Usar.txt",
+              "RelativeDocumentMoniker": "Nomenclatura de Commits a Usar.txt",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Nomenclatura de Commits a Usar.txt",
+              "RelativeToolTip": "Nomenclatura de Commits a Usar.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2026-03-18T17:58:09.533Z"
             }
           ]
         }

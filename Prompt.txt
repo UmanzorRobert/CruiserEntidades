@@ -50,5 +50,8 @@ volumes:
 
 Espero lo tomes en cuenta a la hora de crear el docker-compose.yml de CruiserSystem.
 También ten en cuenta que uso archivos postgres binarios y que me conecto a través de Cmder. 
+Para cada fase y sus respectivas subfases quiero un chat separado, para que sea más fácil de seguir y organizar el proyecto.
+Al comenzar cada fase por favor muestra brevemente su objetivo principal y sus objetivos específicos, para tener claro
+lo que estamos construyendo y porque.
 Si has entendido mis instrucciones por favor me dices algo y si todo esta bien o respondo a tus posibles preguntas
-entonces comenzamos con la Fase 1.
+entonces comenzamos con la Fase 1 en otro chat por favor.

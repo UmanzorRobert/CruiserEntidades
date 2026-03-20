@@ -1,4 +1,4 @@
-Todas las entidades CruiserCat
+Todas las entidades CruiserSystem
 Carpeta ANALITICA
 using System;
 using Cruiser.Entities.Base;

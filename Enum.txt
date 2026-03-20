@@ -1,0 +1,2581 @@
+Todos los Enums CruiserSystem
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Ambiente de despliegue en el que está corriendo la aplicación en Railway.
+    /// </summary>
+    public enum AmbienteDespliegue
+    {
+        /// <summary>Entorno de desarrollo local con Docker Compose.</summary>
+        Development = 1,
+        /// <summary>Entorno de staging en Railway (rama develop).</summary>
+        Staging = 2,
+        /// <summary>Entorno de producción en Railway (rama main).</summary>
+        Production = 3
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Área funcional del sistema a la que pertenece un módulo de menú.
+    /// Permite agrupar módulos en el sidebar por sección lógica.
+    /// </summary>
+    public enum AreaModulo
+    {
+        /// <summary>Panel principal con KPIs y resumen ejecutivo.</summary>
+        Dashboard = 1,
+        /// <summary>Gestión de inventario, productos, almacenes y movimientos.</summary>
+        Inventario = 2,
+        /// <summary>Compras, proveedores y órdenes de compra.</summary>
+        Compras = 3,
+        /// <summary>Clientes, empleados, cotizaciones y asignaciones.</summary>
+        Comercial = 4,
+        /// <summary>Facturación, cobros, remesas y precios.</summary>
+        Facturacion = 5,
+        /// <summary>Calendario, horarios, eventos y citas.</summary>
+        Calendario = 6,
+        /// <summary>Contratos, órdenes de servicio y dominio de limpieza.</summary>
+        Operaciones = 7,
+        /// <summary>Checklists, inspecciones, calidad y NPS.</summary>
+        Calidad = 8,
+        /// <summary>Recursos humanos: fichajes, ausencias, nóminas, EPIs.</summary>
+        RRHH = 9,
+        /// <summary>Gestión de flota de vehículos y rutas.</summary>
+        Flota = 10,
+        /// <summary>Reportes, KPIs y analítica de negocio.</summary>
+        Analitica = 11,
+        /// <summary>Configuración del sistema, parámetros y administración.</summary>
+        Administracion = 12,
+        /// <summary>Módulos relacionados con GDPR y cumplimiento normativo.</summary>
+        GDPR = 13,
+        /// <summary>Integraciones externas (AEAT, pasarelas de pago, etc.).</summary>
+        Integraciones = 14
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Canal a través del cual se envía una notificación al usuario destinatario.
+    /// </summary>
+    public enum CanalEnvioNotificacion
+    {
+        /// <summary>Notificación en pantalla mediante SignalR (campana + panel desplegable).</summary>
+        Sistema = 1,
+        /// <summary>Correo electrónico mediante MailKit SMTP.</summary>
+        Email = 2,
+        /// <summary>Notificación push del navegador mediante Service Worker (PWA).</summary>
+        Push = 3,
+        /// <summary>Mensaje SMS (requiere integración con proveedor SMS externo).</summary>
+        SMS = 4
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Canal de envío de una notificación al usuario destinatario.
+    /// Una notificación puede enviarse simultáneamente por múltiples canales
+    /// según la configuración del TipoNotificacion y las preferencias del usuario.
+    /// </summary>
+    public enum CanalNotificacion
+    {
+        /// <summary>Notificación interna en la campana de la interfaz web (SignalR).</summary>
+        Sistema = 1,
+        /// <summary>Email enviado mediante MailKit al email del usuario.</summary>
+        Email = 2,
+        /// <summary>Push notification en el navegador o dispositivo móvil (Service Worker PWA).</summary>
+        Push = 3,
+        /// <summary>Mensaje SMS al teléfono móvil del usuario (integración externa).</summary>
+        SMS = 4
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Canal utilizado para enviar el recordatorio de cobranza al cliente.
+    /// </summary>
+    public enum CanalRecordatorio
+    {
+        /// <summary>Recordatorio enviado por correo electrónico mediante MailKit.</summary>
+        Email = 1,
+        /// <summary>Recordatorio enviado por teléfono (llamada manual del gestor de cobranzas).</summary>
+        Telefono = 2,
+        /// <summary>Recordatorio enviado por correo postal certificado (para documentación legal).</summary>
+        Postal = 3,
+        /// <summary>Recordatorio enviado por WhatsApp u otra aplicación de mensajería.</summary>
+        Mensajeria = 4,
+        /// <summary>Recordatorio realizado en persona durante una visita al cliente.</summary>
+        Presencial = 5
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Canal a través del cual el cliente solicitó la cita previa.
+    /// Permite analizar qué canales de contacto son más efectivos.
+    /// </summary>
+    public enum CanalSolicitudCita
+    {
+        /// <summary>Solicitud realizada desde el portal web del cliente.</summary>
+        PortalWeb = 1,
+        /// <summary>Solicitud recibida por llamada telefónica y registrada manualmente.</summary>
+        Telefono = 2,
+        /// <summary>Solicitud recibida por email y registrada manualmente.</summary>
+        Email = 3,
+        /// <summary>Solicitud recibida por WhatsApp u otra mensajería.</summary>
+        Mensajeria = 4,
+        /// <summary>Solicitud registrada directamente en la aplicación de gestión.</summary>
+        Presencial = 5
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>Categoría del archivo adjunto a un empleado.</summary>
+    public enum CategoriaArchivoEmpleado
+    {
+        /// <summary>Contrato de trabajo firmado.</summary>
+        Contrato = 1,
+        /// <summary>Certificado de formación o titulación profesional.</summary>
+        Certificado = 2,
+        /// <summary>Nómina mensual.</summary>
+        Nomina = 3,
+        /// <summary>Documento de identificación (DNI, NIE, Pasaporte).</summary>
+        Identificacion = 4,
+        /// <summary>Partes de alta/baja médica por enfermedad.</summary>
+        BajaMedica = 5,
+        /// <summary>Documento relacionado con la Seguridad Social (vida laboral, TC2, etc.).</summary>
+        SeguridadSocial = 6,
+        /// <summary>Evaluación de riesgos laborales y reconocimientos médicos.</summary>
+        PRL = 7,
+        /// <summary>Otros documentos no clasificados en las categorías anteriores.</summary>
+        Otros = 8
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>Categoría del archivo adjunto a un proveedor.</summary>
+    public enum CategoriaArchivoProveedor
+    {
+        /// <summary>Certificado de homologación del proveedor.</summary>
+        Homologacion = 1,
+        /// <summary>Certificado de calidad ISO 9001 u otros estándares.</summary>
+        CertificadoISO = 2,
+        /// <summary>Póliza de seguro de responsabilidad civil vigente.</summary>
+        Seguro = 3,
+        /// <summary>Ficha de datos de seguridad de un producto químico suministrado.</summary>
+        FichaSeguridad = 4,
+        /// <summary>Contrato de suministro o acuerdo comercial firmado.</summary>
+        Contrato = 5,
+        /// <summary>Catálogo de productos del proveedor.</summary>
+        Catalogo = 6,
+        /// <summary>Otros documentos del proveedor.</summary>
+        Otros = 7
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Categoría funcional del movimiento de inventario para clasificación
+    /// en reportes, análisis de costos y control de gestión.
+    /// </summary>
+    public enum CategoriaMovimiento
+    {
+        /// <summary>Recepción de mercancía de proveedor (asociado a OrdenCompra).</summary>
+        Compra = 1,
+        /// <summary>Salida de material hacia cliente o para servicio de limpieza.</summary>
+        Venta = 2,
+        /// <summary>Devolución de material desde cliente al almacén.</summary>
+        DevolucionCliente = 3,
+        /// <summary>Devolución de material al proveedor.</summary>
+        DevolucionProveedor = 4,
+        /// <summary>Ajuste manual de stock (positivo o negativo) con justificación.</summary>
+        Ajuste = 5,
+        /// <summary>Transferencia de stock entre almacenes internos.</summary>
+        Transferencia = 6,
+        /// <summary>Salida por merma, caducidad, rotura o pérdida.</summary>
+        Merma = 7,
+        /// <summary>Entrada por producción interna o fabricación propia.</summary>
+        Produccion = 8,
+        /// <summary>Asignación de material a empleado para uso en campo.</summary>
+        AsignacionEmpleado = 9,
+        /// <summary>Ajuste resultante de un inventario cíclico con diferencias.</summary>
+        AjusteInventarioCiclico = 10,
+        /// <summary>Consumo interno del material por la propia empresa.</summary>
+        ConsumoInterno = 11
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Clasificación ABC de productos/ubicaciones según el Principio de Pareto
+    /// aplicado a inventario (valor económico × rotación de stock).
+    /// Determina la frecuencia de conteo en inventarios cíclicos.
+    /// </summary>
+    public enum ClasificacionABC
+    {
+        /// <summary>
+        /// Categoría A: alto valor y/o alta rotación. Representan ~80% del valor total
+        /// con ~20% de los artículos. Se cuentan con mayor frecuencia (mensual).
+        /// </summary>
+        A = 1,
+        /// <summary>
+        /// Categoría B: valor y rotación medios. ~15% del valor total con ~30% de artículos.
+        /// Se cuentan trimestralmente.
+        /// </summary>
+        B = 2,
+        /// <summary>
+        /// Categoría C: bajo valor y/o baja rotación. ~5% del valor total con ~50% de artículos.
+        /// Se cuentan semestralmente o anualmente.
+        /// </summary>
+        C = 3
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Continente geográfico al que pertenece un país.
+    /// Se utiliza para agrupar y filtrar países en catálogos y reportes.
+    /// </summary>
+    public enum Continente
+    {
+        /// <summary>Europa.</summary>
+        Europa = 1,
+        /// <summary>Asia.</summary>
+        Asia = 2,
+        /// <summary>África.</summary>
+        Africa = 3,
+        /// <summary>América del Norte (incluye Centroamérica y Caribe).</summary>
+        AmericaNorte = 4,
+        /// <summary>América del Sur.</summary>
+        AmericaSur = 5,
+        /// <summary>Oceanía (incluye Australia y Pacífico).</summary>
+        Oceania = 6,
+        /// <summary>Antártida.</summary>
+        Antartida = 7
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Estado del proceso de aprobación de un documento en el flujo de AprobacionDocumento.
+    /// </summary>
+    public enum EstadoAprobacion
+    {
+        /// <summary>Solicitud de aprobación creada y pendiente de revisión por el aprobador.</summary>
+        Pendiente = 1,
+        /// <summary>Documento aprobado. Se desbloquean las acciones dependientes de la aprobación.</summary>
+        Aprobado = 2,
+        /// <summary>Documento rechazado con motivo. El solicitante debe corregir y reenviar.</summary>
+        Rechazado = 3,
+        /// <summary>
+        /// Aprobación delegada a otro usuario (vacaciones, ausencia del aprobador original).
+        /// La responsabilidad pasa al DelegadoAId.
+        /// </summary>
+        Delegado = 4,
+        /// <summary>
+        /// Solicitud de aprobación cancelada por el solicitante antes de ser procesada.
+        /// </summary>
+        Cancelado = 5
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Estado del ciclo de vida de una asignación de productos del almacén.
+    /// </summary>
+    public enum EstadoAsignacion
+    {
+        /// <summary>Asignación creada, productos reservados pero no despachados físicamente.</summary>
+        Pendiente = 1,
+        /// <summary>Productos despachados físicamente desde el almacén. Stock movido.</summary>
+        Despachada = 2,
+        /// <summary>Asignación confirmada por el destinatario (cliente firmó albarán).</summary>
+        Confirmada = 3,
+        /// <summary>Asignación facturada. Se generó la factura correspondiente.</summary>
+        Facturada = 4,
+        /// <summary>Asignación anulada antes del despacho. Las reservas son liberadas.</summary>
+        Anulada = 5
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Estado del ciclo de vida de una ausencia o vacación solicitada por el empleado.
+    /// </summary>
+    public enum EstadoAusencia
+    {
+        /// <summary>Solicitud enviada por el empleado. Pendiente de revisión del supervisor.</summary>
+        Solicitada = 1,
+        /// <summary>Aprobada por el supervisor. El empleado puede ausentarse en las fechas indicadas.</summary>
+        Aprobada = 2,
+        /// <summary>Rechazada por el supervisor con motivo. El empleado debe buscar fechas alternativas.</summary>
+        Rechazada = 3,
+        /// <summary>Cancelada por el propio empleado antes de la fecha de inicio.</summary>
+        Cancelada = 4,
+        /// <summary>Ausencia ya completada (fecha fin superada).</summary>
+        Completada = 5
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Estado del ciclo de vida de una campaña comercial de marketing o fidelización.
+    /// </summary>
+    public enum EstadoCampanaComercial
+    {
+        /// <summary>Campaña en preparación. Clientes aún no seleccionados ni emails enviados.</summary>
+        Borrador = 1,
+        /// <summary>Campaña programada para envío futuro. Configuración completada.</summary>
+        Programada = 2,
+        /// <summary>Campaña activa. Envíos en curso o realizados. Aceptando respuestas.</summary>
+        Activa = 3,
+        /// <summary>Campaña finalizada. Fecha fin superada. Métricas disponibles para análisis.</summary>
+        Finalizada = 4,
+        /// <summary>Campaña pausada manualmente antes de finalizar.</summary>
+        Pausada = 5,
+        /// <summary>Campaña cancelada antes de iniciarse.</summary>
+        Cancelada = 6
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Estado del ciclo de vida de una cita previa solicitada por un cliente.
+    /// </summary>
+    public enum EstadoCitaPrevia
+    {
+        /// <summary>Solicitud recibida. Pendiente de revisión y confirmación por el equipo.</summary>
+        Pendiente = 1,
+        /// <summary>Cita confirmada por el equipo. Se ha reservado el horario del empleado.</summary>
+        Confirmada = 2,
+        /// <summary>Cita rechazada. Se notifica al cliente con el motivo del rechazo.</summary>
+        Rechazada = 3,
+        /// <summary>Cita completada. El servicio se realizó en la fecha y hora acordadas.</summary>
+        Completada = 4,
+        /// <summary>Cita cancelada por el cliente o por la empresa antes de realizarse.</summary>
+        Cancelada = 5
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Estado de procesamiento de una tarea en la cola de procesamiento asíncrono.
+    /// </summary>
+    public enum EstadoColaProcesamiento
+    {
+        /// <summary>Tarea creada y esperando ser recogida por el procesador.</summary>
+        Pendiente = 1,
+        /// <summary>Tarea actualmente siendo procesada por un worker de Hangfire.</summary>
+        EnProceso = 2,
+        /// <summary>Tarea completada exitosamente.</summary>
+        Completada = 3,
+        /// <summary>Tarea fallida tras agotar el número máximo de reintentos.</summary>
+        Fallida = 4,
+        /// <summary>Tarea cancelada manualmente antes de ser procesada.</summary>
+        Cancelada = 5,
+        /// <summary>Tarea en espera de reintento tras un fallo temporal.</summary>
+        EsperandoReintento = 6
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Estado del ciclo de vida de un contrato de servicio de limpieza.
+    /// Determina si se pueden programar órdenes de servicio y generar facturas recurrentes.
+    /// </summary>
+    public enum EstadoContrato
+    {
+        /// <summary>Contrato en elaboración. No genera facturas ni órdenes.</summary>
+        Borrador = 1,
+        /// <summary>Contrato pendiente de firma por el cliente.</summary>
+        PendienteFirma = 2,
+        /// <summary>Contrato activo y en vigor. Genera facturas y órdenes según la programación.</summary>
+        Activo = 3,
+        /// <summary>Contrato temporalmente suspendido por acuerdo mutuo o incidencia.</summary>
+        Suspendido = 4,
+        /// <summary>Contrato finalizado normalmente al término del período pactado.</summary>
+        Finalizado = 5,
+        /// <summary>Contrato rescindido anticipadamente por una de las partes.</summary>
+        Rescindido = 6,
+        /// <summary>Contrato renovado automáticamente. Se crea un nuevo contrato sucesor.</summary>
+        Renovado = 7
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Estado del ciclo de vida de una cotización de servicio enviada a un cliente potencial.
+    /// </summary>
+    public enum EstadoCotizacion
+    {
+        /// <summary>Cotización en elaboración. No enviada al cliente aún.</summary>
+        Borrador = 1,
+        /// <summary>Cotización enviada al cliente por email o entregada en mano.</summary>
+        Enviada = 2,
+        /// <summary>Cliente aceptó la cotización. Pendiente de convertir a contrato.</summary>
+        Aceptada = 3,
+        /// <summary>Cliente rechazó la cotización explícitamente.</summary>
+        Rechazada = 4,
+        /// <summary>
+        /// Cotización caducada por superar la fecha límite de validez
+        /// sin respuesta del cliente.
+        /// </summary>
+        Caducada = 5,
+        /// <summary>Cotización convertida en contrato de servicio activo.</summary>
+        ConvertidaContrato = 6
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Estado del envío de una notificación por un canal específico.
+    /// Cada canal (Email, Push, SMS) tiene su propio estado de envío en NotificacionUsuario.
+    /// </summary>
+    public enum EstadoEnvioNotificacion
+    {
+        /// <summary>Pendiente de envío. No procesada aún por el job de Hangfire.</summary>
+        Pendiente = 1,
+        /// <summary>Enviada correctamente por el canal correspondiente.</summary>
+        Enviada = 2,
+        /// <summary>Error al enviar. Se reintentará según la política de reintentos de Hangfire.</summary>
+        Error = 3,
+        /// <summary>No aplica para este usuario (sin token push, sin email configurado, etc.).</summary>
+        NoAplica = 4
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Estado del Equipo de Protección Individual (EPI) asignado a un empleado.
+    /// </summary>
+    public enum EstadoEPI
+    {
+        /// <summary>EPI entregado al empleado y en uso activo.</summary>
+        Entregado = 1,
+        /// <summary>EPI devuelto por el empleado en buen estado al finalizar la asignación.</summary>
+        Devuelto = 2,
+        /// <summary>EPI declarado perdido por el empleado. Puede generar cargo económico.</summary>
+        Perdido = 3,
+        /// <summary>EPI deteriorado o dañado. Debe ser reemplazado. Genera baja de inventario.</summary>
+        Deteriorado = 4,
+        /// <summary>EPI caducado (fecha de caducidad superada). No puede usarse.</summary>
+        Caducado = 5
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Estado del ciclo de vida de un evento en el calendario del sistema.
+    /// Determina la representación visual y las acciones disponibles en FullCalendar.
+    /// </summary>
+    public enum EstadoEvento
+    {
+        /// <summary>Evento planificado y confirmado. Aparece en color normal en el calendario.</summary>
+        Planificado = 1,
+        /// <summary>Evento en curso actualmente. Aparece resaltado en el calendario.</summary>
+        EnCurso = 2,
+        /// <summary>Evento completado satisfactoriamente.</summary>
+        Completado = 3,
+        /// <summary>Evento cancelado. Aparece tachado o en gris en el calendario.</summary>
+        Cancelado = 4,
+        /// <summary>Evento reprogramado a otra fecha. El evento original queda cancelado.</summary>
+        Reprogramado = 5,
+        /// <summary>Evento pendiente de confirmación por alguna de las partes.</summary>
+        PendienteConfirmacion = 6
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Estado del ciclo de vida de un proceso de inventario cíclico.
+    /// </summary>
+    public enum EstadoInventarioCiclico
+    {
+        /// <summary>Inventario planificado pero no iniciado. Productos asignados pero sin contar.</summary>
+        Planificado = 1,
+        /// <summary>Inventario en curso. Empleados están realizando el conteo físico.</summary>
+        EnProgreso = 2,
+        /// <summary>
+        /// Conteo físico completado. Pendiente de revisión de diferencias
+        /// y generación de ajustes de stock.
+        /// </summary>
+        PendienteRevision = 3,
+        /// <summary>Diferencias revisadas y ajustes de stock generados. Proceso completado.</summary>
+        Completado = 4,
+        /// <summary>Inventario cancelado antes de completarse. No se generan ajustes.</summary>
+        Cancelado = 5
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Estado del ciclo de vida de una liquidación de comisiones de un empleado.
+    /// </summary>
+    public enum EstadoLiquidacionComision
+    {
+        /// <summary>Liquidación calculada y pendiente de revisión por administración.</summary>
+        Pendiente = 1,
+        /// <summary>Aprobada por administración. Lista para su pago junto con la nómina.</summary>
+        Aprobada = 2,
+        /// <summary>Pagada al empleado. La comisión ha sido abonada.</summary>
+        Pagada = 3,
+        /// <summary>Rechazada por administración. El empleado debe revisar los datos.</summary>
+        Rechazada = 4
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Estado del proceso de envío de un email registrado en el log de emails.
+    /// </summary>
+    public enum EstadoLogEmail
+    {
+        /// <summary>Email en cola de Hangfire, pendiente de envío.</summary>
+        Pendiente = 1,
+        /// <summary>Email enviado exitosamente al servidor SMTP.</summary>
+        Enviado = 2,
+        /// <summary>Error al intentar enviar. Se reintentará según política de reintentos.</summary>
+        Error = 3,
+        /// <summary>Fallido definitivamente: agotados los reintentos máximos configurados.</summary>
+        Fallido = 4,
+        /// <summary>Email cancelado antes de ser enviado (destinatario revocó consentimiento).</summary>
+        Cancelado = 5
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Estado del resultado de una llamada a un sistema de integración externo.
+    /// Registrado en LogIntegracion para monitoreo y diagnóstico de fallos.
+    /// </summary>
+    public enum EstadoLogIntegracion
+    {
+        /// <summary>La llamada al sistema externo se completó exitosamente con respuesta válida.</summary>
+        Exitoso = 1,
+        /// <summary>La llamada falló con un error HTTP o de negocio del sistema externo.</summary>
+        Error = 2,
+        /// <summary>La llamada superó el tiempo de espera máximo configurado sin respuesta.</summary>
+        Timeout = 3,
+        /// <summary>La llamada está en proceso de reintento tras un fallo previo.</summary>
+        Reintentando = 4,
+        /// <summary>La llamada fue rechazada por límite de tasa (rate limiting) del sistema externo.</summary>
+        RateLimitado = 5
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Estado sanitario o de calidad de un lote de producto en el sistema de inventario.
+    /// Controla si el lote puede ser utilizado, asignado o vendido.
+    /// </summary>
+    public enum EstadoLote
+    {
+        /// <summary>Lote aprobado para uso normal. Stock disponible para asignación.</summary>
+        Aprobado = 1,
+        /// <summary>Lote bloqueado temporalmente. No disponible hasta nueva revisión.</summary>
+        Bloqueado = 2,
+        /// <summary>Lote caducado. Fecha de caducidad superada. No puede ser usado.</summary>
+        Caducado = 3,
+        /// <summary>
+        /// Lote en cuarentena pendiente de análisis de calidad.
+        /// Recibido pero no disponible hasta superar el control de calidad.
+        /// </summary>
+        EnCuarentena = 4,
+        /// <summary>Lote agotado. Stock = 0. Se conserva por trazabilidad histórica.</summary>
+        Agotado = 5,
+        /// <summary>Lote devuelto al proveedor. Ya no está físicamente en el almacén.</summary>
+        Devuelto = 6
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Estado del ciclo de vida de un movimiento de inventario.
+    /// Los movimientos completados afectan al stock en tiempo real.
+    /// </summary>
+    public enum EstadoMovimiento
+    {
+        /// <summary>Movimiento creado pero pendiente de revisión o autorización.</summary>
+        Pendiente = 1,
+        /// <summary>Movimiento autorizado y que ha afectado al stock del sistema.</summary>
+        Completado = 2,
+        /// <summary>Movimiento rechazado. No afecta al stock. Requiere nuevo movimiento.</summary>
+        Rechazado = 3,
+        /// <summary>
+        /// Movimiento anulado o revertido mediante un movimiento compensatorio.
+        /// El stock queda en el estado anterior al movimiento original.
+        /// </summary>
+        Reversado = 4
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>Estado del ciclo de vida de la nómina mensual de un empleado.</summary>
+    public enum EstadoNomina
+    {
+        /// <summary>Nómina generada automáticamente o manualmente. Pendiente de revisión.</summary>
+        Borrador = 1,
+        /// <summary>Nómina cerrada y bloqueada. No puede modificarse. Lista para pago.</summary>
+        Cerrada = 2,
+        /// <summary>Nómina pagada. El importe ha sido transferido al empleado.</summary>
+        Pagada = 3
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Estado del ciclo de vida de una orden de compra emitida a un proveedor.
+    /// Los estados siguen un flujo lineal con posibilidad de anulación en cualquier punto
+    /// previo a la recepción total de la mercancía.
+    /// </summary>
+    public enum EstadoOrdenCompra
+    {
+        /// <summary>Orden creada pero pendiente de revisión y aprobación interna.</summary>
+        Borrador = 1,
+        /// <summary>Orden pendiente de aprobación por el nivel jerárquico requerido.</summary>
+        PendienteAprobacion = 2,
+        /// <summary>Orden aprobada internamente y pendiente de envío al proveedor.</summary>
+        Aprobada = 3,
+        /// <summary>Orden enviada al proveedor por email. Esperando confirmación.</summary>
+        Enviada = 4,
+        /// <summary>Proveedor confirmó el pedido. Esperando la entrega.</summary>
+        Confirmada = 5,
+        /// <summary>
+        /// Mercancía recibida parcialmente. Recepción incompleta.
+        /// Permanece en este estado hasta recibir el resto o cerrar el pedido.
+        /// </summary>
+        RecepcionParcial = 6,
+        /// <summary>Toda la mercancía recibida y verificada. Orden completamente cerrada.</summary>
+        Completada = 7,
+        /// <summary>Orden anulada antes de recibir mercancía. No genera movimientos de inventario.</summary>
+        Anulada = 8
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Estado del ciclo de vida de una orden de servicio de limpieza.
+    /// Sigue el flujo desde la programación hasta la facturación.
+    /// </summary>
+    public enum EstadoOrdenServicio
+    {
+        /// <summary>Orden creada y pendiente de asignar equipo y programar fecha.</summary>
+        Pendiente = 1,
+        /// <summary>Orden programada con fecha, equipo y vehículo asignados.</summary>
+        Programada = 2,
+        /// <summary>Equipo confirmado y en desplazamiento hacia las instalaciones del cliente.</summary>
+        EnDesplazamiento = 3,
+        /// <summary>Servicio iniciado. El equipo está trabajando en las instalaciones.</summary>
+        EnEjecucion = 4,
+        /// <summary>Servicio completado por el equipo. Pendiente de validación del supervisor.</summary>
+        Completada = 5,
+        /// <summary>Servicio validado por el supervisor y aprobado para facturación.</summary>
+        Validada = 6,
+        /// <summary>Factura emitida para esta orden de servicio.</summary>
+        Facturada = 7,
+        /// <summary>Orden cancelada antes de ejecutarse. No genera coste ni factura.</summary>
+        Cancelada = 8,
+        /// <summary>Orden reprogramada a otra fecha. La orden original queda cerrada.</summary>
+        Reprogramada = 9
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Estado del procesamiento de un webhook recibido de un sistema externo.
+    /// </summary>
+    public enum EstadoProcesadoWebhook
+    {
+        /// <summary>Webhook recibido y pendiente de procesar por IIntegracionService.</summary>
+        Pendiente = 1,
+        /// <summary>Webhook procesado exitosamente. Los datos fueron actualizados en BD.</summary>
+        Procesado = 2,
+        /// <summary>Error al procesar el webhook. Se reintentará automáticamente por Hangfire.</summary>
+        Error = 3,
+        /// <summary>Webhook ignorado porque el tipo o los datos no son reconocidos.</summary>
+        Ignorado = 4,
+        /// <summary>Webhook descartado por duplicado (ya fue procesado anteriormente).</summary>
+        Duplicado = 5
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Estado del ciclo de vida de una remesa bancaria SEPA de domiciliación de recibos.
+    /// Sigue el flujo de presentación al banco hasta la confirmación o devolución.
+    /// </summary>
+    public enum EstadoRemesa
+    {
+        /// <summary>Remesa en preparación. Facturas seleccionadas pero XML no generado.</summary>
+        EnPreparacion = 1,
+        /// <summary>Fichero XML SEPA generado y listo para presentar al banco.</summary>
+        Generada = 2,
+        /// <summary>Remesa presentada al banco para su procesamiento.</summary>
+        Presentada = 3,
+        /// <summary>Banco procesó la remesa. Todos los recibos cobrados exitosamente.</summary>
+        Cobrada = 4,
+        /// <summary>
+        /// Remesa con devoluciones parciales (algunos recibos devueltos con códigos R-transaction).
+        /// Requiere gestión individual de los recibos devueltos.
+        /// </summary>
+        ConDevoluciones = 5,
+        /// <summary>Remesa cancelada antes de presentar al banco.</summary>
+        Cancelada = 6
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>Estado del ciclo de vida de una ruta de servicio diaria.</summary>
+    public enum EstadoRutaServicio
+    {
+        /// <summary>Ruta planificada pero no iniciada. El vehículo aún no ha salido.</summary>
+        Planificada = 1,
+        /// <summary>Ruta en curso. El vehículo está realizando las visitas programadas.</summary>
+        EnCurso = 2,
+        /// <summary>Ruta completada. Todas las órdenes han sido atendidas y el vehículo ha vuelto.</summary>
+        Completada = 3,
+        /// <summary>Ruta cancelada antes de comenzar.</summary>
+        Cancelada = 4
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Estado del proceso de sincronización de operaciones offline realizadas
+    /// por un empleado desde la PWA en campo sin conexión a internet.
+    /// </summary>
+    public enum EstadoSincronizacion
+    {
+        /// <summary>Operaciones offline pendientes de sincronizar con el servidor.</summary>
+        Pendiente = 1,
+        /// <summary>Sincronización en curso. No interrumpir.</summary>
+        EnProceso = 2,
+        /// <summary>Sincronización completada exitosamente. Todas las operaciones procesadas.</summary>
+        Completada = 3,
+        /// <summary>Sincronización completada con conflictos que requieren resolución manual.</summary>
+        ConConflictos = 4,
+        /// <summary>Sincronización fallida por error de red o del servidor. Reintentará automáticamente.</summary>
+        Error = 5
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Estado del ciclo de vida de una solicitud GDPR desde su recepción hasta su resolución.
+    /// </summary>
+    public enum EstadoSolicitudGDPR
+    {
+        /// <summary>Solicitud recibida, pendiente de revisión por el responsable de datos.</summary>
+        Pendiente = 1,
+        /// <summary>Solicitud en proceso de tramitación. Plazo máximo legal: 30 días (Art. 12 RGPD).</summary>
+        EnProceso = 2,
+        /// <summary>Solicitud completada satisfactoriamente. Se notificó al interesado.</summary>
+        Completada = 3,
+        /// <summary>Solicitud rechazada con motivo justificado. Se notificó al interesado.</summary>
+        Rechazada = 4,
+        /// <summary>Solicitud expirada sin tramitar. Superado el plazo legal de 30 días.</summary>
+        Expirada = 5
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>Estado operativo actual de un vehículo de la flota.</summary>
+    public enum EstadoVehiculo
+    {
+        /// <summary>Vehículo operativo y disponible para asignación.</summary>
+        Disponible = 1,
+        /// <summary>Vehículo asignado a un equipo o ruta en curso.</summary>
+        EnUso = 2,
+        /// <summary>Vehículo en taller para mantenimiento preventivo o correctivo.</summary>
+        EnMantenimiento = 3,
+        /// <summary>Vehículo inmovilizado por avería grave. Fuera de servicio temporal.</summary>
+        Averiado = 4,
+        /// <summary>Vehículo dado de baja definitiva de la flota.</summary>
+        DadoDeBaja = 5,
+        /// <summary>Vehículo inmovilizado por sanción, embargo o retirada de circulación.</summary>
+        Inmovilizado = 6
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Estrategia de caché del Service Worker para recursos de la PWA.
+    /// </summary>
+    public enum EstrategiaCache
+    {
+        /// <summary>Intenta red primero; si falla, usa caché. Ideal para llamadas a la API.</summary>
+        NetworkFirst = 1,
+        /// <summary>Usa caché primero; si no existe, va a red. Ideal para assets estáticos.</summary>
+        CacheFirst = 2,
+        /// <summary>Solo usa caché. Sin red en ningún caso. Para recursos completamente estáticos.</summary>
+        CacheOnly = 3,
+        /// <summary>Solo usa red. Sin caché en ningún caso. Para datos siempre actualizados.</summary>
+        NetworkOnly = 4,
+        /// <summary>Responde con caché inmediatamente y actualiza en segundo plano.</summary>
+        StaleWhileRevalidate = 5
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Formato de salida de un reporte generado por el sistema.
+    /// Determina la librería usada para la generación: QuestPDF, ClosedXML o visualización web.
+    /// </summary>
+    public enum FormatoSalidaReporte
+    {
+        /// <summary>Reporte en formato PDF generado con QuestPDF. Descargable e imprimible.</summary>
+        PDF = 1,
+        /// <summary>Reporte en formato Excel (.xlsx) generado con ClosedXML. Editable.</summary>
+        Excel = 2,
+        /// <summary>Visualización en pantalla dentro de la interfaz web. Sin descarga.</summary>
+        Pantalla = 3
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Frecuencia con la que se recalcula y persiste el valor de un KPI.
+    /// Determina la programación del job de Hangfire que ejecuta IAnalíticaService.CalcularKPI.
+    /// </summary>
+    public enum FrecuenciaCalculoKPI
+    {
+        /// <summary>KPI recalculado cada hora (valores muy volátiles: pedidos en curso, stock).</summary>
+        Horaria = 1,
+        /// <summary>KPI recalculado una vez al día (la mayoría de KPIs operativos).</summary>
+        Diaria = 2,
+        /// <summary>KPI recalculado una vez por semana (tendencias, RFM, segmentación).</summary>
+        Semanal = 3,
+        /// <summary>KPI recalculado una vez por mes (nóminas, comisiones, rentabilidad mensual).</summary>
+        Mensual = 4,
+        /// <summary>KPI recalculado cada trimestre (análisis estratégico, evolución anual).</summary>
+        Trimestral = 5
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Frecuencia de generación automática de facturas en una programación recurrente.
+    /// Usada en ProgramacionFacturaRecurrente para determinar el intervalo entre emisiones.
+    /// </summary>
+    public enum FrecuenciaFacturacion
+    {
+        /// <summary>Factura generada una vez a la semana.</summary>
+        Semanal = 1,
+        /// <summary>Factura generada una vez cada dos semanas.</summary>
+        Quincenal = 2,
+        /// <summary>Factura generada una vez al mes. La más habitual en contratos de limpieza.</summary>
+        Mensual = 3,
+        /// <summary>Factura generada una vez cada dos meses.</summary>
+        Bimestral = 4,
+        /// <summary>Factura generada una vez cada tres meses.</summary>
+        Trimestral = 5,
+        /// <summary>Factura generada una vez cada seis meses.</summary>
+        Semestral = 6,
+        /// <summary>Factura generada una vez al año.</summary>
+        Anual = 7
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Frecuencia de prestación del servicio de limpieza contratado.
+    /// Determina el intervalo entre órdenes de servicio generadas automáticamente.
+    /// </summary>
+    public enum FrecuenciaServicio
+    {
+        /// <summary>Servicio puntual o bajo demanda. No genera órdenes automáticas.</summary>
+        Puntual = 1,
+        /// <summary>Servicio diario de lunes a viernes.</summary>
+        Diaria = 2,
+        /// <summary>Servicio dos o tres veces por semana.</summary>
+        VariasVecesSemana = 3,
+        /// <summary>Servicio una vez por semana en el día pactado.</summary>
+        Semanal = 4,
+        /// <summary>Servicio dos veces al mes.</summary>
+        Quincenal = 5,
+        /// <summary>Servicio una vez al mes.</summary>
+        Mensual = 6,
+        /// <summary>Servicio trimestral (limpieza a fondo estacional).</summary>
+        Trimestral = 7,
+        /// <summary>Servicio semestral.</summary>
+        Semestral = 8,
+        /// <summary>Servicio anual (limpieza general de fin de año).</summary>
+        Anual = 9
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Técnica de anonimización aplicada sobre los datos personales del interesado.
+    /// </summary>
+    public enum MetodoAnonimizacion
+    {
+        /// <summary>
+        /// Sustitución de valores personales por un token pseudónimo.
+        /// Ejemplo: Nombre → "GDPR_DEL_a3f9b2c1", Email → "gdpr_a3f9b2c1@noreply.gdpr".
+        /// Método principal del sistema CruiserCat.
+        /// </summary>
+        Pseudonimizacion = 1,
+        /// <summary>Eliminación de caracteres intermedios manteniendo estructura del campo.</summary>
+        Enmascaramiento = 2,
+        /// <summary>Sustitución por valores ficticios genéricos sin relación con el original.</summary>
+        Generalizacion = 3
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Método por el que se desbloqueó una cuenta previamente bloqueada.
+    /// </summary>
+    public enum MetodoDesbloqueo
+    {
+        /// <summary>Desbloqueo manual realizado por un administrador desde el panel.</summary>
+        ManualAdmin = 1,
+        /// <summary>Desbloqueo automático por expiración del tiempo de bloqueo configurado.</summary>
+        AutomaticoExpiracion = 2,
+        /// <summary>Desbloqueo mediante token de recuperación enviado al email del usuario.</summary>
+        TokenRecuperacion = 3,
+        /// <summary>Desbloqueo tras cambio exitoso de contraseña.</summary>
+        CambioContrasena = 4
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Tipo o naturaleza del método de pago utilizado para cobrar facturas.
+    /// Determina el flujo de conciliación y los campos requeridos al registrar un pago.
+    /// </summary>
+    public enum MetodoPagoTipo
+    {
+        /// <summary>Transferencia bancaria SEPA o internacional.</summary>
+        Transferencia = 1,
+        /// <summary>Domiciliación bancaria SEPA (adeudo directo, norma 19.14).</summary>
+        DomiciliacionSEPA = 2,
+        /// <summary>Pago con tarjeta de crédito o débito (TPV o pasarela online).</summary>
+        Tarjeta = 3,
+        /// <summary>Pago en efectivo (solo para clientes presenciales).</summary>
+        Efectivo = 4,
+        /// <summary>Cheque bancario o pagaré.</summary>
+        Cheque = 5,
+        /// <summary>Pago a través de pasarela de pago online (Stripe, PayPal, Redsys).</summary>
+        PasarelaOnline = 6,
+        /// <summary>Compensación o cruce de deudas entre cliente y proveedor.</summary>
+        Compensacion = 7,
+        /// <summary>Pago aplazado mediante financiación externa.</summary>
+        Financiacion = 8
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Modo en que se completó una orden de servicio o un fichaje.
+    /// Permite distinguir las operaciones realizadas con conexión a internet
+    /// de las sincronizadas posteriormente desde el modo offline de la PWA.
+    /// </summary>
+    public enum ModoCompleto
+    {
+        /// <summary>Operación completada con conexión activa al servidor.</summary>
+        Online = 1,
+        /// <summary>Operación completada sin conexión y sincronizada posteriormente.</summary>
+        Offline = 2
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Naturaleza o dirección del flujo de mercancía en un tipo de movimiento de inventario.
+    /// Determina si el movimiento aumenta, disminuye o no afecta al stock disponible.
+    /// </summary>
+    public enum NaturalezaMovimiento
+    {
+        /// <summary>El movimiento incrementa el stock disponible en el almacén destino.</summary>
+        Entrada = 1,
+        /// <summary>El movimiento decrementa el stock disponible en el almacén origen.</summary>
+        Salida = 2,
+        /// <summary>
+        /// El movimiento implica tanto entrada como salida (transferencia entre almacenes).
+        /// Se generan dos registros: uno de salida y uno de entrada relacionados.
+        /// </summary>
+        Mixto = 3
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Nivel de urgencia de una alerta de vencimiento próximo.
+    /// Determina el color del semáforo visual en la interfaz.
+    /// </summary>
+    public enum NivelAlertaVencimiento
+    {
+        /// <summary>Verde: vencimiento lejano, sin acción inmediata requerida. Más de 30 días.</summary>
+        Verde = 1,
+        /// <summary>Amarillo: vencimiento próximo, revisar en los próximos días. Entre 15 y 30 días.</summary>
+        Amarillo = 2,
+        /// <summary>Naranja: vencimiento inminente, acción urgente. Entre 7 y 15 días.</summary>
+        Naranja = 3,
+        /// <summary>Rojo: vencimiento en menos de 7 días o ya vencido. Acción inmediata requerida.</summary>
+        Rojo = 4
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Nivel de severidad o importancia de una entrada en la bitácora del sistema.
+    /// </summary>
+    public enum NivelBitacora
+    {
+        /// <summary>Información general sobre operaciones normales del sistema.</summary>
+        Informacion = 1,
+
+        /// <summary>Advertencia sobre situaciones inusuales que no impiden la operación.</summary>
+        Advertencia = 2,
+
+        /// <summary>Error que impidió completar una operación.</summary>
+        Error = 3,
+
+        /// <summary>Error crítico que afecta la estabilidad o seguridad del sistema.</summary>
+        Critico = 4,
+
+        /// <summary>Evento de seguridad relevante (logins, cambios de permisos, bloqueos).</summary>
+        Seguridad = 5,
+
+        /// <summary>Operación relacionada con GDPR (consentimientos, anonimizaciones, exportaciones).</summary>
+        GDPR = 6
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Nivel de confidencialidad de un archivo adjunto que determina
+    /// quién puede acceder a él y si requiere cifrado en el almacenamiento.
+    /// </summary>
+    public enum NivelConfidencialidadArchivo
+    {
+        /// <summary>Archivo público. Puede ser visto por cualquier usuario del sistema.</summary>
+        Publico = 1,
+        /// <summary>Archivo interno. Solo visible para empleados con el permiso correspondiente.</summary>
+        Interno = 2,
+        /// <summary>Archivo confidencial. Solo visible para el rol Supervisor o superior.</summary>
+        Confidencial = 3,
+        /// <summary>Archivo secreto. Solo visible para Administrador o el propietario del registro.</summary>
+        Secreto = 4
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>Nivel de dificultad técnica de un protocolo o servicio de limpieza.</summary>
+    public enum NivelDificultad
+    {
+        /// <summary>Servicio básico que puede realizar cualquier empleado con formación estándar.</summary>
+        Basico = 1,
+        /// <summary>Servicio que requiere experiencia previa y conocimiento de productos específicos.</summary>
+        Intermedio = 2,
+        /// <summary>Servicio especializado que requiere formación certificada y experiencia avanzada.</summary>
+        Avanzado = 3,
+        /// <summary>Servicio altamente especializado con riesgo (altura, productos peligrosos, industria).</summary>
+        Experto = 4
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Frecuencia de ejecución automática de un reporte guardado.
+    /// Determina la programación del job de Hangfire que genera y envía el reporte.
+    /// </summary>
+    public enum PeriodicidadReporte
+    {
+        /// <summary>Ejecución manual bajo demanda. No se programa automáticamente.</summary>
+        Puntual = 1,
+        /// <summary>Ejecución automática diaria a la hora configurada.</summary>
+        Diaria = 2,
+        /// <summary>Ejecución automática semanal el día y hora configurados.</summary>
+        Semanal = 3,
+        /// <summary>Ejecución automática mensual el día del mes configurado.</summary>
+        Mensual = 4,
+        /// <summary>Ejecución automática trimestral al inicio de cada trimestre.</summary>
+        Trimestral = 5,
+        /// <summary>Ejecución automática anual al inicio de cada año.</summary>
+        Anual = 6
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Plataforma del dispositivo receptor de las push notifications.
+    /// Determina el protocolo de envío: Web Push API, FCM (Android) o APNs (iOS).
+    /// </summary>
+    public enum PlataformaPush
+    {
+        /// <summary>Navegador web de escritorio o móvil (Web Push API con VAPID).</summary>
+        Web = 1,
+        /// <summary>Aplicación Android (Firebase Cloud Messaging - FCM).</summary>
+        Android = 2,
+        /// <summary>Aplicación iOS (Apple Push Notification service - APNs).</summary>
+        iOS = 3
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Plataforma o sistema operativo desde el que se instaló o usa la PWA.
+    /// </summary>
+    public enum PlataformaPWA
+    {
+        /// <summary>Navegador web de escritorio (no instalada como app).</summary>
+        Web = 1,
+        /// <summary>PWA instalada en dispositivo Android (Chrome, Edge, Samsung Internet).</summary>
+        Android = 2,
+        /// <summary>PWA instalada en dispositivo iOS/iPadOS (Safari).</summary>
+        iOS = 3,
+        /// <summary>PWA instalada en Windows 10/11 (Edge).</summary>
+        Windows = 4,
+        /// <summary>PWA instalada en macOS (Chrome, Edge, Safari).</summary>
+        macOS = 5,
+        /// <summary>Plataforma no identificada.</summary>
+        Desconocida = 6
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Nivel de prioridad de una tarea en la cola de procesamiento.
+    /// Las tareas con mayor prioridad se procesan antes.
+    /// </summary>
+    public enum PrioridadCola
+    {
+        /// <summary>Prioridad crítica: emails de seguridad, alertas de sistema. Se procesa inmediatamente.</summary>
+        Critica = 1,
+        /// <summary>Prioridad alta: emails de facturas, notificaciones importantes.</summary>
+        Alta = 2,
+        /// <summary>Prioridad normal: notificaciones estándar, reportes bajo demanda.</summary>
+        Normal = 3,
+        /// <summary>Prioridad baja: emails de marketing, cálculos analíticos periódicos.</summary>
+        Baja = 4
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Nivel de prioridad de una notificación que determina su presentación visual,
+    /// el sonido de alerta y el tiempo de auto-ocultado en la interfaz.
+    /// </summary>
+    public enum PrioridadNotificacion
+    {
+        /// <summary>Notificación informativa sin urgencia. Auto-ocultar en 5 segundos.</summary>
+        Info = 1,
+        /// <summary>Notificación de éxito de una operación. Auto-ocultar en 4 segundos.</summary>
+        Exito = 2,
+        /// <summary>Advertencia que requiere atención pero no es crítica. Auto-ocultar en 8 segundos.</summary>
+        Advertencia = 3,
+        /// <summary>Error o situación crítica que requiere acción inmediata. Persistente hasta que el usuario la cierra.</summary>
+        Error = 4,
+        /// <summary>Alerta de máxima urgencia (stock agotado, ITV vencida). Suena y persiste.</summary>
+        Critica = 5
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Nivel de prioridad de una orden de servicio.
+    /// Determina el orden de atención cuando hay conflicto de recursos
+    /// y la urgencia comunicada al equipo asignado.
+    /// </summary>
+    public enum PrioridadServicio
+    {
+        /// <summary>Prioridad baja. Se atiende cuando haya disponibilidad de equipo.</summary>
+        Baja = 1,
+        /// <summary>Prioridad normal. Orden estándar según la planificación.</summary>
+        Normal = 2,
+        /// <summary>Prioridad alta. Se atiende antes que las órdenes normales.</summary>
+        Alta = 3,
+        /// <summary>Urgente. Requiere atención inmediata. Notificación push al equipo.</summary>
+        Urgente = 4
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Régimen fiscal especial aplicable a una provincia o región española.
+    /// Afecta al tipo de impuesto aplicable en facturas con clientes de esa región.
+    /// </summary>
+    public enum RegimenFiscalEspecial
+    {
+        /// <summary>Régimen general de IVA (Art. 68 LIVA). Aplica a la Península y Baleares.</summary>
+        IVAGeneral = 1,
+        /// <summary>
+        /// IGIC - Impuesto General Indirecto Canario (Ley 20/1991).
+        /// Aplica en las Islas Canarias. Tipo general 7%, reducido 3%, 0%.
+        /// </summary>
+        IGICCanarias = 2,
+        /// <summary>
+        /// IPSI - Impuesto sobre la Producción, los Servicios e Importación.
+        /// Aplica en Ceuta (Ley 8/1991) y Melilla (Ley 8/1991).
+        /// </summary>
+        IPSICeutaMelilla = 3,
+        /// <summary>Sin régimen especial (territorio fuera del ámbito fiscal español).</summary>
+        SinRegimenEspecial = 4
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Resultado o desenlace de una interacción comercial con el cliente.
+    /// Permite medir la efectividad de las gestiones comerciales del equipo.
+    /// </summary>
+    public enum ResultadoInteraccion
+    {
+        /// <summary>Interacción positiva. Cliente interesado en contratar o renovar.</summary>
+        Positivo = 1,
+        /// <summary>Interacción neutral. Sin avance ni retroceso en la relación comercial.</summary>
+        Neutral = 2,
+        /// <summary>Interacción negativa. Cliente desinteresado, queja o amenaza de baja.</summary>
+        Negativo = 3,
+        /// <summary>Venta o contratación cerrada como resultado directo de la interacción.</summary>
+        VentaCerrada = 4,
+        /// <summary>No se pudo contactar con el cliente. Pendiente de reintento.</summary>
+        SinContacto = 5,
+        /// <summary>Cliente solicitó información adicional. Pendiente de enviar propuesta.</summary>
+        SolicitaInformacion = 6
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Rol que desempeña un empleado en una orden de servicio específica.
+    /// </summary>
+    public enum RolEmpleadoOrden
+    {
+        /// <summary>Responsable principal de la orden. Firma el acta de servicio.</summary>
+        Responsable = 1,
+        /// <summary>Empleado de apoyo. Trabaja bajo la dirección del responsable.</summary>
+        Auxiliar = 2,
+        /// <summary>Supervisor que inspecciona la calidad del servicio sin ejecutarlo.</summary>
+        Supervisor = 3
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Rol funcional que desempeña un empleado dentro de un equipo de trabajo.
+    /// Determina las responsabilidades y permisos en la ejecución de órdenes de servicio.
+    /// </summary>
+    public enum RolEnEquipo
+    {
+        /// <summary>Líder del equipo. Responsable de la ejecución y calidad del servicio.</summary>
+        Lider = 1,
+        /// <summary>Miembro auxiliar del equipo. Ejecuta tareas bajo supervisión del líder.</summary>
+        Auxiliar = 2,
+        /// <summary>Especialista técnico para servicios que requieren cualificación específica.</summary>
+        Especialista = 3,
+        /// <summary>Supervisor externo que acompaña al equipo para control de calidad.</summary>
+        Supervisor = 4,
+        /// <summary>Conductor del vehículo asignado al equipo.</summary>
+        Conductor = 5
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Segmento comercial asignado a un cliente según su valor, frecuencia
+    /// y recencia de compra/contratación (análisis RFM).
+    /// Determina el nivel de atención, descuentos y prioridad en la gestión comercial.
+    /// </summary>
+    public enum SegmentoCliente
+    {
+        /// <summary>
+        /// Cliente VIP: alto valor, alta frecuencia y reciente. Prioridad máxima.
+        /// Representa el top ~10% de clientes por facturación.
+        /// </summary>
+        VIP = 1,
+        /// <summary>
+        /// Cliente estándar: buen historial de contratación y pagos regulares.
+        /// </summary>
+        Estandar = 2,
+        /// <summary>
+        /// Cliente nuevo: registrado recientemente, aún sin historial suficiente para clasificar.
+        /// </summary>
+        Nuevo = 3,
+        /// <summary>
+        /// Cliente en riesgo: bajada reciente en frecuencia o valor de contratación.
+        /// Requiere acción comercial preventiva.
+        /// </summary>
+        EnRiesgo = 4,
+        /// <summary>
+        /// Cliente inactivo: sin contrataciones en los últimos N meses (configurable).
+        /// Candidato para campaña de reactivación.
+        /// </summary>
+        Inactivo = 5,
+        /// <summary>
+        /// Cliente en recuperación: estaba inactivo y ha vuelto a contratar recientemente.
+        /// </summary>
+        EnRecuperacion = 6
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Nivel de severidad de una incidencia de servicio.
+    /// Determina la urgencia de la respuesta y las acciones correctivas requeridas.
+    /// </summary>
+    public enum SeveridadIncidencia
+    {
+        /// <summary>Incidencia menor sin impacto económico ni reputacional significativo.</summary>
+        Baja = 1,
+        /// <summary>Incidencia con impacto moderado. Requiere seguimiento y respuesta al cliente.</summary>
+        Media = 2,
+        /// <summary>Incidencia grave con impacto económico o en la relación con el cliente.</summary>
+        Alta = 3,
+        /// <summary>Incidencia crítica: accidente laboral, daño grave, riesgo legal inmediato.</summary>
+        Critica = 4
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Tendencia de evolución de un KPI respecto al período anterior.
+    /// Calculada automáticamente por IAnalíticaService al registrar el nuevo valor.
+    /// Determina el indicador visual (flecha arriba/abajo/horizontal) en el dashboard.
+    /// </summary>
+    public enum TendenciaKPI
+    {
+        /// <summary>El valor del KPI está mejorando respecto al período anterior.</summary>
+        Alza = 1,
+        /// <summary>El valor del KPI está empeorando respecto al período anterior.</summary>
+        Baja = 2,
+        /// <summary>El valor del KPI se mantiene estable sin variación significativa.</summary>
+        Estable = 3,
+        /// <summary>No hay datos del período anterior para calcular la tendencia.</summary>
+        SinDatos = 4
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Tipo de credencial o mecanismo de acceso a las instalaciones del cliente.
+    /// Los valores se almacenan cifrados en la entidad ClavesAccesoInstalacion.
+    /// </summary>
+    public enum TipoAccesoInstalacion
+    {
+        /// <summary>Código numérico de teclado para portón, portero automático o alarma.</summary>
+        CodigoTeclado = 1,
+        /// <summary>Tarjeta RFID o llave electrónica de acceso.</summary>
+        TarjetaRFID = 2,
+        /// <summary>Llave física convencional del inmueble.</summary>
+        LlaveFisica = 3,
+        /// <summary>Código de aplicación móvil o QR para acceso sin llave.</summary>
+        CodigoApp = 4,
+        /// <summary>Código PIN del sistema de alarma (activación/desactivación).</summary>
+        CodigoAlarma = 5,
+        /// <summary>Credenciales de videoportero o intercomunicador.</summary>
+        Videoportero = 6,
+        /// <summary>Otro tipo de credencial de acceso no contemplado.</summary>
+        Otro = 99
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Tipo de asignación de productos desde el almacén hacia el destino.
+    /// Determina si los productos se asignan a un cliente, a un empleado
+    /// para uso en campo, o se consumen internamente.
+    /// </summary>
+    public enum TipoAsignacionProducto
+    {
+        /// <summary>Asignación de productos a un cliente (genera factura o albarán).</summary>
+        AsignacionCliente = 1,
+        /// <summary>Asignación de materiales de trabajo a un empleado para uso en campo.</summary>
+        AsignacionEmpleado = 2,
+        /// <summary>Consumo interno de productos por la empresa (no facturable).</summary>
+        ConsumoInterno = 3,
+        /// <summary>Muestra o donación de producto a cliente potencial sin cargo.</summary>
+        Muestra = 4
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Tipo de atributo diferenciador de un producto.
+    /// Determina el widget de selección en la interfaz y la validación del valor.
+    /// </summary>
+    public enum TipoAtributoProducto
+    {
+        /// <summary>Color representado por un código hexadecimal (#RRGGBB). Muestra color picker.</summary>
+        Color = 1,
+        /// <summary>Talla o tamaño (XS, S, M, L, XL, XXL o numérico).</summary>
+        Talla = 2,
+        /// <summary>Material o composición del producto (algodón, acero, plástico, etc.).</summary>
+        Material = 3,
+        /// <summary>Capacidad o volumen (litros, kg, ml, unidades).</summary>
+        Capacidad = 4,
+        /// <summary>Fragancia o aroma del producto (para productos de limpieza).</summary>
+        Aroma = 5,
+        /// <summary>Concentración o dilución del producto químico.</summary>
+        Concentracion = 6,
+        /// <summary>Presentación comercial (spray, gel, polvo, pastilla, rollo).</summary>
+        Presentacion = 7,
+        /// <summary>Otro tipo de atributo personalizado no contemplado en los anteriores.</summary>
+        Otro = 99
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Tipo de ausencia laboral de un empleado según la causa que la motiva.
+    /// Determina si la ausencia es remunerada, si requiere justificante y
+    /// si afecta a la facturación del servicio asignado al cliente.
+    /// </summary>
+    public enum TipoAusencia
+    {
+        /// <summary>Baja médica por enfermedad común o accidente no laboral.</summary>
+        BajaMedica = 1,
+        /// <summary>Accidente de trabajo o enfermedad profesional (cobertura mutua).</summary>
+        AccidenteTrabajo = 2,
+        /// <summary>Permiso de maternidad o paternidad remunerado.</summary>
+        Maternidad = 3,
+        /// <summary>Permiso por asuntos propios (máximo días según convenio, no remunerado).</summary>
+        AsuntosPropios = 4,
+        /// <summary>Permiso retribuido por causa justificada: matrimonio, fallecimiento familiar, etc.</summary>
+        PermisoRetribuido = 5,
+        /// <summary>Huelga legal. No remunerada. Requiere comunicación previa a RRHH.</summary>
+        Huelga = 6,
+        /// <summary>Ausencia injustificada sin comunicación previa. Genera incidencia RRHH.</summary>
+        Injustificada = 7,
+        /// <summary>Excedencia voluntaria o forzosa. Suspende temporalmente el contrato.</summary>
+        Excedencia = 8,
+        /// <summary>Reducción de jornada por cuidado de familiar o lactancia.</summary>
+        ReduccionJornada = 9,
+        /// <summary>Suspensión disciplinaria de empleo y sueldo.</summary>
+        SuspensionDisciplinaria = 10
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Motivo o contexto del cambio de contraseña registrado en el historial.
+    /// </summary>
+    public enum TipoCambioContrasena
+    {
+        /// <summary>Cambio voluntario iniciado por el propio usuario.</summary>
+        CambioManual = 1,
+        /// <summary>Cambio forzado por política de expiración de contraseñas.</summary>
+        CambioForzadoPolitica = 2,
+        /// <summary>Cambio tras proceso de recuperación de contraseña olvidada.</summary>
+        Recuperacion = 3,
+        /// <summary>Contraseña provisional asignada al crear la cuenta por un administrador.</summary>
+        PasswordInicialAdmin = 4,
+        /// <summary>Cambio realizado directamente por un administrador del sistema.</summary>
+        ResetPorAdmin = 5,
+        /// <summary>Cambio obligatorio en el primer inicio de sesión del usuario.</summary>
+        PrimerIngreso = 6
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Motivo o causa del cambio de precio de un producto registrado en HistorialPrecioProducto.
+    /// </summary>
+    public enum TipoCambioPrecio
+    {
+        /// <summary>Cambio por incremento de costos del proveedor.</summary>
+        IncrementoCoste = 1,
+        /// <summary>Cambio por reducción de costos o mejora en condiciones de compra.</summary>
+        ReduccionCoste = 2,
+        /// <summary>Ajuste por inflación o revisión periódica de precios.</summary>
+        AjusteInflacion = 3,
+        /// <summary>Cambio por política de precios de la empresa (nueva estrategia de margen).</summary>
+        PoliticaEmpresa = 4,
+        /// <summary>Precio especial de campaña o promoción temporal.</summary>
+        Promocion = 5,
+        /// <summary>Corrección de un error en el precio previamente registrado.</summary>
+        Correccion = 6,
+        /// <summary>Cambio por actualización de la lista de precios activa.</summary>
+        ActualizacionLista = 7
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Tipo o estándar del código de barras o código bidimensional de un producto.
+    /// Determina el algoritmo de lectura en QuaggaJS / ZXing-JS (escáner PWA).
+    /// </summary>
+    public enum TipoCodigoBarras
+    {
+        /// <summary>EAN-13: código de barras de 13 dígitos. Estándar europeo para productos de consumo.</summary>
+        EAN13 = 1,
+        /// <summary>EAN-8: código de barras de 8 dígitos. Para productos pequeños con espacio reducido.</summary>
+        EAN8 = 2,
+        /// <summary>UPC-A: código de barras de 12 dígitos. Estándar norteamericano.</summary>
+        UPCA = 3,
+        /// <summary>Code 128: código de barras alfanumérico de alta densidad. Para uso interno.</summary>
+        Code128 = 4,
+        /// <summary>Code 39: código de barras alfanumérico legacy. Usado en almacenes y logística.</summary>
+        Code39 = 5,
+        /// <summary>QR Code: código bidimensional con gran capacidad de datos.</summary>
+        QR = 6,
+        /// <summary>Data Matrix: código bidimensional compacto para espacios reducidos.</summary>
+        DataMatrix = 7,
+        /// <summary>PDF417: código de barras apilado para documentos (albaranes, etiquetas).</summary>
+        PDF417 = 8
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Tipo de consentimiento GDPR que puede otorgar o revocar un interesado.
+    /// Basado en los fundamentos legales del Art. 6 del RGPD.
+    /// </summary>
+    public enum TipoConsentimientoGDPR
+    {
+        /// <summary>Consentimiento para envío de comunicaciones comerciales y promociones.</summary>
+        Marketing = 1,
+        /// <summary>Consentimiento para captura y procesamiento de datos de geolocalización GPS.</summary>
+        UbicacionGPS = 2,
+        /// <summary>Consentimiento para compartir datos con terceros (proveedores, socios).</summary>
+        DatosTerceros = 3,
+        /// <summary>Consentimiento para el tratamiento de datos de salud o sensibles.</summary>
+        DatosSensibles = 4,
+        /// <summary>Consentimiento para el envío de notificaciones push en el navegador.</summary>
+        NotificacionesPush = 5,
+        /// <summary>Aceptación de la política de privacidad y términos del servicio.</summary>
+        PoliticaPrivacidad = 6,
+        /// <summary>Consentimiento para el uso de cookies no esenciales y analítica.</summary>
+        Cookies = 7
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Rol o función del contacto adicional dentro de la entidad a la que pertenece.
+    /// Un contacto puede tener múltiples roles (flags booleanos en la entidad).
+    /// </summary>
+    public enum TipoContactoAdicional
+    {
+        /// <summary>Contacto para temas de facturación y gestión de pagos.</summary>
+        Facturacion = 1,
+        /// <summary>Contacto comercial para negociaciones y pedidos.</summary>
+        Comercial = 2,
+        /// <summary>Contacto técnico para soporte y coordinación de servicios.</summary>
+        Tecnico = 3,
+        /// <summary>Contacto de dirección o gerencia de la entidad.</summary>
+        Gerencia = 4,
+        /// <summary>Contacto de recursos humanos.</summary>
+        RRHH = 5,
+        /// <summary>Otro tipo de contacto no contemplado en los anteriores.</summary>
+        Otro = 99
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Alcance del conteo físico en un inventario cíclico.
+    /// Determina qué productos se incluyen en el proceso de conteo.
+    /// </summary>
+    public enum TipoConteoInventario
+    {
+        /// <summary>Conteo de todos los productos del almacén completo.</summary>
+        Total = 1,
+        /// <summary>Conteo de una categoría, zona o grupo de productos seleccionado.</summary>
+        Parcial = 2,
+        /// <summary>
+        /// Conteo basado en clasificación ABC: primero los A (mayor valor/rotación),
+        /// luego B y opcionalmente C. Metodología más eficiente para almacenes grandes.
+        /// </summary>
+        ABC = 3
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Tipo de cálculo del descuento en la entidad Descuento.
+    /// Determina si el valor del descuento es un porcentaje o un importe fijo.
+    /// </summary>
+    public enum TipoDescuento
+    {
+        /// <summary>Descuento como porcentaje del precio base. Ejemplo: 10% de descuento.</summary>
+        Porcentaje = 1,
+        /// <summary>Descuento como importe fijo en la moneda base. Ejemplo: 5,00 € de descuento.</summary>
+        ImporteFijo = 2,
+        /// <summary>
+        /// Precio fijo especial que sustituye completamente al precio base.
+        /// Ejemplo: precio especial de 45,00 € independientemente del precio original.
+        /// </summary>
+        PrecioEspecial = 3
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Propósito o uso de una dirección registrada en el sistema.
+    /// Una entidad puede tener múltiples direcciones con distintos tipos.
+    /// </summary>
+    public enum TipoDireccion
+    {
+        /// <summary>Dirección fiscal/legal registrada ante la autoridad tributaria.</summary>
+        Fiscal = 1,
+        /// <summary>Dirección de envío de mercancía o materiales.</summary>
+        Envio = 2,
+        /// <summary>Dirección del lugar donde se presta el servicio de limpieza.</summary>
+        Trabajo = 3,
+        /// <summary>Dirección de facturación (puede diferir de la fiscal en algunos casos).</summary>
+        Facturacion = 4,
+        /// <summary>Dirección particular del empleado (para RRHH y notificaciones).</summary>
+        Particular = 5,
+        /// <summary>Otra dirección no clasificada en los tipos anteriores.</summary>
+        Otro = 99
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Tipo de dispositivo desde el que se registra una sesión o dispositivo confiable.
+    /// </summary>
+    public enum TipoDispositivo
+    {
+        /// <summary>Ordenador de escritorio o portátil.</summary>
+        Desktop = 1,
+        /// <summary>Teléfono móvil (smartphone).</summary>
+        Mobile = 2,
+        /// <summary>Tablet o dispositivo de pantalla intermedia.</summary>
+        Tablet = 3,
+        /// <summary>Dispositivo de tipo desconocido o no clasificado.</summary>
+        Desconocido = 4
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Tipo de documento que pasa por el flujo de aprobación centralizado.
+    /// Determina las reglas, niveles y notificaciones del proceso de aprobación.
+    /// </summary>
+    public enum TipoDocumentoAprobacion
+    {
+        /// <summary>Orden de compra a proveedor que supera el umbral de importe configurado.</summary>
+        OrdenCompra = 1,
+        /// <summary>Factura de proveedor recibida pendiente de verificación y contabilización.</summary>
+        FacturaProveedor = 2,
+        /// <summary>Contrato de servicio nuevo o renovación que requiere autorización de dirección.</summary>
+        ContratoServicio = 3,
+        /// <summary>Cotización de servicio enviada a cliente que supera umbrales de descuento.</summary>
+        CotizacionServicio = 4,
+        /// <summary>Gasto de empleado (viáticos, combustible, materiales) que requiere aprobación.</summary>
+        GastoEmpleado = 5,
+        /// <summary>Ajuste de stock manual que supera el umbral de valor configurado.</summary>
+        AjusteInventario = 6,
+        /// <summary>Solicitud de ausencia o vacaciones de empleado pendiente de aprobación del supervisor.</summary>
+        AusenciaEmpleado = 7,
+        /// <summary>Liquidación de comisiones del período pendiente de aprobación de administración.</summary>
+        LiquidacionComision = 8
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Tipo de excepción al horario regular de un empleado.
+    /// Las excepciones modifican puntualmente la disponibilidad del empleado
+    /// sin cambiar su horario base en HorarioEmpleado.
+    /// </summary>
+    public enum TipoExcepcionHorario
+    {
+        /// <summary>El empleado está disponible en una fecha normalmente no laborable (hora extra, guardia).</summary>
+        Disponible = 1,
+        /// <summary>El empleado no está disponible en una fecha normalmente laborable (baja, asunto propio).</summary>
+        NoDisponible = 2,
+        /// <summary>El empleado tiene un horario diferente al habitual ese día específico.</summary>
+        HorarioEspecial = 3
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Tipo de documento de facturación según la normativa fiscal española.
+    /// Determina la obligatoriedad de campos, el cálculo del hash VeriFactu
+    /// y las validaciones de la cadena de integridad.
+    /// </summary>
+    public enum TipoFactura
+    {
+        /// <summary>
+        /// Factura ordinaria o completa. Documento principal de facturación.
+        /// Requiere todos los datos fiscales del emisor y receptor.
+        /// </summary>
+        Normal = 1,
+        /// <summary>
+        /// Factura rectificativa (nota de crédito o débito).
+        /// Debe referenciar la factura original que rectifica mediante FacturaOriginalId.
+        /// </summary>
+        Rectificativa = 2,
+        /// <summary>
+        /// Factura de abono completo de la factura original.
+        /// Anula económicamente la factura original sin eliminarla del sistema.
+        /// </summary>
+        Abono = 3,
+        /// <summary>
+        /// Factura proforma o presupuesto no vinculante.
+        /// No tiene efectos fiscales ni contables. No forma parte de la cadena VeriFactu.
+        /// </summary>
+        Proforma = 4,
+        /// <summary>
+        /// Factura simplificada (ticket) para importes inferiores a 400€.
+        /// No requiere NIF del receptor. Regulada por el Art. 7 RD 1619/2012.
+        /// </summary>
+        Simplificada = 5
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Tipo de formación o certificación laboral del empleado.
+    /// Las formaciones obligatorias (EsObligatoria=true) bloquean la asignación
+    /// del empleado a órdenes de servicio si están caducadas.
+    /// </summary>
+    public enum TipoFormacion
+    {
+        /// <summary>Prevención de Riesgos Laborales (PRL). Obligatoria por ley.</summary>
+        PRL = 1,
+        /// <summary>Manipulación de productos químicos y biocidas. Carné oficial requerido.</summary>
+        ProductosQuimicos = 2,
+        /// <summary>Formación en uso y mantenimiento de maquinaria de limpieza.</summary>
+        Maquinaria = 3,
+        /// <summary>Primeros auxilios y RCP. Recomendable para personal de campo.</summary>
+        PrimerosAuxilios = 4,
+        /// <summary>Protección de datos (GDPR/RGPD). Obligatoria por política interna.</summary>
+        ProteccionDatos = 5,
+        /// <summary>Carné de conducir o autorización para conducir vehículos de empresa.</summary>
+        Conduccion = 6,
+        /// <summary>Técnicas de limpieza especializadas (salas blancas, hospitales, industria).</summary>
+        LimpiezaEspecializada = 7,
+        /// <summary>Formación interna de la empresa (procedimientos, protocolos, valores).</summary>
+        FormacionInterna = 8,
+        /// <summary>Titulación universitaria o FP reglada relacionada con el puesto.</summary>
+        TitulacionReglada = 9,
+        /// <summary>Otro tipo de formación o certificado no categorizado.</summary>
+        Otros = 10
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Motor de renderizado frontend utilizado para un módulo específico del sistema.
+    /// Permite que diferentes módulos usen diferentes tecnologías en la misma aplicación.
+    /// </summary>
+    public enum TipoFrontend
+    {
+        /// <summary>Razor Pages o MVC clásico. Para CRUD estándar con Bootstrap 5 / SB Admin 2.</summary>
+        Razor = 1,
+        /// <summary>Blazor Server. Para módulos interactivos con SignalR nativo (Dashboard, Calendario).</summary>
+        Blazor = 2,
+        /// <summary>Componente Vue.js embebido en Razor/Blazor. Para sub-componentes muy interactivos.</summary>
+        Vue = 3,
+        /// <summary>Componente React embebido. Para widgets de alta interactividad (Kanban, Charts).</summary>
+        React = 4,
+        /// <summary>PWA standalone. Para páginas de campo accesibles offline (Fichaje, Órdenes).</summary>
+        PWA = 5
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>Tipo de gasto asociado al uso o mantenimiento de un vehículo de la flota.</summary>
+    public enum TipoGastoVehiculo
+    {
+        /// <summary>Repostaje de combustible (gasolina, diesel, GLP).</summary>
+        Combustible = 1,
+        /// <summary>Peaje de autopista o vía de peaje.</summary>
+        Peaje = 2,
+        /// <summary>Aparcamiento o parking.</summary>
+        Parking = 3,
+        /// <summary>Multa de tráfico. Requiere aprobación del responsable de flota.</summary>
+        Multa = 4,
+        /// <summary>Reparación o pieza de recambio.</summary>
+        Reparacion = 5,
+        /// <summary>Lavado o limpieza del vehículo.</summary>
+        Lavado = 6,
+        /// <summary>Accesorios o equipamiento adicional instalado en el vehículo.</summary>
+        Accesorios = 7,
+        /// <summary>Otro gasto no categorizado.</summary>
+        Otro = 8
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Tipo de incidencia de seguridad registrada en el sistema.
+    /// </summary>
+    public enum TipoIncidencia
+    {
+        /// <summary>Intento de acceso con credenciales incorrectas.</summary>
+        LoginFallido = 1,
+
+        /// <summary>Cuenta de usuario bloqueada por exceso de intentos fallidos.</summary>
+        CuentaBloqueada = 2,
+
+        /// <summary>Intento de acceso a un recurso sin los permisos necesarios.</summary>
+        AccesoNoAutorizado = 3,
+
+        /// <summary>Posible ataque de fuerza bruta detectado desde una IP.</summary>
+        FuerzaBruta = 4,
+
+        /// <summary>Token JWT inválido, expirado o manipulado.</summary>
+        TokenInvalido = 5,
+
+        /// <summary>Violación de la política de contraseñas.</summary>
+        ViolacionPoliticaContrasena = 6,
+
+        /// <summary>Solicitud que excede los límites de tasa (rate limiting).</summary>
+        RateLimitExcedido = 7,
+
+        /// <summary>Cambio en la configuración de seguridad del sistema.</summary>
+        CambioConfiguracionSeguridad = 8,
+
+        /// <summary>Acceso desde un dispositivo o IP no reconocidos.</summary>
+        DispositivoDesconocido = 9,
+
+        /// <summary>Otro tipo de incidencia no clasificada.</summary>
+        Otro = 99
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>Tipo de incidencia registrada durante o después de un servicio de limpieza.</summary>
+    public enum TipoIncidenciaServicio
+    {
+        /// <summary>Daño accidental a bienes del cliente durante el servicio.</summary>
+        DanioInstalaciones = 1,
+        /// <summary>Accidente laboral del empleado durante el servicio.</summary>
+        AccidenteLaboral = 2,
+        /// <summary>Problema de acceso a las instalaciones del cliente.</summary>
+        ProblemaAcceso = 3,
+        /// <summary>Reclamación del cliente por calidad insuficiente del servicio.</summary>
+        ReclamacionCliente = 4,
+        /// <summary>Robo o pérdida de material de trabajo durante el servicio.</summary>
+        RoboMaterial = 5,
+        /// <summary>Incidencia con el vehículo de empresa durante el desplazamiento.</summary>
+        IncidenciaVehiculo = 6,
+        /// <summary>Conducta inadecuada del empleado comunicada por el cliente.</summary>
+        ConductaEmpleado = 7,
+        /// <summary>Otro tipo de incidencia no categorizada.</summary>
+        Otro = 8
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Tipo de integración con un sistema externo.
+    /// Determina el protocolo de comunicación, el formato de datos y
+    /// las validaciones específicas aplicadas por IIntegracionService.
+    /// </summary>
+    public enum TipoIntegracion
+    {
+        /// <summary>
+        /// Agencia Estatal de Administración Tributaria (AEAT).
+        /// Envío de SII (Suministro Inmediato de Información) para VeriFactu.
+        /// Endpoint: https://www7.aeat.es/wlpl/SSII-FACT/ws/fe/SiiFactFEV1SOAP
+        /// </summary>
+        AEAT = 1,
+        /// <summary>
+        /// Pasarela de pago Stripe para cobro online de facturas.
+        /// REST API con autenticación Bearer Token.
+        /// </summary>
+        Stripe = 2,
+        /// <summary>
+        /// API de WhatsApp Business para notificaciones a clientes y empleados.
+        /// Mensajes transaccionales: recordatorios de cita, confirmaciones de servicio.
+        /// </summary>
+        WhatsApp = 3,
+        /// <summary>
+        /// Google Maps Platform para geocodificación de direcciones y cálculo de rutas.
+        /// API: Geocoding, Directions, Distance Matrix.
+        /// </summary>
+        GoogleMaps = 4,
+        /// <summary>
+        /// Sistema ERP externo del cliente para sincronización bidireccional de facturas y pedidos.
+        /// Protocolo: REST o SOAP según el ERP destino.
+        /// </summary>
+        ERP = 5,
+        /// <summary>
+        /// Plataforma de envío masivo de SMS para notificaciones y recordatorios.
+        /// Proveedores soportados: Twilio, Vonage, MásMóvil.
+        /// </summary>
+        SMS = 6,
+        /// <summary>
+        /// Pasarela de pago alternativa (Redsys, PayPal, Bizum).
+        /// </summary>
+        PasarelaPago = 7,
+        /// <summary>
+        /// Integración con software de contabilidad externo (Sage, Contaplus, A3).
+        /// Exportación de asientos contables y datos fiscales.
+        /// </summary>
+        Contabilidad = 8,
+        /// <summary>
+        /// Sistema de Gestión de Recursos Humanos externo (A3Nom, Sage HR).
+        /// Sincronización de nóminas y datos laborales.
+        /// </summary>
+        RRHH = 9,
+        /// <summary>
+        /// Plataforma de firma digital electrónica (AutoFirma, Signaturit, DocuSign).
+        /// Para firmar contratos y documentos legales con certificado digital.
+        /// </summary>
+        FirmaDigital = 10,
+        /// <summary>Otra integración no categorizada en los tipos anteriores.</summary>
+        Otro = 99
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Canal o modalidad de una interacción comercial registrada entre
+    /// un empleado y un cliente en el CRM del sistema.
+    /// </summary>
+    public enum TipoInteraccionComercial
+    {
+        /// <summary>Llamada telefónica entrante o saliente.</summary>
+        Llamada = 1,
+        /// <summary>Correo electrónico enviado o recibido.</summary>
+        Email = 2,
+        /// <summary>Reunión presencial o videoconferencia.</summary>
+        Reunion = 3,
+        /// <summary>Visita comercial en las instalaciones del cliente.</summary>
+        Visita = 4,
+        /// <summary>Mensaje por WhatsApp u otra aplicación de mensajería.</summary>
+        Mensajeria = 5,
+        /// <summary>Propuesta comercial o cotización presentada.</summary>
+        Propuesta = 6,
+        /// <summary>Seguimiento post-servicio o encuesta de satisfacción.</summary>
+        Seguimiento = 7,
+        /// <summary>Otra modalidad de interacción no contemplada.</summary>
+        Otro = 99
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Tipo de jornada laboral del empleado que define la estructura de su horario.
+    /// </summary>
+    public enum TipoJornada
+    {
+        /// <summary>Jornada completa con descanso al mediodía (mañana + tarde).</summary>
+        Partida = 1,
+        /// <summary>Jornada sin interrupción al mediodía. Habitual en verano o por convenio.</summary>
+        Continua = 2,
+        /// <summary>Solo trabaja en la franja de la mañana.</summary>
+        SoloManana = 3,
+        /// <summary>Solo trabaja en la franja de la tarde.</summary>
+        SoloTarde = 4,
+        /// <summary>Jornada nocturna (servicios de limpieza nocturnos en oficinas).</summary>
+        Nocturna = 5,
+        /// <summary>Horario variable o flexible según las necesidades del servicio.</summary>
+        Flexible = 6
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Tipo de lista de precios según el segmento de cliente al que aplica.
+    /// Determina la prioridad de selección cuando un cliente tiene múltiples listas aplicables.
+    /// </summary>
+    public enum TipoListaPrecio
+    {
+        /// <summary>Lista de precios general aplicable a todos los clientes por defecto.</summary>
+        General = 1,
+        /// <summary>Lista de precios especial por segmento de cliente (VIP, Estándar, etc.).</summary>
+        PorSegmento = 2,
+        /// <summary>Lista de precios personalizada pactada con un cliente específico.</summary>
+        PorCliente = 3,
+        /// <summary>Lista de precios por volumen (descuento por cantidad).</summary>
+        PorVolumen = 4,
+        /// <summary>Lista de precios promocional con vigencia limitada (campañas comerciales).</summary>
+        Promocional = 5,
+        /// <summary>Lista de precios de coste (precio de compra + margen mínimo), uso interno.</summary>
+        Coste = 6
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>Tipo de mantenimiento o intervención técnica realizada en un vehículo.</summary>
+    public enum TipoMantenimiento
+    {
+        /// <summary>Mantenimiento preventivo programado: aceite, filtros, neumáticos.</summary>
+        Preventivo = 1,
+        /// <summary>Reparación correctiva de avería no programada.</summary>
+        Correctivo = 2,
+        /// <summary>Inspección Técnica de Vehículos (ITV) obligatoria.</summary>
+        ITV = 3,
+        /// <summary>Revisión de la póliza de seguro o renovación.</summary>
+        Seguro = 4,
+        /// <summary>Lavado interior y exterior del vehículo.</summary>
+        Lavado = 5,
+        /// <summary>Revisión de neumáticos: cambio de temporada, equilibrado.</summary>
+        Neumaticos = 6,
+        /// <summary>Revisión de frenos y sistema de seguridad.</summary>
+        Frenos = 7,
+        /// <summary>Otro tipo de intervención técnica no categorizada.</summary>
+        Otro = 8
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Categoría de negocio a la que pertenece la métrica KPI.
+    /// Permite agrupar y filtrar KPIs en el dashboard por área funcional.
+    /// </summary>
+    public enum TipoMetricaKPI
+    {
+        /// <summary>KPI de operaciones: órdenes completadas, tiempos de servicio, incidencias.</summary>
+        Operaciones = 1,
+        /// <summary>KPI financiero: facturación, cobros, morosidad, margen, rentabilidad.</summary>
+        Financiero = 2,
+        /// <summary>KPI de clientes: satisfacción, NPS, retención, segmentación, campañas.</summary>
+        Clientes = 3,
+        /// <summary>KPI de RRHH: absentismo, horas trabajadas, formaciones, EPIs.</summary>
+        RecursosHumanos = 4,
+        /// <summary>KPI de inventario: rotación de stock, caducidades, diferencias de inventario.</summary>
+        Inventario = 5,
+        /// <summary>KPI de calidad: inspecciones, evaluaciones, puntuaciones de servicio.</summary>
+        Calidad = 6,
+        /// <summary>KPI de flota: kilómetros, consumo, costes de mantenimiento, disponibilidad.</summary>
+        Flota = 7,
+        /// <summary>KPI comercial: ventas, contratos nuevos, cotizaciones convertidas.</summary>
+        Comercial = 8
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Tipo de segundo factor de autenticación (MFA) configurado por el usuario.
+    /// </summary>
+    public enum TipoMFA
+    {
+        /// <summary>Aplicación autenticadora TOTP (Google Authenticator, Authy, etc.).</summary>
+        TOTP = 1,
+        /// <summary>Código enviado por SMS al teléfono verificado del usuario.</summary>
+        SMS = 2,
+        /// <summary>Código enviado al email del usuario.</summary>
+        Email = 3,
+        /// <summary>Código de respaldo de un solo uso generado al activar MFA.</summary>
+        CodigoRespaldo = 4
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Objetivo principal de una campaña comercial.
+    /// Determina las métricas de éxito y el contenido del mensaje.
+    /// </summary>
+    public enum TipoObjetivoCampana
+    {
+        /// <summary>Captación de nuevos clientes no registrados.</summary>
+        Captacion = 1,
+        /// <summary>Fidelización de clientes existentes con servicios adicionales.</summary>
+        Fidelizacion = 2,
+        /// <summary>Reactivación de clientes inactivos.</summary>
+        Reactivacion = 3,
+        /// <summary>Upselling: propuesta de servicios de mayor valor al cliente.</summary>
+        Upselling = 4,
+        /// <summary>Cross-selling: propuesta de servicios complementarios.</summary>
+        CrossSelling = 5,
+        /// <summary>Comunicación informativa (cambios de tarifas, nueva normativa, etc.).</summary>
+        Informativa = 6,
+        /// <summary>Encuesta de satisfacción o NPS.</summary>
+        Encuesta = 7
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Tipo de operación registrada en la auditoría de cambios por campo.
+    /// </summary>
+    public enum TipoOperacionAuditoria
+    {
+        /// <summary>Inserción de un nuevo registro.</summary>
+        Insercion = 1,
+
+        /// <summary>Actualización de uno o más campos de un registro existente.</summary>
+        Actualizacion = 2,
+
+        /// <summary>Eliminación lógica (soft-delete) del registro.</summary>
+        EliminacionLogica = 3,
+
+        /// <summary>Restauración de un registro previamente eliminado de forma lógica.</summary>
+        Restauracion = 4,
+
+        /// <summary>Anonimización GDPR de los datos personales del registro.</summary>
+        AnonimizacionGDPR = 5
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    public enum TipoOperacionOffline
+    {
+        /// <summary>Registro de entrada o salida de un fichaje GPS.</summary>
+        Fichaje = 1,
+        /// <summary>Completar un ítem del checklist de una orden de servicio.</summary>
+        ChecklistItem = 2,
+        /// <summary>Subida de una fotografía del servicio (Antes/Durante/Después).</summary>
+        FotografiaServicio = 3,
+        /// <summary>Captura de la firma digital del cliente al finalizar el servicio.</summary>
+        FirmaDigital = 4,
+        /// <summary>Cambio de estado de una orden de servicio.</summary>
+        CambioEstadoOrden = 5,
+        /// <summary>Registro de materiales utilizados durante el servicio.</summary>
+        MaterialUtilizado = 6,
+        /// <summary>Registro de un gasto de la orden de servicio (taxi, material urgente).</summary>
+        GastoOrden = 7,
+        /// <summary>Completar el checklist completo de la orden de servicio.</summary>
+        CompletarOrden = 8
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Tipo de entidad u operación que originó una reserva de stock.
+    /// Determina qué módulo gestionó la reserva y qué proceso debe liberarla.
+    /// </summary>
+    public enum TipoOrigenReserva
+    {
+        /// <summary>Stock reservado para una asignación de producto a cliente pendiente de despachar.</summary>
+        AsignacionProducto = 1,
+        /// <summary>Stock reservado para una orden de servicio que requiere materiales específicos.</summary>
+        OrdenServicio = 2,
+        /// <summary>Stock reservado para una cotización de servicio enviada al cliente.</summary>
+        CotizacionServicio = 3,
+        /// <summary>Reserva manual realizada por un administrador de almacén.</summary>
+        ReservaManual = 4,
+        /// <summary>Stock reservado para la preparación de un kit o pack de productos.</summary>
+        Pack = 5
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>
+    /// Tipo de dato del valor almacenado en un ParametroSistema.
+    /// Controla la validación y el widget de edición en la interfaz de administración.
+    /// </summary>
+    public enum TipoParametro
+    {
+        /// <summary>Valor de texto libre. Se edita con un input text.</summary>
+        String = 1,
+        /// <summary>Valor entero. Se valida que sea un número sin decimales.</summary>
+        Integer = 2,
+        /// <summary>Valor decimal. Se valida que sea un número con posibles decimales.</summary>
+        Decimal = 3,
+        /// <summary>Valor booleano (true/false). Se edita con un toggle/checkbox.</summary>
+        Boolean = 4,
+        /// <summary>Valor JSON estructurado. Se edita con un editor JSON en la UI.</summary>
+        Json = 5,
+        /// <summary>Valor de fecha. Se edita con un datepicker.</summary>
+        Fecha = 6,
+        /// <summary>Valor de color hexadecimal. Se edita con un color picker.</summary>
+        Color = 7
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cruiser.Entities.Enums
+{
+    /// <summary>Tipo de política de RRHH que establece las reglas de gestión del personal.</summary>
+    public enum TipoPoliticaRRHH
+    {
+        /// <summary>Política de acumulación y disfrute de vacaciones anuales.</summary>
+        Vacaciones = 1,
+        /// <summary>Política de autorización y compensación de horas extra.</summary>
+        HorasExtra = 2,
+        /// <summary>Política de gestión y justificación de ausencias.</summary>
+        Ausencias = 3,
+        /// <summary>Política de cálculo y pago de comisiones por ventas y contratos.</summary>
+        Comisiones = 4,
+        /// <summary>Política disciplinaria: faltas, sanciones y procedimientos.</summary>
+        Disciplinaria = 5,
+        /// <summary>Política de teletrabajo y trabajo en remoto.</summary>
+        Teletrabajo = 6,
+        /// <summary>Política de uso de EPIs y prevención de riesgos laborales.</summary>
+        PRL = 7
+    }
+}
+

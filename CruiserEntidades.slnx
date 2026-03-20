@@ -1,6 +1,7 @@
 <Solution>
   <Folder Name="/Elementos de la solución/">
     <File Path="Entidades.txt" />
+    <File Path="Enum.txt" />
     <File Path="Nomenclatura de Commits a Usar.txt" />
     <File Path="Plan de Fases.txt" />
     <File Path="Prompt.txt" />

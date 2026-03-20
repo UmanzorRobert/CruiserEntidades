@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{254AFEB7-0329-AF49-FB51-15B2E337EB20}|Elementos de la soluci\u00F3n{254AFEB7-0329-AF49-FB51-15B2E337EB20}|C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Enum.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{254AFEB7-0329-AF49-FB51-15B2E337EB20}|Elementos de la soluci\u00F3n{254AFEB7-0329-AF49-FB51-15B2E337EB20}|solutionrelative:Enum.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{254AFEB7-0329-AF49-FB51-15B2E337EB20}|Elementos de la soluci\u00F3n{254AFEB7-0329-AF49-FB51-15B2E337EB20}|C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Entidades.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{254AFEB7-0329-AF49-FB51-15B2E337EB20}|Elementos de la soluci\u00F3n{254AFEB7-0329-AF49-FB51-15B2E337EB20}|solutionrelative:Entidades.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
@@ -31,6 +35,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Enum.txt",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Enum.txt",
+              "RelativeDocumentMoniker": "Enum.txt",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Enum.txt",
+              "RelativeToolTip": "Enum.txt",
+              "ViewState": "AgIAAPgJAAAAAAAAAAAQwBUKAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2026-03-20T15:55:56.392Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Entidades.txt",
               "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Entidades.txt",
               "RelativeDocumentMoniker": "Entidades.txt",
@@ -43,7 +60,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Prompt.txt",
               "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Prompt.txt",
               "RelativeDocumentMoniker": "Prompt.txt",
@@ -55,7 +72,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Plan de Fases.txt",
               "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Plan de Fases.txt",
               "RelativeDocumentMoniker": "Plan de Fases.txt",
@@ -68,7 +85,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Nomenclatura de Commits a Usar.txt",
               "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Nomenclatura de Commits a Usar.txt",
               "RelativeDocumentMoniker": "Nomenclatura de Commits a Usar.txt",

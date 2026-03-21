@@ -1,656 +1,670 @@
-Plan de Fases de CruiserSystem
-
-Plan de Fases
-BLOQUE 1 — FUNDAMENTOS
-Fase 1: Setup solución & estructura de capas
-1.1. Crear solución .NET 10 con proyectos: Entities, DataAccess, Business, Web
-1.2. Configurar referencias entre capas y convenciones de nombres (namespace Cruiser.*)
-1.3. Agregar paquetes NuGet base: EF Core 10, AspNetCore Identity, BCrypt.Net, FluentValidation
-1.4. Setup Cmder + PowerShell integrado en Visual Studio Community 2026
-1.5. Configurar .editorconfig, .gitignore y estructura inicial de carpetas por módulo
-1.6. Primer commit a repositorio GitHub con estructura base y pipeline CI esqueleto
-
-Fase 2: Docker + PostgreSQL 18 + entorno local
-2.1. Crear docker-compose.yml con imagen oficial postgres:18 con schemas pre-creados
-2.2. Configurar volúmenes, variables de entorno y red Docker interna
-2.3. Verificar conexión desde Visual Studio con pgAdmin 4 y DBeaver como alternativa
-2.4. Configurar appsettings.json con connection string base + search_path por contexto
-2.5. Setup de múltiples entornos: Development / Staging / Production con secrets separados
-2.6. Documentar proceso de arranque local en README.md con diagrama de arquitectura
-
-Fase 2B: Secrets & gestión de entornos 
-2B.1. Configurar User Secrets (dotnet user-secrets) para desarrollo local — NUNCA credenciales en appsettings
-2B.2. Crear script PowerShell init-dev-secrets.ps1 para provisionar secrets de un desarrollador nuevo
-2B.3. Definir convención de nombres de variables de entorno por contexto: DB__[Contexto]__ConnectionString
-2B.4. Configurar Railway Secrets para staging y producción con variables de entorno segregadas
-2B.5. Crear appsettings.Development.json, appsettings.Staging.json (sin datos sensibles, solo estructura)
-2B.6. Documentar en SECRETS.md qué variables son requeridas y en qué entorno
-
-Fase 3: EntidadBase + Fluent API Base
-3.1. Implementar EntidadBase con Id (Guid), FechaCreacion, FechaModificacion, EstaActivo
-3.2. Crear IEntityTypeConfiguration<T> base con soft-delete global query filter y conversores UTC
-3.3. Crear CruiserIdentityDbContext heredando de IdentityDbContext<ApplicationUser> — schema "identity"
-3.4. Implementar OnModelCreating en cada DbContext con llamadas a IEntityTypeConfiguration por módulo
-3.5. Configurar conversores UTC para todas las propiedades DateTime en todos los contextos
-3.6. Definir convención de naming para tablas: snake_case en schema correspondiente (EF HasDefaultSchema)
-
-Fase 3B: Implementar los 9 DbContexts de dominio
-3B.1. Crear CruiserCoreDbContext (schema "core"): Config, Módulos, Permisos, Auditoría, Notificaciones, GDPR
-3B.2. Crear CruiserComercialDbContext (schema "comercial"): Cliente, Empleado, Cotización, Asignaciones, RFM
-3B.3. Crear CruiserInventarioDbContext (schema "inventario"): Producto, Almacén, Movimientos, Lotes, Fichas
-3B.4. Crear CruiserComprasDbContext (schema "compras"): Proveedor, OrdenCompra, Recepción, Discrepancias
-3B.5. Crear CruiserOperacionesDbContext (schema "operaciones"): TipoServicio, Contrato, OS, Checklist, Calidad
-3B.6. Crear CruiserFacturacionDbContext (schema "facturacion"): Factura, Serie, Pago, CuentaCobrar, VeriFactu
-3B.7. Crear CruiserRRHHDbContext (schema "rrhh"): ContratoLaboral, Fichaje, Ausencias, EPI, Nómina
-3B.8. Crear CruiserFlotaDbContext (schema "flota"): Vehículo, Mantenimiento, Ruta, Incidencia
-3B.9. Crear CruiserAnaliticaDbContext (schema "analitica"): MétricaKPI, HistorialKPI, DashboardUsuario
-3B.10. Registrar todos los contextos en Program.cs con DI y connection string por contexto
-
-Fase 4: Migraciones iniciales por contexto — DDL
-4.1. Migración inicial CruiserIdentityDbContext: tablas Identity estándar + ApplicationUser extendido
-4.2. Migración inicial CruiserCoreDbContext: tablas de configuración, módulos, permisos, sesiones
-4.3. Migraciones iniciales para los 8 contextos de dominio restantes (una migración por contexto)
-4.4. Configurar HasColumnType("jsonb") en todos los campos JSON vía Fluent API en cada contexto
-4.5. Verificar generación correcta de tablas y schemas en PostgreSQL 18 con pgAdmin
-4.6. Crear script PowerShell apply-all-migrations.ps1 para aplicar todos los contextos en orden
-
-Fase 4B: Migraciones de índices — GIN, compuestos y full-text
-4B.1. Migración dedicada Inv_Indexes: índices GIN en JSONB (PermisosEspeciales, DatosAdicionales, PuntajeRFM)
-4B.2. Migración dedicada Core_Indexes: índices en BitácoraAcción (UsuarioId, FechaCreacion, Módulo)
-4B.3. Migración dedicada Facturacion_Indexes: índices en Factura (ClienteId, FechaEmision, Estado, NumeroSerie)
-4B.4. Migración dedicada RRHH_Indexes: índices compuestos en Fichaje (EmpleadoId, FechaEntrada)
-4B.5. Migración dedicada Operaciones_Indexes: índices en OrdenServicio (Estado, FechaProgramada, EmpleadoId)
-4B.6. Migración dedicada Analitica_Indexes: índice único en HistorialKPI (MetricaKPIId, Periodo)
-4B.7. Crear script validate-indexes.sql que verifica la existencia de todos los índices críticos
-
-Fase 4C: Outbox Pattern + cross-context consistency
-4C.1. Crear tabla OutboxMessage en CruiserCoreDbContext: Id, ContextOrigen, TipoEvento, PayloadJson, FechaCreacion, Procesado
-4C.2. Implementar IOutboxService que persiste eventos en la misma transacción que el cambio de negocio
-4C.3. Job Hangfire "OutboxProcessor" (cada 30s): lee mensajes no procesados y los despacha a sus consumidores
-4C.4. Implementar IOutboxConsumer<T> para cada tipo de evento cross-context (ej: ClienteCreadoEvent → Facturación)
-4C.5. Garantizar at-least-once delivery con reintentos exponenciales (máx 5 reintentos con Hangfire)
-4C.6. Dashboard de mensajes Outbox en panel de administración: pendientes, fallidos, procesados hoy
-
-Fase 4D: Migration CI/CD — efbundle & pipeline
-4D.1. Configurar efbundle en el pipeline de GitHub Actions: genera ejecutable de migraciones sin EF tolos
-4D.2. Step "Generate Migration Bundle" en pipeline: dotnet ef migrations bundle --self-contained para cada contexto
-4D.3. Step "Apply Migrations" en deploy a staging: ejecutar bundle contra BD de staging con variables de entorno
-4D.4. Rollback automatizado: si el bundle falla, ejecutar script de rollback desde /docs/migrations/rollback/
-4D.5. Crear migración de smoke test: tabla MigrationHealthCheck con timestamp de aplicación por contexto
-4D.6. Documentar en MIGRATIONS.md el proceso completo: crear, aplicar, revertir y resolver conflictos
-
-Fase 4E: DbContext Health Checks & Connection Pooling
-4E.1. Registrar health check por DbContext en /health: verifica conectividad de cada uno de los 10 contextos
-4E.2. Configurar Npgsql connection pooling en cada contexto: MinPoolSize=2, MaxPoolSize=20 según módulo
-4E.3. Implementar AddDbContextPool<T> para los 3 contextos de mayor carga: Operaciones, Comercial, Facturación
-4E.4. Endpoint /health/db devuelve estado de cada contexto con latencia de ping a PostgreSQL
-4E.5. Configurar retry policy en Npgsql: 3 reintentos con backoff exponencial en caso de timeout transitorio
-4E.6. Dashboard de conexiones activas por contexto en panel de administración (Npgsql statistics)
-
-Fase 4F: Testing de migraciones & seed testing
-4F.1. Crear proyecto CruiserSystem.Tests.Migrations con xUnit + Testcontainers (PostgreSQL efímero)
-4F.2. Test CanApplyAllMigrations: aplica todas las migraciones de todos los contextos en contenedor limpio
-4F.3. Test CanRollbackLastMigration: verifica que dotnet ef database update [PreviousMigration] funciona por contexto
-4F.4. Test SeedDataIsIdempotent: ejecuta seed dos veces y verifica que no hay registros duplicados
-4F.5. Test SchemaIsolation: verifica que cada contexto solo accede a su propio schema PostgreSQL
-4F.6. Integrar tests de migración como step obligatorio en el pipeline de CI (no merge sin test verde)
-
-BLOQUE 2 — AUTENTICACIÓN & SEGURIDAD
-Fase 5: ASP.NET Core Identity + gestión de usuarios
-5.1. Configurar ApplicationUser extendido con campos propios: EmpleadoId, último acceso, avatar, tema UI
-5.2. Setup IdentityRole + asignación de roles múltiples por usuario, registrado en CruiserIdentityDbContext
-5.3. Registrar servicios Identity en Program.cs con opciones de contraseña fuertes y política de bloqueo
-5.4. Crear UsuarioService + IUsuarioRepository con patrón Repository en DataAccess
-5.5. FluentValidation para DTO de creación/edición de usuario con validación de NIF español
-5.6. Seed de usuario SuperAdmin inicial con hash BCrypt almacenado en migración de CruiserCoreDbContext
-
-Fase 6: JWT + Refresh Tokens + cookies HttpOnly
-6.1. Generar JWT con claims: UserId, Email, Roles, PermisosEspeciales, SchemaActivo
-6.2. Implementar RefreshToken almacenado en CruiserIdentityDbContext + cookie HttpOnly SameSite=Strict
-6.3. Endpoint POST /auth/refresh para renovación silenciosa de token con validación de IP y UserAgent
-6.4. Endpoint POST /auth/logout con revocación de refresh token y limpieza de cookie
-6.5. Middleware de validación JWT en cada request protegido con extracción de claims al contexto HTTP
-6.6. Test en Swagger: login → token → acceso a recurso protegido → refresh → logout
-
-Fase 7: BCrypt, política contraseñas & auditoría auth
-7.1. Configurar BCrypt.Net con work factor 12 para hashing de contraseñas
-7.2. Política: mínimo 8 chars, mayúscula + minúscula + número + carácter especial
-7.3. Bloqueo de cuenta tras 5 intentos fallidos (lockout 15 min, configurable en ConfiguracionSistema)
-7.4. Registro de intentos fallidos en tabla AuditoriaLogin (CruiserIdentityDbContext)
-7.5. Endpoint de cambio de contraseña con validación de contraseña antigua + historial de últimas 5
-7.6. Flujo de recuperación de contraseña vía email con token de un solo uso (TTL 1h)
-
-Fase 8: Middleware, Serilog, Rate Limiting & Health Checks
-8.1. Configurar Serilog con sinks: Console + File (rolling daily) + PostgreSQL (tabla LogEntry en CruiserCoreDbContext)
-8.2. Estructura de log enriquecida: RequestId, UserId, IP, Módulo, ContextoDbActivo, CorrelationId
-8.3. Configurar AspNetCoreRateLimit: 100 req/min por IP global, 10/min en /auth/*
-8.4. Middleware global de manejo de excepciones: captura, log Serilog, respuesta Problem Details (RFC 7807)
-8.5. Health Check /health con verificación de los 10 DbContexts + SignalR + Hangfire
-8.6. Configurar correlación de requests con header X-Correlation-Id propagado a logs y respuestas
-
-BLOQUE 3 — LAYOUT & UI BASE
-Fase 9: SB Admin 2 + Bootstrap 5 + layout MVC base
-9.1. Instalar SB Admin 2 en wwwroot con compilación SCSS personalizada con variables CruiserSystem
-9.2. Layout _Layout.cshtml con sidebar, topbar (campana notificaciones), footer y área de contenido
-9.3. Paleta de colores CruiserSystem sobre variables Bootstrap 5 (navy, teal, amber)
-9.4. Partial views reutilizables: _Alert, _Breadcrumb, _PageHeader, _Loading, _EmptyState
-9.5. Integrar Font Awesome 6 para iconos del sidebar, acciones y estados de entidades
-9.6. Responsividad mobile-first verificada en 320px / 768px / 1024px / 1440px
-
-Fase 10: Sidebar dinámico por permisos & módulos
-10.1. Servicio ISidebarService que lee ModuloPermisoRol del CruiserCoreDbContext para el usuario autenticado
-10.2. Construcción del árbol de módulos jerárquico (padre → hijos) en memoria con caché
-10.3. Renderizado dinámico del sidebar con highlight de ruta activa y badge de alertas por módulo
-10.4. Breadcrumb automático basado en la jerarquía de módulos activa
-10.5. Caché en IMemoryCache del árbol de permisos por usuario (TTL 5 min, invalidar al cambiar rol)
-10.6. Test: cambio de rol → invalidación de caché → sidebar actualizado en próxima carga
-
-Fase 11: Blazor Server setup + SignalR hub base
-11.1. Configurar Blazor Server en la solución junto a MVC/Razor Pages con routing coexistente
-11.2. Crear MainHub heredando de Hub con autenticación JWT y grupos por empresa/rol/usuario
-11.3. Grupos SignalR: empresa-{id}, rol-{rolId}, usuario-{userId} para targeting granular
-11.4. Componente Blazor de ejemplo con contador en tiempo real para validar el hub
-11.5. Circuit handler para reconexión automática del websocket con UI de estado de conexión
-11.6. Registro de conexiones activas en tabla SesionUsuario (CruiserIdentityDbContext)
-
-Fase 12: Componentes Blazor & Razor reutilizables
-12.1. Componente <DataTable> con paginación server-side, búsqueda, ordenación y export PDF/Excel
-12.2. Componente <ConfirmDialog> con confirmación de borrado y soft-delete visual
-12.3. Componente <ValidatedForm> con validación FluentValidation reactiva en tiempo real
-12.4. Tag Helper <authorize-content> que muestra/oculta UI según PuedeVer/PuedeEditar
-12.5. Componente <ExportButtons> para PDF/Excel según PuedeExportar del módulo activo
-12.6. Documentación de componentes con ejemplos de uso en /docs/components.md
-
-BLOQUE 4 — CONFIGURACIÓN & ADMINISTRACIÓN
-
-Fase 13: Módulos sistema + seed roles & permisos
-13.1. Seed completo del árbol de Modulo (~60 nodos) en migración de CruiserCoreDbContext
-13.2. Seed de roles base: SuperAdmin, Administrador, Supervisor, Comercial, Empleado, Auditor
-13.3. Matriz inicial de ModuloPermisoRol por rol con permisos CRUD estándar (ver/crear/editar/eliminar/exportar)
-13.4. CRUD de roles en UI con asignación visual de permisos por módulo (matriz interactiva Blazor)
-13.5. CRUD de usuarios con asignación de roles múltiples y vista de permisos efectivos
-13.6. Acción de auditoría al modificar permisos: registro en BitácoraAccion (quién, qué módulo, cuándo)
-
-Fase 14: Configuración sistema & parámetros globales
-14.1. CRUD ConfiguracionSistema: nombre empresa, logo, moneda, IVA por defecto, zona horaria, colores PWA
-14.2. CRUD ConfiguracionNotificacion: umbrales de alertas automáticas por tipo de evento
-14.3. CRUD ConfiguracionPWA: versión Service Worker, estrategia caché, permisos GPS/cámara, nombre app
-14.4. CRUD ConfiguracionFacturacion: prefijos de series, pie de factura, datos fiscales, modo VeriFactu
-14.5. Seed ConfiguracionJsonbCampo con documentación técnica de todos los campos JSONB del sistema
-14.6. Panel de administración técnica con vista de salud del sistema y configuración avanzada
-
-Fase 15: Bitácora acciones usuario
-15.1. Tabla BitacoraAccion en CruiserCoreDbContext: Usuario, Módulo, Acción, Entidad, IP, UserAgent, Duration
-15.2. Servicio IBitacoraService inyectable en Controllers y Services vía DI
-15.3. Registro automático de acciones: login, logout, CRUD, exportación, cambio de configuración
-15.4. Listado filtrable de bitácora en UI con exportación a Excel (ClosedXML)
-15.5. Retención configurable (90 días default) con job Hangfire de archivado/limpieza
-15.6. Protección RBAC: solo SuperAdmin puede ver la bitácora completa; Auditor tiene vista parcial
-
-Fase 16: Auditoría entidades — Interceptor EF
-16.1. Implementar SaveChangesInterceptor que captura Add/Modify/Delete en los contextos auditables
-16.2. Serialización de ValorAnterior y ValorNuevo a JSON para cada campo modificado por contexto
-16.3. Exclusión configurada de entidades no auditables: HistorialKPI, LogEntry, OutboxMessage, SesionUsuario
-16.4. Captura de UsuarioId desde IHttpContextAccessor en el interceptor con fallback a "sistema"
-16.5. Listado de historial de cambios por entidad en UI con diff visual (antes/después por campo)
-16.6. Archivado de registros de auditoría mayores a 90 días en tabla AuditoriaArchivada (job Hangfire)
-
-BLOQUE 5 — CATÁLOGO & ALMACÉN
-Fase 17: Categorías, unidades de medida & proveedores
-17.1. CRUD CategoriaProducto con árbol jerárquico y árbol visual en UI (CruiserInventarioDbContext)
-17.2. CRUD UnidadMedida con factor de conversión entre unidades y validación de coherencia
-17.3. CRUD Proveedor completo: datos fiscales, contacto, condiciones pago (CruiserComprasDbContext)
-17.4. Relación Proveedor ↔ Producto: proveedor principal + alternativos con precio y plazo entrega
-17.5. Validaciones FluentValidation: CIF/NIF/NIE español, IBAN, código postal
-17.6. Import inicial de catálogo vía plantilla Excel (ClosedXML) con validación y reporte de errores
-
-Fase 18: Productos + precios + stock base
-18.1. CRUD Producto: código, nombre, categoría, IVA, precio coste/venta (CruiserInventarioDbContext)
-18.2. Campo EsPeligroso activa ficha REACH/CLP obligatoria en operaciones
-18.3. Stock calculado (vistas SQL sobre MovimientoInventario) vs StockMinimo/StockMaximo por almacén
-18.4. Variantes de producto con código de barras EAN-13 por variante y generador de etiquetas QR
-18.5. Búsqueda full-text en nombre, código, descripción usando índice GIN en PostgreSQL
-18.6. Generador de QR para etiquetas de productos directamente desde la UI
-
-Fase 19: Fichas de seguridad REACH / CLP
-19.1. CRUD FichaSeguridad: versión, nombre químico, clasificación de peligro GHS (CruiserInventarioDbContext)
-19.2. Campos JSONB PictogramasRiesgo (array GHS) y EppsRequeridos con índice GIN
-19.3. Upload PDF de la ficha con almacenamiento en servidor y versionado
-19.4. Alerta automática de vencimiento (Hangfire) 30 días antes con notificación SignalR
-19.5. Consulta de ficha desde PWA de campo antes de usar el producto (modo offline disponible)
-19.6. Indicador visual en listado de productos de ficha vencida o próxima a vencer
-
-Fase 20: Almacenes, ubicaciones & depósitos
-20.1. CRUD Almacen: nombre, dirección, responsable, tipo (central/delegación/móvil) — CruiserInventarioDbContext
-20.2. CRUD Ubicacion jerárquica: pasillo → estantería → balda con código único por almacén
-20.3. Stock por ubicación (kardex por ubicación) con movimientos de traslado interno
-20.4. Traslados inter-almacén con generación de albarán interno y aprobación si importe > umbral
-20.5. Stock disponible = total − reservado por órdenes de servicio pendientes (vista SQL)
-20.6. Inventario visual por almacén con chart de ocupación (%) en UI
-
-BLOQUE 6 — COMERCIAL
-Fase 21: Clientes CRUD completo
-21.1. CRUD Cliente: datos fiscales, dirección, contacto, condiciones pago (CruiserComercialDbContext)
-21.2. Campos JSONB DatosAdicionales con índice GIN para búsquedas flexibles por atributos custom
-21.3. Segmentación automática RFM (Recencia/Frecuencia/Monetario) vía job Hangfire mensual
-21.4. PuntajeRFM en JSONB con índice GIN para filtros avanzados en listado de clientes
-21.5. Timeline de actividad del cliente: contratos, facturas, órdenes, incidencias cronológicas
-21.6. Importación masiva de clientes desde Excel (ClosedXML + FluentValidation + reporte errores)
-
-Fase 22: Empleados CRUD + vinculación usuario
-22.1. CRUD Empleado: datos personales, NIF, NSS, categoría, salario base (CruiserComercialDbContext)
-22.2. Vinculación opcional a ApplicationUserId (Guid cross-context) para acceso al sistema/PWA
-22.3. Jerarquía organizativa vía SupervisorId con orgánico visual en UI (árbol D3.js)
-22.4. Campos sensibles marcados como anonimizables GDPR en metadata de entidad
-22.5. Upload documentos: contrato, título, certificado médico con versionado de archivos
-22.6. Foto de perfil del empleado con thumbnail para PWA y listados (resize automático)
-
-Fase 23: Cotizaciones & oportunidades comerciales
-23.1. CRUD Cotizacion con líneas de servicio/producto, descuentos y condiciones especiales (CruiserComercialDbContext)
-23.2. Flujo de estados: Borrador → Enviada → Aceptada / Rechazada / Expirada con historial
-23.3. Conversión de cotización aceptada a ContratoServicio automático (evento Outbox cross-context)
-23.4. Generación PDF de cotización con QuestPDF (plantilla profesional con logo empresa)
-23.5. Email automático al cliente al enviar cotización (MailKit con plantilla HTML responsive)
-23.6. KPI tasa de conversión de cotizaciones en dashboard comercial con tendencia mensual
-
-Fase 24: Asignaciones cliente-empleado & comisiones
-24.1. CRUD AsignacionClienteEmpleado con PorcentajeComision y fechas de vigencia
-24.2. Historial de asignaciones: al reasignar, se cierra la anterior con FechaFin y se crea nueva
-24.3. Restricción de acceso RBAC: cada comercial solo ve sus clientes asignados en el CruiserComercialDbContext
-24.4. Notificación SignalR al empleado al recibir nuevo cliente asignado
-24.5. Dashboard individual del comercial: cartera de clientes, volumen facturado, comisiones pendientes
-24.6. KPI de asignación: ratio clientes/empleado, tiempo medio de respuesta, tasa de retención
-
-Fase 25: Segmentación RFM + dashboard comercial
-25.1. Job Hangfire mensual que recalcula PuntajeRFM de todos los clientes con query optimizada
-25.2. Visualización de mapa de calor RFM en dashboard comercial con Chart.js (eje R×F con color M)
-25.3. Filtros avanzados por segmento RFM, zona geográfica, tipo de servicio y empleado asignado
-25.4. Top 10 clientes por facturación / crecimiento / riesgo de abandono (semáforo automático)
-25.5. Exportación de segmentos a Excel para campañas de email marketing
-25.6. Alerta de cliente inactivo configurable por umbral de días sin actividad (notificación Outbox)
-
-BLOQUE 7 — COMPRAS
-Fase 26: Proveedores & contratos proveedor
-26.1. CRUD Proveedor completo con validación CIF/NIF/NIE español e IBAN (CruiserComprasDbContext)
-26.2. Condiciones pago: neto 30/60/90, descuento pronto pago, divisa
-26.3. Contratos proveedor con fechas vigencia, condiciones especiales y upload PDF
-26.4. Valoración de proveedor (1-5 estrellas) con historial de evaluaciones y media ponderada
-26.5. Mapa de proveedores con Leaflet.js (geolocalización de sede principal)
-26.6. Alerta vencimiento contratos proveedor (Hangfire 30 días antes + notificación SignalR)
-
-Fase 27: Órdenes de compra & flujo de aprobación
-27.1. CRUD OrdenCompra con líneas (producto/cantidad/precio), IVA y condiciones de entrega
-27.2. Flujo: Borrador → Pendiente Aprobación → Aprobada → Enviada → Recibida → Cerrada
-27.3. Regla de aprobación automática si importe < umbral configurable en ConfiguracionSistema
-27.4. Notificación SignalR al aprobador cuando hay OC pendiente + email si no resuelve en 24h
-27.5. Generación PDF de orden de compra con QuestPDF (plantilla con datos fiscales de empresa)
-27.6. Email automático al proveedor al aprobar y enviar OC (MailKit con adjunto PDF)
-
-Fase 28: Recepción mercancía & entrada almacén
-28.1. Albarán de entrada vinculado a OC con validación de cantidades esperadas vs recibidas
-28.2. Registro de discrepancias: exceso, defecto, daños en recepción con foto adjunta (PWA)
-28.3. Actualización automática de stock al confirmar recepción (evento Outbox → CruiserInventarioDbContext)
-28.4. Generación MovimientoInventario tipo Entrada al confirmar recepción con traza a AlbaranEntrada
-28.5. Escáner de código de barras en recepción con QuaggaJS desde UI web en tablet
-28.6. Notificación SignalR al solicitante cuando llega mercancía pedida
-
-BLOQUE 8 — INVENTARIO
-
-Fase 29: Movimientos de inventario
-29.1. CRUD MovimientoInventario: tipos Entrada/Salida/Traspaso/Ajuste/Merma (CruiserInventarioDbContext)
-29.2. Número de movimiento correlativo autoincremental por tipo con formato: MOV-{TIPO}-{YYYY}-{NNNNNN}
-29.3. Actualización atómica de stock en transacción DB al registrar movimiento (optimistic concurrency)
-29.4. Listado filtrable por tipo, producto, almacén, usuario, fecha con exportación Excel
-29.5. Kardex completo por producto: vista de evolución de stock con línea temporal Chart.js
-29.6. Validación FEFO/FIFO en salidas: bloqueo automático de lotes caducados
-
-Fase 30: Control stock mínimo & alertas automáticas
-30.1. Configurar StockMinimo y StockMaximo por producto y almacén (tabla StockAlmacen)
-30.2. Job Hangfire diario que detecta productos por debajo del mínimo y genera alertas
-30.3. Notificación SignalR en tiempo real al responsable de compras con detalle del producto
-30.4. Panel de alertas de stock con semáforo visual (verde/amarillo/rojo) por almacén
-30.5. Propuesta automática de OC al proveedor principal al caer bajo mínimo (evento Outbox)
-30.6. KPIs de stock: rotación, cobertura en días, valor total inventario por categoría en dashboard
-
-Fase 31: Inventario físico & ajustes de diferencias
-31.1. CRUD InventarioFisico: apertura de conteo con fecha, responsable y almacén seleccionado
-31.2. Registro de conteos físicos por ubicación y producto (escaneo QR desde PWA de campo)
-31.3. Comparativa automática: stock sistema vs conteo físico → listado de diferencias
-31.4. Ajuste de inventario con motivo obligatorio y aprobación supervisora antes de aplicar
-31.5. Generación de acta de inventario en PDF (QuestPDF) con firma digital del responsable
-31.6. Histórico de inventarios físicos con gráfico de desviaciones por categoría y período
-
-Fase 32: Trazabilidad lotes & caducidades
-32.1. NumeroLote y FechaCaducidad en MovimientoInventario con índice compuesto (CruiserInventarioDbContext)
-32.2. Alertas de caducidad próxima (30/15/7 días) vía Hangfire con notificación SignalR y email
-32.3. Bloqueo automático de lotes caducados en despachos (validación en MovimientoInventario Salida)
-32.4. Trazabilidad completa: desde recepción (AlbaranEntrada) hasta entrega al cliente (OS)
-32.5. FIFO/FEFO configurable por categoría de producto en ConfiguracionInventario
-32.6. Informe de lotes próximos a caducar exportable a Excel con datos de proveedor y almacén
-
-BLOQUE 9 — OPERACIONES
-
-Fase 33: Tipos de servicio & dominio de limpieza
-33.1. CRUD TipoServicio: nombre, duración estimada, materiales requeridos (CruiserOperacionesDbContext)
-33.2. Vinculación TipoServicio → PlantillaChecklist por defecto con versionado
-33.3. Configuración de frecuencia de recurrencia por tipo de servicio (diario/semanal/mensual/custom)
-33.4. CRUD ZonaServicio con polígono Leaflet.js y empleados asignados a la zona
-33.5. Catálogo de incidencias tipificadas por tipo de servicio con prioridad y SLA
-33.6. Tarifas por tipo de servicio y franja horaria (diurna/nocturna/festivo/fin de semana)
-
-Fase 34: Contratos de servicio recurrentes
-34.1. CRUD ContratoServicio: cliente, tipo, frecuencia, importe mensual, vigencia (CruiserOperacionesDbContext)
-34.2. Motor de recurrencia: genera órdenes de servicio automáticamente vía Hangfire según configuración
-34.3. Flujo de estados: Borrador → Activo → Pausado → Finalizado → Renovado con historial
-34.4. Cálculo automático de facturación mensual por contrato activo (evento Outbox → Facturación)
-34.5. PDF de contrato con QuestPDF + campo de firma digital (base64 canvas) almacenado en JSONB
-34.6. Alertas de vencimiento de contrato a 90/30/7 días con notificación al comercial responsable
-
-Fase 35: Órdenes de servicio & programación
-35.1. CRUD OrdenServicio: contrato/cliente, empleados asignados, vehículo, materiales (CruiserOperacionesDbContext)
-35.2. Estados: Programada → En Curso → Completada → Verificada / Cancelada / Incidencia
-35.3. Asignación automática de empleados según disponibilidad, zona y carga de trabajo del día
-35.4. Generación de checklist instanciado desde PlantillaChecklist al crear la OS
-35.5. Número de OS correlativo con formato OS-YYYYMMDD-0001 por empresa
-35.6. Vista Kanban de órdenes del día/semana (Vue.js embebido en Blazor con interop)
-
-Fase 36: FullCalendar 6.x drag-drop & recurrencia
-36.1. Integrar FullCalendar 6.x en Blazor Server con interop JS y carga dinámica de eventos
-36.2. Vista mes/semana/día/agenda con código de color por estado de OS y tipo de servicio
-36.3. Drag-drop de órdenes de servicio para reprogramación con validación de conflictos
-36.4. Clic en OS abre modal Blazor con detalles, historial de cambios y acciones disponibles
-36.5. Eventos de recurrencia generados por contrato marcados visualmente con icono diferenciado
-36.6. Exportación del calendario a iCal para sincronización con Google Calendar / Outlook
-
-Fase 37: Asignación de recursos: empleados / materiales / flota
-37.1. Panel de disponibilidad de empleados por día y hora (vista heatmap con Chart.js)
-37.2. Algoritmo de sugerencia de asignación: zona geográfica + especialidad + carga de trabajo
-37.3. Reserva de vehículo (cross-context Guid → CruiserFlotaDbContext) con control de conflictos
-37.4. Materiales reservados de almacén al programar la OS (evento Outbox → CruiserInventarioDbContext)
-37.5. Liberación automática de reservas de materiales y vehículo si la OS se cancela
-37.6. Notificación push PWA al empleado al recibir nueva asignación o cambio de OS
-
-Fase 38: Plantillas checklist & ítems por tipo servicio
-38.1. CRUD PlantillaChecklist: nombre, versión semántica, tipo de servicio asociado (CruiserOperacionesDbContext)
-38.2. CRUD ItemPlantillaChecklist: texto, tipo respuesta (OK/NOK/foto/numérico/texto libre)
-38.3. Drag-drop para reordenar ítems que actualiza campo Orden en tiempo real (Vue.js interop)
-38.4. Versionado: nueva versión al modificar ítems obligatorios; OS en curso mantienen versión original
-38.5. Previsualización de checklist como la verá el empleado en la PWA de campo
-38.6. Clonado de plantilla para crear variantes rápidamente con prefijo nombre "Copia de..."
-
-Fase 39: Checklist en órdenes de servicio
-39.1. Instanciación automática de ChecklistOrdenServicio al crear la OS con copia de ítems versionados
-39.2. Completar checklist desde PWA en campo (modo offline con IndexedDB + sync al reconectar)
-39.3. Validación: no se puede marcar OS como Completada sin checklist 100% (ítems obligatorios)
-39.4. Campo foto en ítems: captura con cámara del móvil, compresión client-side y upload al servidor
-39.5. PorcentajeCompletado calculado en tiempo real al responder ítems y reflejado en listado de OS
-39.6. Cola de sincronización offline → online vía ColaSincronizacionOffline con conflicto resolution
-
-Fase 40: Inspecciones de calidad & NPS
-40.1. CRUD InspeccionCalidad: OS, inspector, tipo (Rutinaria/Sorpresa/PostReclamación) — CruiserOperacionesDbContext
-40.2. Puntuación 1-10 en 4 dimensiones: Limpieza, Protocolo, Presentación, Seguridad con comentarios
-40.3. Cálculo automático de PuntuacionMedia y trending de calidad en dashboard de operaciones
-40.4. Envío automático de encuesta NPS al cliente 24h después del servicio (MailKit)
-40.5. Registro RespuestaNPS con score 0-10 y comentario libre + clasificación Promotor/Pasivo/Detractor
-40.6. Dashboard de calidad: puntuación media mensual, top/bottom empleados, NPS score global
-
-BLOQUE 10 — PWA & CAMPO
-Fase 41: Progressive Web App setup
-41.1. Generar manifest.json dinámico desde ConfiguracionSistema (nombre, logo, colores)
-41.2. Implementar Service Worker con estrategia NetworkFirst configurable en ConfiguracionPWA
-41.3. Cache de recursos estáticos y respuestas de API críticas para modo offline
-41.4. Pantalla de instalación PWA con detección de display-mode standalone en iOS y Android
-41.5. Gestión de actualización del SW: notificación al usuario de nueva versión disponible
-41.6. Test en iOS Safari + Android Chrome + modo avión verificado para funcionalidades core
-
-Fase 42: Módulo fichaje GPS con Leaflet.js
-42.1. Pantalla PWA de fichaje: botones grandes Entrada/Salida con confirmación y timestamp
-42.2. Captura de coordenadas GPS al fichar con consentimiento GDPR previo (ConsentimientoGDPR)
-42.3. Mapa Leaflet.js con posición actual del empleado y polígono de zona de trabajo asignada
-42.4. Validación de proximidad: alerta si ficha a > 200m de zona (umbral configurable en ConfiguracionPWA)
-42.5. Almacenamiento del fichaje en IndexedDB si sin red, sync automático al reconectar
-42.6. Resumen diario del empleado en PWA: horas trabajadas, ubicaciones, alertas de desviación
-
-Fase 43: Órdenes de servicio en campo (offline-first)
-43.1. Lista de OS del día descargada al iniciar turno (precache Service Worker con Workbox)
-43.2. Inicio/fin de OS desde la PWA con timestamp automático y geolocalización
-43.3. Checklist completo offline con fotos almacenadas en IndexedDB (compresión WebP)
-43.4. Firma digital del cliente en tablet/móvil (canvas HTML5) almacenada como base64 JSONB
-43.5. Sincronización automática al recuperar conexión con cola FIFO y resolución de conflictos
-43.6. Indicador de pendientes de sincronización en barra de estado de la PWA
-
-Fase 44: Escáner QR & códigos de barra en campo
-44.1. Integrar QuaggaJS para escáner de código de barras EAN-13 vía cámara trasera del móvil
-44.2. Integrar ZXing-JS como fallback para QR codes de vehículos, almacenes y EPIs
-44.3. Escaneo de producto para registrar material usado en la OS (actualiza stock reservado)
-44.4. Escaneo de vehículo para confirmar asignación al inicio de ruta con validación de disponibilidad
-44.5. Escaneo de EPI para registrar entrega al empleado con firma en PWA
-44.6. Test en múltiples dispositivos móviles: iOS/Android, buena/mala iluminación, QR dañado
-
-BLOQUE 11 — RECURSOS HUMANOS
-Fase 45: Contratos laborales & categorías profesionales
-45.1. CRUD ContratoLaboral: tipo, fecha inicio/fin, jornada semanal, salario bruto (CruiserRRHHDbContext)
-45.2. CRUD CategoriaEmpleado: nombre, convenio colectivo, coeficiente salarial, complementos
-45.3. Gestión de bajas médicas con fecha, tipo y documentación adjunta (IT/AT/Maternidad/Paternidad)
-45.4. Flujo de renovación de contratos con alertas 30 días antes de vencimiento (Hangfire)
-45.5. Generación PDF de contrato con QuestPDF + campos de firma (plantilla legal estándar)
-45.6. Integración RRHH → Nóminas: salario base y categoría alimentan cálculo mensual automático
-
-Fase 46: Control horario & resumen mensual fichajes
-46.1. Vista mensual del empleado: calendario de fichajes con totales por día y semana
-46.2. Detección automática de irregularidades: llegadas tarde, ausencias sin justificar, olvidos fichaje
-46.3. Cálculo de horas extra: horas trabajadas > jornada contrato con tipo (voluntarias/obligatorias)
-46.4. Validación y aprobación de horas extra por supervisor con comentario obligatorio
-46.5. Resumen mensual exportable a Excel por empleado y por departamento (formato TC-2)
-46.6. Dashboard RRHH: absentismo %, horas extra totales, coste horas extra por mes
-
-Fase 47: Ausencias, vacaciones & flujo de aprobación
-47.1. CRUD SolicitudAusencia: tipo (vacaciones/enfermedad/asuntos propios/CBPE), fechas, notas
-47.2. Flujo de aprobación: Pendiente → Aprobada / Rechazada por supervisor con razón obligatoria
-47.3. Notificación SignalR al supervisor + email de confirmación al empleado en cada cambio de estado
-47.4. Cálculo de días de vacaciones disponibles según antigüedad y convenio colectivo aplicable
-47.5. Bloqueo de asignación a OS si el empleado tiene ausencia aprobada ese día
-47.6. Vista de calendario de ausencias del equipo para gestión visual de turnos
-
-Fase 48: EPIs & formaciones + documentación PRL
-48.1. CRUD EPI: nombre, talla, fecha caducidad, stock en almacén (CruiserRRHHDbContext)
-48.2. Registro de entrega de EPIs al empleado con firma digital en PWA (canvas HTML5)
-48.3. Alerta automática de EPI próximo a caducar (Hangfire 30/15 días) con SignalR
-48.4. CRUD FormacionEmpleado: curso, horas, fecha, certificado PDF adjunto con versionado
-48.5. Control de formaciones obligatorias por categoría con semáforo (completada/pendiente/vencida)
-48.6. Informe de cumplimiento PRL exportable a Excel para auditorías de prevención
-
-Fase 49: Nóminas & liquidación de comisiones
-49.1. CRUD NominaEmpleado: período, salario bruto, IRPF, SS empleado/empresa, deducciones, neto
-49.2. Cálculo automático de nómina mensual vía Hangfire con aprobación previa del responsable
-49.3. Generación PDF de nómina individual con QuestPDF (formato oficial español con todos los conceptos)
-49.4. CRUD LiquidacionComision: cálculo mensual por AsignacionClienteEmpleado cross-context
-49.5. Flujo comisiones: Pendiente → Aprobada → Pagada junto con la nómina del período
-49.6. Exportación fichero SEPA XML 2.0 para transferencia bancaria masiva de nóminas
-
-BLOQUE 12 — FACTURACIÓN
-Fase 50: Series & configuración de facturación
-50.1. CRUD SerieFactura: prefijo, contador, tipo (ordinaria/rectificativa/simplificada) — CruiserFacturacionDbContext
-50.2. Configuración de series por ejercicio fiscal con cierre de año y archivo
-50.3. CRUD EstadoFactura con flujo configurable: Borrador/Emitida/Enviada/Pagada/Vencida/Rectificada
-50.4. Parámetros globales: IVA por defecto, moneda, pie de factura, datos fiscales empresa, IBAN emisor
-50.5. CRUD ListaPrecio con vigencia temporal y asignación por cliente o segmento RFM
-50.6. Numeración inalterabilidad VeriFactu: secuencia continua sin huecos por serie y ejercicio
-
-Fase 51: Emisión de facturas + líneas + IVA
-51.1. CRUD Factura: cliente, serie, fecha, líneas con producto/servicio/cantidad/precio/descuento
-51.2. Cálculo automático BaseImponible, IVA desglosado por tipo (4%/10%/21%), TotalFactura
-51.3. Generación PDF con QuestPDF (plantilla personalizable con logo, datos fiscales, QR)
-51.4. Factura desde contrato: generación mensual automática vía Hangfire con conciliación
-51.5. Factura desde OS completada: albarán de servicio → factura en un click
-51.6. Envío PDF por email al cliente con MailKit al emitir + registro en HistorialEmail
-
-Fase 52: Facturas rectificativas & abonos
-52.1. Generación de factura rectificativa vinculada a factura original con referencia cruzada
-52.2. HashFacturaOriginal para trazabilidad completa en cadena VeriFactu
-52.3. Cálculo de diferencias: importe a devolver o cobrar adicional con desglose IVA
-52.4. Abono total o parcial según la causa de rectificación (error, devolución, descuento)
-52.5. Actualización automática de estado de factura original a Rectificada con fecha
-52.6. Listado cruzado original ↔ rectificativa en UI con acceso directo a ambos documentos
-
-Fase 53: Cobros, cuentas por cobrar & remesas
-53.1. CRUD PagoFactura: importe, fecha, método de pago, referencia bancaria, banco
-53.2. CuentaCobrar generada automáticamente al emitir con FechaVencimiento calculada por condición pago
-53.3. Semáforo de vencimiento en listado: verde (<15 días) / amarillo (1-15 días) / rojo (vencida)
-53.4. Remesa SEPA XML 2.0 exportable para presentar en banco (Core y B2B)
-53.5. Dashboard financiero: facturado vs cobrado, días de mora media, % morosidad por segmento
-53.6. Recordatorio automático de pago (Hangfire) a 7/3/0 días del vencimiento vía email
-
-Fase 54: VeriFactu / AEAT (SII) + cadena hash
-54.1. Implementar SHA-256 encadenado por serie: hash = SHA256(DatosFactura + HashFacturaAnterior)
-54.2. Registro de Huella digital: HashFactura + HashFacturaAnterior + FechaHashGenerado en CruiserFacturacionDbContext
-54.3. Endpoint de envío SII a AEAT (SOAP/REST): alta, anulación, consulta de estado
-54.4. Gestión de respuestas AEAT: correcto / con errores / rechazado con código de error clasificado
-54.5. Reenvío automático de facturas rechazadas con reintentos Hangfire (backoff exponencial)
-54.6. Log completo de comunicaciones AEAT en tabla RegistroIntegracion con payload request/response
-
-BLOQUE 13 — FLOTA
-Fase 55: Vehículos & mantenimiento de flota
-55.1. CRUD VehiculoEmpresa: matrícula, VIN, tipo, marca, modelo, conductor habitual (CruiserFlotaDbContext)
-55.2. Control ITV: fecha vencimiento + alerta Hangfire a 60/30/15 días con semáforo visual
-55.3. Control seguro: número de póliza, vencimiento, compañía + alerta Hangfire a 30 días
-55.4. CRUD MantenimientoVehiculo: tipo (preventivo/correctivo), coste, taller, km, factura adjunta
-55.5. Registro de incidencias de vehículo reportadas desde la PWA de campo con foto
-55.6. KPI flota: disponibilidad %, coste mantenimiento/km, vehículos con alertas activas en dashboard
-
-Fase 56: Rutas, asignación conductor & kilometraje
-56.1. CRUD RutaVehiculo: OS del día, empleados, almacén de salida, km estimados por Google Maps API
-56.2. Registro de km al inicio y fin de ruta (odómetro) por el conductor desde PWA con escaneo QR
-56.3. Cálculo de consumo de combustible por ruta: L/100km con alerta si supera media del vehículo
-56.4. Integración Google Maps Distance Matrix API para distancia y tiempo estimado de ruta
-56.5. Mapa Leaflet.js con trayecto planificado y paradas de la ruta con OS vinculadas
-56.6. Informe mensual de flota: km totales, coste combustible, emisiones CO₂, horas de uso
-
-BLOQUE 14 — ANALÍTICAS & REPORTES
-Fase 57: Dashboard KPIs con Chart.js (8 categorías)
-57.1. Dashboard principal con 8 secciones de KPIs (TipoMetricaKPI enum) en layout responsive
-57.2. Gráficos Chart.js: barras (ventas), líneas (tendencias), dona (distribución), radar (calidad)
-57.3. KPIs en tiempo real vía SignalR: órdenes activas, empleados fichados, alertas stock pendientes
-57.4. Widgets numéricos con comparativa vs período anterior (% variación + flecha tendencia)
-57.5. Filtros de período: hoy / semana / mes / trimestre / año / rango personalizado
-57.6. Diseño responsive del dashboard para 1440px (4 columnas) y tablet 1024px (2 columnas)
-
-Fase 58: Motor KPIs & HistoricoKPI
-58.1. CRUD MetricaKPI: nombre, fórmula SQL, unidad, umbral alerta, tipo, frecuencia de cálculo
-58.2. Job Hangfire por frecuencia (horario/diario/semanal/mensual) que calcula y persiste HistorialKPI
-58.3. Queries optimizadas con índices para cálculo rápido de KPIs sobre grandes volúmenes de datos
-58.4. Configuración de alertas: umbral mínimo/máximo con notificación SignalR al superar
-58.5. API REST de KPIs consumible desde componentes Blazor y desde widgets Vue/React embebidos
-58.6. Export de histórico de KPIs a Excel con gráficas embebidas (ClosedXML + Charts)
-
-Fase 59: Reportes PDF con QuestPDF
-59.1. Informe ejecutivo mensual: ventas, cobros, contratos activos, calidad media, resumen RRHH
-59.2. Informe de rentabilidad por cliente: coste real del servicio vs importe facturado (margen %)
-59.3. Informe de productividad por empleado: OS completadas, puntuación calidad, horas trabajadas
-59.4. Factura y albarán con plantilla profesional personalizable con logo y datos de la empresa
-59.5. Nómina individual con formato oficial español y desglose completo de conceptos retributivos
-59.6. Informe de inventario: stock actual, valoración total, rotación y caducidades próximas
-
-Fase 60: Reportes Excel con ClosedXML
-60.1. Export de cualquier listado del sistema a Excel con filtros activos y formato condicional
-60.2. Plantillas Excel de importación: clientes, empleados, productos con validación de datos embebida
-60.3. Informe contable: libro de facturas emitidas y recibidas en formato AEAT
-60.4. Reporte de asistencia mensual por empleado en formato nómina / TC2
-60.5. Dashboard financiero en Excel con fórmulas dinámicas, tablas pivot y gráficas
-60.6. Protección de celdas en plantillas críticas (facturas, nóminas) con contraseña configurable
-
-BLOQUE 15 — GDPR & AUDITORÍA LEGAL
-Fase 61: Consentimiento GDPR & Derechos ARCO
-61.1. CRUD ConsentimientoGDPR: tipo (GPS/notificaciones/marketing/WhatsApp), fecha, IP, dispositivo
-61.2. Pantalla de bienvenida PWA con solicitud de permisos GDPR granular (cámara/GPS/notificaciones)
-61.3. CRUD SolicitudDerechosARCO: tipo (acceso/rectificación/cancelación/oposición/portabilidad)
-61.4. Flujo de tramitación ARCO: plazo legal 30 días + alertas automáticas al responsable de privacidad
-61.5. Generación de respuesta formal GDPR en PDF (QuestPDF) con registro inalterable
-61.6. Audit trail de consentimientos: append-only en ConsentimientoGDPR para cumplimiento normativo
-
-Fase 62: Anonimización datos personales
-62.1. Servicio IAnonimizacionService con método Anonimizar(entidadId) genérico y transaccional
-62.2. Técnica: pseudonimización SHA-256 → token "GDPR_DEL_{hash}" en cada campo personal
-62.3. Campos anonimizados en Empleado: NombreCompleto, NIF, Email, Teléfono, NSS, coordenadas GPS
-62.4. Preservación íntegra de registros laborales, nóminas y contratos (obligación legal española)
-62.5. CRUD RegistroAnonimizacionGDPR con log de campos anonimizados, método, solicitante y fecha
-62.6. Verificación post-anonimización: datos personales eliminados pero estadísticas y contabilidad intactas
-
-BLOQUE 16 — INTEGRACIONES EXTERNAS
-Fase 63: Email MailKit SMTP
-63.1. Configurar MailKit con soporte Gmail / Outlook / SMTP custom con SSL/TLS y autenticación OAuth2
-63.2. Plantillas de email HTML responsive en Razor (facturas, cotizaciones, recordatorios, alertas)
-63.3. Cola de envío de emails con reintentos (3x) vía Hangfire para tolerancia a fallos
-63.4. Registro en HistorialEmail: estado, timestamp, destinatario, asunto, error si aplica
-63.5. Gestión de rebotes y errores SMTP con alerta al administrador y cuarentena de dirección
-63.6. Test de conectividad SMTP desde panel de administración con envío de email de prueba
-
-Fase 64: WhatsApp Business API
-64.1. Integración con WhatsApp Cloud API (Meta) para mensajes transaccionales aprobados
-64.2. Plantillas aprobadas: confirmación cita, recordatorio de servicio, encuesta NPS post-servicio
-64.3. Envío condicionado a ConsentimientoGDPR tipo WhatsApp activo para el cliente
-64.4. Registro de mensajes enviados en HistorialWhatsApp con estado (entregado/leído/error)
-64.5. Gestión de opt-out desde respuesta del cliente (actualiza ConsentimientoGDPR automáticamente)
-64.6. Fallback a email si WhatsApp no disponible; fallback a SMS si proveedor configurado
-
-Fase 65: Stripe & pasarelas de pago
-65.1. Integrar Stripe API para cobro online de facturas vía link de pago enviado por email
-65.2. Webhook Stripe para actualizar estado de cobro automáticamente (payment_intent.succeeded)
-65.3. Registro en PagoFactura al recibir evento con referencia de transacción Stripe
-65.4. Soporte Redsys/Bizum como pasarela alternativa configurable por empresa en ConfiguracionFacturacion
-65.5. Gestión de disputas y reembolsos desde panel de administración con log de comunicaciones
-65.6. Dashboard de cobros online: importes, tasas de éxito, tiempos medios, comisiones Stripe
-
-Fase 66: Google Maps API & geocodificación
-66.1. Geocodificación de direcciones de clientes y empleados al guardar con caché en base de datos
-66.2. Cálculo de distancia empleado ↔ zona de servicio para validación de fichaje GPS
-66.3. Optimización de ruta multi-parada para rutas de vehículo (Distance Matrix API)
-66.4. Mapa de calor Leaflet.js de densidad de servicios por zona geográfica (heatmap layer)
-66.5. Autocompletado de dirección en formularios usando Places Autocomplete API
-66.6. Gestión de cuota API con caché de geocodificaciones para evitar re-consultas (TTL 30 días)
-
-BLOQUE 17 — JOBS & NOTIFICACIONES EN TIEMPO REAL
-
-Fase 67: Hangfire Jobs recurrentes
-67.1. Configurar Hangfire con PostgreSQL como backing store en schema "hangfire" dedicado
-67.2. Jobs diarios: alertas de stock, vencimientos ITV/seguro/contrato, fichajes irregulares, OutboxProcessor
-67.3. Jobs mensuales: facturas recurrentes, nóminas, liquidación de comisiones, KPIs, segmentación RFM
-67.4. Jobs semanales: resumen de actividad por email a administradores + informe de flota
-67.5. Dashboard Hangfire con autenticación (solo SuperAdmin) + métricas de jobs fallidos/exitosos
-67.6. Monitorización de jobs fallidos con reintento automático (máx 3x con backoff exponencial)
-
-Fase 68: SignalR notificaciones en tiempo real
-68.1. Hub NotificacionesHub con grupos: empresa-{id}, rol-{rolId}, usuario-{userId}
-68.2. Tipos de notificación: alerta stock, nueva OS asignada, aprobación pendiente, pago recibido
-68.3. Campana de notificaciones en topbar Blazor con contador de no leídas + panel desplegable
-68.4. Marcar como leída individual o todas (persistidas en tabla Notificacion del CruiserCoreDbContext)
-68.5. Notificación push PWA via Web Push API cuando la app está en segundo plano o cerrada
-68.6. Configuración de preferencias de notificación por usuario: qué tipos recibir y por qué canal
-
-Fase 69: Alertas automáticas & recordatorios
-69.1. Motor de alertas configurable: ConfiguracionNotificacion por tipo de alerta, umbral y canal
-69.2. Tipos: vencimiento contrato/seguro/ITV, stock bajo, factura vencida, EPI caducado, formación vencida
-69.3. Canal configurable por alerta: SignalR / Email / WhatsApp / Push PWA (prioridad configurable)
-69.4. Agrupación de alertas del mismo tipo en resumen diario para evitar sobrecarga de notificaciones
-69.5. Escalado: si alerta no se resuelve en N días configurables → notificar al responsable superior
-69.6. Dashboard de alertas activas con acceso directo a la entidad relacionada y acción rápida
-
-BLOQUE 18 — DESPLIEGUE & QA
-Fase 70: Testing: Unit + Integration
-70.1. Proyecto CruiserSystem.Tests con xUnit: unit tests para Business layer (servicios y reglas de negocio)
-70.2. Mocking de DbContexts con Moq/NSubstitute + repositorios in-memory para unit tests
-70.3. Tests de integración con Testcontainers (PostgreSQL efímero) para repositorios reales
-70.4. Coverage mínimo del 70% en Business layer medido con Coverlet en el pipeline de CI
-70.5. Tests de regresión para flujos críticos: auth, facturación, generación OS, cálculo nómina
-70.6. Test de carga básico con k6: 100 usuarios concurrentes en endpoints de listado y dashboard
-
-Fase 71: CI/CD GitHub Actions + Railway + Go Live
-71.1. Pipeline GitHub Actions: build → test (unit + migration) → lint → coverage → publish en cada push
-71.2. Step "Migration Bundle": genera efbundle y lo publica como artefacto del pipeline
-71.3. Deploy automático a Railway (staging) en merge a develop + deploy a producción manual con aprobación
-71.4. Variables de entorno en Railway Secrets (nunca en código fuente); validación de secretos al startup
-71.5. Configurar dominio personalizado + HTTPS automático Railway (obligatorio para PWA y cookies)
-71.6. Runbook de Go Live: checklist de migraciones, seeds, configuración, test E2E, comunicación a usuarios
+Plan de Fases de CruiserCat
+
+BLOQUE 1 --- FUNDAMENTOS
+
+ Fase 1:  Setup solución & estructura de capas
+-  1.1.  Crear solución .NET 10 con proyectos: Entities, DataAccess, Business, Web.
+-  1.2.  Configurar referencias entre capas y convención de nombres (namespace Cruiser.\*).
+-  1.3.  Agregar NuGet base: EF Core 10, Identity, BCrypt.Net, FluentValidation.
+-  1.4.  Setup Cmder + PowerShell integrado en VS 2026.
+-  1.5.  Configurar .editorconfig, .gitignore y estructura inicial de carpetas por módulo.
+-  1.6.  Primer commit a GitHub con estructura base y pipeline CI esqueleto.
+
+ Fase 2:  Docker + PostgreSQL 18 + entorno local
+-  2.1.  Crear docker-compose.yml con postgres:18 y schemas pre-creados.
+-  2.2.  Configurar volúmenes, variables de entorno y red Docker interna.
+-  2.3.  Verificar conexión desde VS con pgAdmin 4 y DBeaver.
+-  2.4.  Configurar appsettings.json con connection string base + search_path por contexto.
+-  2.5.  Setup de múltiples entornos: Development / Staging / Production con secrets separados.
+-  2.6.  Documentar proceso de arranque local en README.md con diagrama de arquitectura.
+
+ Fase 2B:  Secrets & gestión de entornos
+-  2B.1.  Configurar User Secrets para desarrollo local.
+-  2B.2.  Crear script init-dev-secrets.ps1 para provisionar secrets.
+-  2B.3.  Definir convención de variables de entorno por contexto: DB\_\_\[Contexto\]\_\_ConnectionString.
+-  2B.4.  Configurar Railway Secrets para staging/producción.
+-  2B.5.  Crear appsettings.Development.json y .Staging.json (solo estructura).
+-  2B.6.  Documentar variables requeridas en SECRETS.md.
+
+ Fase 3:  EntidadBase + Fluent API Base
+-  3.1.  Implementar EntidadBase con Id (Guid), FechaCreacion, FechaModificacion, EstaActivo.
+-  3.2.  Crear IEntityTypeConfiguration\<T\> base con soft-delete filter y conversores UTC.
+-  3.3.  Crear CruiserIdentityDbContext heredando de IdentityDbContext\<ApplicationUser\> (schema "identity").
+-  3.4.  Implementar OnModelCreating con llamadas a configuraciones por módulo.
+-  3.5.  Configurar conversores UTC para todas las DateTime.
+-  3.6.  Definir convención de naming para tablas: snake_case con HasDefaultSchema.
+
+ Fase 3B:  Implementar los 9 DbContexts de dominio
+-  3B.1.  CruiserCoreDbContext (schema "core"): Config, Módulos, Permisos, Auditoría, Notificaciones, GDPR.
+-  3B.2.  CruiserComercialDbContext ("comercial"): Cliente, Empleado, Cotización, Asignaciones, RFM.
+-  3B.3.  CruiserInventarioDbContext ("inventario"): Producto, Almacén, Movimientos, Lotes, Fichas.
+-  3B.4.  CruiserComprasDbContext ("compras"): Proveedor, OrdenCompra, Recepción, Discrepancias.
+-  3B.5.  CruiserOperacionesDbContext ("operaciones"): TipoServicio, Contrato, OS, Checklist, Calidad.
+-  3B.6.  CruiserFacturacionDbContext ("facturacion"): Factura, Serie, Pago, CuentaCobrar, VeriFactu.
+-  3B.7.  CruiserRRHHDbContext ("rrhh"): ContratoLaboral, Fichaje, Ausencias, EPI, Nómina.
+-  3B.8.  CruiserFlotaDbContext ("flota"): Vehículo, Mantenimiento, Ruta, Incidencia.
+-  3B.9.  CruiserAnaliticaDbContext ("analitica"): MétricaKPI, HistorialKPI, DashboardUsuario.
+-  3B.10.  Registrar todos los contextos en Program.cs con DI y connection string por contexto.
+
+ Fase 4:  Migraciones iniciales por contexto --- DDL
+-  4.1.  Migración inicial Identity: tablas Identity + ApplicationUser extendido.
+-  4.2.  Migración inicial Core: tablas de configuración, módulos, permisos, sesiones.
+-  4.3.  Migraciones iniciales para los 8 contextos de dominio restantes.
+-  4.4.  Configurar HasColumnType("jsonb") en todos los campos JSON.
+-  4.5.  Verificar generación correcta de tablas y schemas en PostgreSQL.
+-  4.6.  Crear script apply-all-migrations.ps1 para aplicar en orden.
+
+ Fase 4B:  Migraciones de índices --- GIN, compuestos y full-text
+-  4B.1.  Migración Inv_Indexes: índices GIN en JSONB.
+-  4B.2.  Migración Core_Indexes: índices en BitácoraAcción.
+-  4B.3.  Migración Facturacion_Indexes: índices en Factura.
+-  4B.4.  Migración RRHH_Indexes: índices compuestos en Fichaje.
+-  4B.5.  Migración Operaciones_Indexes: índices en OrdenServicio.
+-  4B.6.  Migración Analitica_Indexes: índice único en HistorialKPI.
+-  4B.7.  Crear script validate-indexes.sql para verificar índices críticos.
+
+ Fase 4C:  Outbox Pattern + cross-context consistency
+-  4C.1.  Crear tabla OutboxMessage en Core: Id, ContextOrigen, TipoEvento, PayloadJson, Procesado.
+-  4C.2.  Implementar IOutboxService que persiste eventos en la misma transacción.
+-  4C.3.  Job Hangfire "OutboxProcessor" (cada 30s) para despachar mensajes.
+-  4C.4.  Implementar IOutboxConsumer\<T\> para eventos cross-context.
+-  4C.5.  Garantizar at-least-once delivery con reintentos exponenciales.
+-  4C.6.  Dashboard de mensajes Outbox en administración.
+
+ Fase 4D:  Migration CI/CD --- efbundle & pipeline
+-  4D.1.  Configurar efbundle en GitHub Actions.
+-  4D.2.  Step "Generate Migration Bundle": dotnet ef migrations bundle para cada contexto.
+-  4D.3.  Step "Apply Migrations" en deploy a staging.
+-  4D.4.  Rollback automatizado si el bundle falla.
+-  4D.5.  Crear migración de smoke test: tabla MigrationHealthCheck.
+-  4D.6.  Documentar proceso en MIGRATIONS.md.
+
+ Fase 4E:  DbContext Health Checks & Connection Pooling
+-  4E.1.  Registrar health check por DbContext en /health.
+-  4E.2.  Configurar Npgsql connection pooling (MinPoolSize=2, MaxPoolSize=20).
+-  4E.3.  Implementar AddDbContextPool\<T\> para contextos de alta carga.
+-  4E.4.  Endpoint /health/db con latencia de ping.
+-  4E.5.  Configurar retry policy en Npgsql.
+-  4E.6.  Dashboard de conexiones activas por contexto.
+
+ Fase 4F:  Testing de migraciones & seed testing
+-  4F.1.  Proyecto CruiserCat.Tests.Migrations con xUnit + Testcontainers.
+-  4F.2.  Test CanApplyAllMigrations.
+-  4F.3.  Test CanRollbackLastMigration.
+-  4F.4.  Test SeedDataIsIdempotent.
+-  4F.5.  Test SchemaIsolation.
+-  4F.6.  Integrar tests de migración en pipeline de CI.
+
+ BLOQUE 2 --- AUTENTICACIÓN & SEGURIDAD 
+
+ Fase 5:  ASP.NET Core Identity + gestión de usuarios
+-  5.1.  Configurar ApplicationUser extendido.
+-  5.2.  Setup IdentityRole + asignación de roles múltiples.
+-  5.3.  Registrar servicios Identity con políticas de contraseña y bloqueo.
+-  5.4.  Crear UsuarioService + IUsuarioRepository.
+-  5.5.  FluentValidation para DTOs con validación de NIF español.
+-  5.6.  Seed de usuario SuperAdmin inicial.
+
+ Fase 6:  JWT + Refresh Tokens + cookies HttpOnly
+-  6.1.  Generar JWT con claims: UserId, Email, Roles, PermisosEspeciales.
+-  6.2.  Implementar RefreshToken almacenado en Identity + cookie HttpOnly.
+-  6.3.  Endpoint POST /auth/refresh con validación de IP y UserAgent.
+-  6.4.  Endpoint POST /auth/logout con revocación de token.
+-  6.5.  Middleware de validación JWT.
+-  6.6.  Test en Swagger del flujo completo.
+
+ Fase 7:  BCrypt, política contraseñas & auditoría auth
+-  7.1.  Configurar BCrypt.Net con work factor 12.
+-  7.2.  Política de contraseñas robusta.
+-  7.3.  Bloqueo de cuenta tras 5 intentos fallidos.
+-  7.4.  Registro de intentos fallidos en AuditoriaLogin.
+-  7.5.  Endpoint de cambio de contraseña con historial.
+-  7.6.  Flujo de recuperación de contraseña vía email.
+
+ Fase 8:  Middleware, Serilog, Rate Limiting & Health Checks
+-  8.1.  Configurar Serilog con sinks: Console, File, PostgreSQL.
+-  8.2.  Estructura de log enriquecida: RequestId, UserId, IP, CorrelationId.
+-  8.3.  Configurar AspNetCoreRateLimit.
+-  8.4.  Middleware global de manejo de excepciones con Problem Details.
+-  8.5.  Health Check /health con verificación de DbContexts, SignalR, Hangfire.
+-  8.6.  Configurar correlación de requests con X-Correlation-Id.
+
+ BLOQUE 3 --- LAYOUT & UI BASE 
+
+ Fase 9:  SB Admin 2 + Bootstrap 5 + layout MVC base
+-  9.1.  Instalar SB Admin 2 con compilación SCSS personalizada.
+-  9.2.  Layout \_Layout.cshtml con sidebar, topbar, footer.
+-  9.3.  Paleta de colores CruiserCat sobre Bootstrap 5.
+-  9.4.  Partial views reutilizables: \_Alert, \_Breadcrumb, \_Loading, etc.
+-  9.5.  Integrar Font Awesome 6.
+-  9.6.  Responsividad mobile-first verificada.
+
+ Fase 10:  Sidebar dinámico por permisos & módulos
+-  10.1.  Servicio ISidebarService que lee permisos del Core.
+-  10.2.  Construcción del árbol de módulos jerárquico en memoria.
+-  10.3.  Renderizado dinámico del sidebar con highlight de ruta activa.
+-  10.4.  Breadcrumb automático basado en jerarquía.
+-  10.5.  Caché en IMemoryCache del árbol de permisos por usuario.
+-  10.6.  Test: cambio de rol → invalidación de caché.
+
+ Fase 11:  Blazor Server setup + SignalR hub base
+-  11.1.  Configurar Blazor Server coexistente con MVC.
+-  11.2.  Crear MainHub con autenticación JWT y grupos.
+-  11.3.  Grupos SignalR: empresa-{id}, rol-{rolId}, usuario-{userId}.
+-  11.4.  Componente Blazor de ejemplo para validar hub.
+-  11.5.  Circuit handler para reconexión automática.
+-  11.6.  Registro de conexiones activas en SesionUsuario.
+
+ Fase 12:  Componentes Blazor & Razor reutilizables
+-  12.1.  Componente \<DataTable\> con paginación server-side y export.
+-  12.2.  Componente \<ConfirmDialog\>.
+-  12.3.  Componente \<ValidatedForm\> con FluentValidation reactiva.
+-  12.4.  Tag Helper \<authorize-content\>.
+-  12.5.  Componente \<ExportButtons\> según permisos.
+-  12.6.  Documentación de componentes.
+
+ BLOQUE 4 --- CONFIGURACIÓN & ADMINISTRACIÓN 
+
+ Fase 13:  Módulos sistema + seed roles & permisos
+-  13.1.  Seed completo del árbol de Modulo (~60 nodos).
+-  13.2.  Seed de roles base: SuperAdmin, Administrador, Supervisor, Comercial, Empleado, Auditor.
+-  13.3.  Matriz inicial de ModuloPermisoRol con permisos CRUD estándar.
+-  13.4.  CRUD de roles en UI con asignación visual de permisos.
+-  13.5.  CRUD de usuarios con asignación de roles múltiples.
+-  13.6.  Acción de auditoría al modificar permisos.
+
+ Fase 14:  Configuración sistema & parámetros globales
+-  14.1.  CRUD ConfiguracionSistema.
+-  14.2.  CRUD ConfiguracionNotificacion.
+-  14.3.  CRUD ConfiguracionPWA.
+-  14.4.  CRUD ConfiguracionFacturacion.
+-  14.5.  Seed ConfiguracionJsonbCampo con documentación técnica.
+-  14.6.  Panel de administración técnica.
+
+ Fase 15:  Bitácora acciones usuario
+-  15.1.  Tabla BitacoraAccion en Core.
+-  15.2.  Servicio IBitacoraService inyectable.
+-  15.3.  Registro automático de acciones.
+-  15.4.  Listado filtrable con exportación a Excel.
+-  15.5.  Retención configurable con job Hangfire.
+-  15.6.  Protección RBAC.
+
+ Fase 16:  Auditoría entidades --- Interceptor EF
+-  16.1.  Implementar SaveChangesInterceptor.
+-  16.2.  Serialización de ValorAnterior y ValorNuevo a JSON.
+-  16.3.  Exclusión de entidades no auditables.
+-  16.4.  Captura de UsuarioId desde IHttpContextAccessor.
+-  16.5.  Listado de historial de cambios por entidad.
+-  16.6.  Archivado de registros de auditoría > 90 días.
+
+ BLOQUE 5 --- CATÁLOGO & ALMACÉN 
+
+ Fase 17:  Categorías, unidades de medida & proveedores
+-  17.1.  CRUD CategoriaProducto con árbol jerárquico.
+-  17.2.  CRUD UnidadMedida con factor de conversión.
+-  17.3.  CRUD Proveedor completo.
+-  17.4.  Relación Proveedor ↔ Producto.
+-  17.5.  Validaciones FluentValidation: CIF, IBAN, etc.
+-  17.6.  Import inicial de catálogo vía Excel.
+
+ Fase 18:  Productos + precios + stock base
+-  18.1.  CRUD Producto.
+-  18.2.  Campo EsPeligroso activa ficha REACH/CLP.
+-  18.3.  Stock calculado vs StockMinimo/StockMaximo.
+-  18.4.  Variantes de producto con código de barras EAN-13.
+-  18.5.  Búsqueda full-text con índice GIN.
+-  18.6.  Generador de QR para etiquetas.
+
+ Fase 19:  Fichas de seguridad REACH / CLP
+-  19.1.  CRUD FichaSeguridad.
+-  19.2.  Campos JSONB PictogramasRiesgo y EppsRequeridos.
+-  19.3.  Upload PDF con versionado.
+-  19.4.  Alerta automática de vencimiento.
+-  19.5.  Consulta desde PWA de campo.
+-  19.6.  Indicador visual de ficha vencida.
+
+ Fase 20:  Almacenes, ubicaciones & depósitos
+-  20.1.  CRUD Almacen.
+-  20.2.  CRUD Ubicacion jerárquica.
+-  20.3.  Stock por ubicación.
+-  20.4.  Traslados inter-almacén.
+-  20.5.  Stock disponible = total − reservado.
+-  20.6.  Inventario visual por almacén.
+
+ BLOQUE 6 --- COMERCIAL 
+
+ Fase 21:  Clientes CRUD completo
+-  21.1.  CRUD Cliente.
+-  21.2.  Campos JSONB DatosAdicionales.
+-  21.3.  Segmentación automática RFM vía Hangfire.
+-  21.4.  PuntajeRFM en JSONB.
+-  21.5.  Timeline de actividad del cliente.
+-  21.6.  Importación masiva de clientes desde Excel.
+
+ Fase 22:  Empleados CRUD + vinculación usuario
+-  22.1.  CRUD Empleado.
+-  22.2.  Vinculación opcional a ApplicationUserId.
+-  22.3.  Jerarquía organizativa vía SupervisorId.
+-  22.4.  Campos sensibles marcados como anonimizables GDPR.
+-  22.5.  Upload documentos con versionado.
+-  22.6.  Foto de perfil con thumbnail.
+
+ Fase 23:  Cotizaciones & oportunidades comerciales
+-  23.1.  CRUD Cotizacion con líneas.
+-  23.2.  Flujo de estados.
+-  23.3.  Conversión a ContratoServicio automática (Outbox).
+-  23.4.  Generación PDF con QuestPDF.
+-  23.5.  Email automático al cliente.
+-  23.6.  KPI tasa de conversión.
+
+ Fase 24:  Asignaciones cliente-empleado & comisiones
+-  24.1.  CRUD AsignacionClienteEmpleado.
+-  24.2.  Historial de asignaciones.
+-  24.3.  Restricción RBAC por comercial.
+-  24.4.  Notificación SignalR al asignar.
+-  24.5.  Dashboard individual del comercial.
+-  24.6.  KPIs de asignación.
+
+ Fase 25:  Segmentación RFM + dashboard comercial
+-  25.1.  Job Hangfire mensual recalcula RFM.
+-  25.2.  Visualización de mapa de calor RFM.
+-  25.3.  Filtros avanzados por segmento.
+-  25.4.  Top 10 clientes por facturación / riesgo.
+-  25.5.  Exportación de segmentos a Excel.
+-  25.6.  Alerta de cliente inactivo.
+
+ BLOQUE 7 --- COMPRAS 
+
+ Fase 26:  Proveedores & contratos proveedor
+-  26.1.  CRUD Proveedor con validaciones.
+-  26.2.  Condiciones pago.
+-  26.3.  Contratos proveedor.
+-  26.4.  Valoración de proveedor.
+-  26.5.  Mapa de proveedores con Leaflet.js.
+-  26.6.  Alerta vencimiento contratos.
+
+ Fase 27:  Órdenes de compra & flujo de aprobación
+-  27.1.  CRUD OrdenCompra.
+-  27.2.  Flujo de estados configurable.
+-  27.3.  Regla de aprobación automática por importe.
+-  27.4.  Notificación SignalR al aprobador.
+-  27.5.  Generación PDF de orden de compra.
+-  27.6.  Email automático al proveedor.
+
+ Fase 28:  Recepción mercancía & entrada almacén
+-  28.1.  Albarán de entrada vinculado a OC.
+-  28.2.  Registro de discrepancias.
+-  28.3.  Actualización automática de stock (Outbox).
+-  28.4.  Generación MovimientoInventario tipo Entrada.
+-  28.5.  Escáner de código de barras.
+-  28.6.  Notificación SignalR al solicitante.
+
+ BLOQUE 8 --- INVENTARIO 
+
+ Fase 29:  Movimientos de inventario
+-  29.1.  CRUD MovimientoInventario.
+-  29.2.  Número de movimiento correlativo.
+-  29.3.  Actualización atómica de stock.
+-  29.4.  Listado filtrable con exportación.
+-  29.5.  Kardex completo por producto.
+-  29.6.  Validación FEFO/FIFO.
+
+ Fase 30:  Control stock mínimo & alertas automáticas
+-  30.1.  Configurar StockMinimo y StockMaximo.
+-  30.2.  Job Hangfire diario detecta stock bajo.
+-  30.3.  Notificación SignalR en tiempo real.
+-  30.4.  Panel de alertas de stock.
+-  30.5.  Propuesta automática de OC (Outbox).
+-  30.6.  KPIs de stock.
+
+ Fase 31:  Inventario físico & ajustes de diferencias
+-  31.1.  CRUD InventarioFisico.
+-  31.2.  Registro de conteos físicos con QR.
+-  31.3.  Comparativa automática.
+-  31.4.  Ajuste con motivo y aprobación.
+-  31.5.  Generación de acta en PDF.
+-  31.6.  Histórico con gráfico de desviaciones.
+
+ Fase 32:  Trazabilidad lotes & caducidades
+-  32.1.  NumeroLote y FechaCaducidad en Movimiento.
+-  32.2.  Alertas de caducidad próxima.
+-  32.3.  Bloqueo automático de lotes caducados.
+-  32.4.  Trazabilidad completa.
+-  32.5.  FIFO/FEFO configurable.
+-  32.6.  Informe de lotes próximos a caducar.
+
+ BLOQUE 9 --- OPERACIONES 
+
+ Fase 33:  Tipos de servicio & dominio de limpieza
+-  33.1.  CRUD TipoServicio.
+-  33.2.  Vinculación TipoServicio → PlantillaChecklist.
+-  33.3.  Configuración de frecuencia de recurrencia.
+-  33.4.  CRUD ZonaServicio con polígono Leaflet.
+-  33.5.  Catálogo de incidencias tipificadas.
+-  33.6.  Tarifas por franja horaria.
+
+ Fase 34:  Contratos de servicio recurrentes
+-  34.1.  CRUD ContratoServicio.
+-  34.2.  Motor de recurrencia con Hangfire.
+-  34.3.  Flujo de estados.
+-  34.4.  Cálculo automático de facturación mensual (Outbox).
+-  34.5.  PDF de contrato con firma digital.
+-  34.6.  Alertas de vencimiento.
+
+ Fase 35:  Órdenes de servicio & programación
+-  35.1.  CRUD OrdenServicio.
+-  35.2.  Estados configurables.
+-  35.3.  Asignación automática de empleados.
+-  35.4.  Generación de checklist instanciado.
+-  35.5.  Número de OS correlativo.
+-  35.6.  Vista Kanban.
+
+ Fase 36:  FullCalendar 6.x drag-drop & recurrencia
+-  36.1.  Integrar FullCalendar 6.x en Blazor.
+-  36.2.  Vista mes/semana/día con código de color.
+-  36.3.  Drag-drop para reprogramación.
+-  36.4.  Modal con detalles de OS.
+-  36.5.  Eventos de recurrencia marcados.
+-  36.6.  Exportación a iCal.
+
+ Fase 37:  Asignación de recursos: empleados / materiales / flota
+-  37.1.  Panel de disponibilidad de empleados.
+-  37.2.  Algoritmo de sugerencia de asignación.
+-  37.3.  Reserva de vehículo cross-context.
+-  37.4.  Reserva de materiales (Outbox).
+-  37.5.  Liberación automática de reservas.
+-  37.6.  Notificación push PWA al empleado.
+
+ Fase 38:  Plantillas checklist & ítems por tipo servicio
+-  38.1.  CRUD PlantillaChecklist.
+-  38.2.  CRUD ItemPlantillaChecklist con tipos de respuesta.
+-  38.3.  Drag-drop para reordenar.
+-  38.4.  Versionado.
+-  38.5.  Previsualización.
+-  38.6.  Clonado de plantilla.
+
+ Fase 39:  Checklist en órdenes de servicio
+-  39.1.  Instanciación automática al crear OS.
+-  39.2.  Completar desde PWA (offline-first).
+-  39.3.  Validación de checklist completo.
+-  39.4.  Campo foto con compresión.
+-  39.5.  PorcentajeCompletado en tiempo real.
+-  39.6.  Cola de sincronización offline.
+
+ Fase 40:  Inspecciones de calidad & NPS
+-  40.1.  CRUD InspeccionCalidad.
+-  40.2.  Puntuación en 4 dimensiones.
+-  40.3.  Cálculo automático de PuntuacionMedia.
+-  40.4.  Envío automático de encuesta NPS.
+-  40.5.  Registro RespuestaNPS.
+-  40.6.  Dashboard de calidad.
+
+ BLOQUE 10 --- PWA & CAMPO 
+
+ Fase 41:  Progressive Web App setup
+-  41.1.  Generar manifest.json dinámico.
+-  41.2.  Implementar Service Worker con estrategia configurable.
+-  41.3.  Cache de recursos estáticos y APIs.
+-  41.4.  Pantalla de instalación PWA.
+-  41.5.  Gestión de actualización del SW.
+-  41.6.  Test en iOS y Android.
+
+ Fase 42:  Módulo fichaje GPS con Leaflet.js
+-  42.1.  Pantalla PWA de fichaje.
+-  42.2.  Captura de GPS con consentimiento GDPR.
+-  42.3.  Mapa Leaflet con zona de trabajo.
+-  42.4.  Validación de proximidad.
+-  42.5.  Almacenamiento en IndexedDB si sin red.
+-  42.6.  Resumen diario del empleado.
+
+ Fase 43:  Órdenes de servicio en campo (offline-first)
+-  43.1.  Lista de OS del día precacheada.
+-  43.2.  Inicio/fin de OS con geolocalización.
+-  43.3.  Checklist offline con fotos.
+-  43.4.  Firma digital del cliente.
+-  43.5.  Sincronización automática.
+-  43.6.  Indicador de pendientes de sincronización.
+
+ Fase 44:  Escáner QR & códigos de barra en campo
+-  44.1.  Integrar QuaggaJS para EAN-13.
+-  44.2.  Integrar ZXing-JS para QR.
+-  44.3.  Escaneo de producto para uso en OS.
+-  44.4.  Escaneo de vehículo para asignación.
+-  44.5.  Escaneo de EPI para registro de entrega.
+-  44.6.  Test en múltiples dispositivos.
+
+ BLOQUE 11 --- RECURSOS HUMANOS 
+
+ Fase 45:  Contratos laborales & categorías profesionales
+-  45.1.  CRUD ContratoLaboral.
+-  45.2.  CRUD CategoriaEmpleado.
+-  45.3.  Gestión de bajas médicas.
+-  45.4.  Flujo de renovación con alertas.
+-  45.5.  Generación PDF de contrato.
+-  45.6.  Integración RRHH → Nóminas.
+
+ Fase 46:  Control horario & resumen mensual fichajes
+-  46.1.  Vista mensual del empleado.
+-  46.2.  Detección automática de irregularidades.
+-  46.3.  Cálculo de horas extra.
+-  46.4.  Validación y aprobación por supervisor.
+-  46.5.  Resumen mensual exportable.
+-  46.6.  Dashboard RRHH.
+
+ Fase 47:  Ausencias, vacaciones & flujo de aprobación
+-  47.1.  CRUD SolicitudAusencia.
+-  47.2.  Flujo de aprobación.
+-  47.3.  Notificaciones SignalR y email.
+-  47.4.  Cálculo de días disponibles.
+-  47.5.  Bloqueo de asignación a OS.
+-  47.6.  Vista de calendario de ausencias.
+
+ Fase 48:  EPIs & formaciones + documentación PRL
+-  48.1.  CRUD EPI.
+-  48.2.  Registro de entrega con firma.
+-  48.3.  Alerta automática de caducidad.
+-  48.4.  CRUD FormacionEmpleado.
+-  48.5.  Control de formaciones obligatorias.
+-  48.6.  Informe de cumplimiento PRL.
+
+ Fase 49:  Nóminas & liquidación de comisiones
+-  49.1.  CRUD NominaEmpleado.
+-  49.2.  Cálculo automático mensual vía Hangfire.
+-  49.3.  Generación PDF de nómina.
+-  49.4.  CRUD LiquidacionComision.
+-  49.5.  Flujo de comisiones.
+-  49.6.  Exportación SEPA XML.
+
+ BLOQUE 12 --- FACTURACIÓN 
+
+ Fase 50:  Series & configuración de facturación
+-  50.1.  CRUD SerieFactura.
+-  50.2.  Configuración de series por ejercicio.
+-  50.3.  CRUD EstadoFactura.
+-  50.4.  Parámetros globales.
+-  50.5.  CRUD ListaPrecio.
+-  50.6.  Numeración inalterabilidad VeriFactu.
+
+ Fase 51:  Emisión de facturas + líneas + IVA
+-  51.1.  CRUD Factura.
+-  51.2.  Cálculo automático.
+-  51.3.  Generación PDF con QR.
+-  51.4.  Factura desde contrato.
+-  51.5.  Factura desde OS.
+-  51.6.  Envío PDF por email.
+
+ Fase 52:  Facturas rectificativas & abonos
+-  52.1.  Generación de factura rectificativa.
+-  52.2.  HashFacturaOriginal.
+-  52.3.  Cálculo de diferencias.
+-  52.4.  Abono total o parcial.
+-  52.5.  Actualización de estado.
+-  52.6.  Listado cruzado.
+
+ Fase 53:  Cobros, cuentas por cobrar & remesas
+-  53.1.  CRUD PagoFactura.
+-  53.2.  CuentaCobrar automática.
+-  53.3.  Semáforo de vencimiento.
+-  53.4.  Remesa SEPA XML.
+-  53.5.  Dashboard financiero.
+-  53.6.  Recordatorio automático de pago.
+
+ Fase 54:  VeriFactu / AEAT (SII) + cadena hash
+-  54.1.  Implementar SHA-256 encadenado.
+-  54.2.  Registro de Huella digital.
+-  54.3.  Endpoint de envío SII.
+-  54.4.  Gestión de respuestas AEAT.
+-  54.5.  Reenvío automático con reintentos.
+-  54.6.  Log completo de comunicaciones.
+
+ BLOQUE 13 --- FLOTA 
+
+ Fase 55:  Vehículos & mantenimiento de flota
+-  55.1.  CRUD VehiculoEmpresa.
+-  55.2.  Control ITV con alertas.
+-  55.3.  Control seguro con alertas.
+-  55.4.  CRUD MantenimientoVehiculo.
+-  55.5.  Registro de incidencias desde PWA.
+-  55.6.  KPIs de flota.
+
+ Fase 56:  Rutas, asignación conductor & kilometraje
+-  56.1.  CRUD RutaVehiculo.
+-  56.2.  Registro de km con escaneo QR.
+-  56.3.  Cálculo de consumo de combustible.
+-  56.4.  Integración Google Maps Distance Matrix.
+-  56.5.  Mapa Leaflet con trayecto.
+-  56.6.  Informe mensual de flota.
+
+ BLOQUE 14 --- ANALÍTICAS & REPORTES 
+
+ Fase 57:  Dashboard KPIs con Chart.js (8 categorías)
+-  57.1.  Dashboard principal con 8 secciones.
+-  57.2.  Gráficos Chart.js.
+-  57.3.  KPIs en tiempo real vía SignalR.
+-  57.4.  Widgets numéricos con comparativa.
+-  57.5.  Filtros de período.
+-  57.6.  Diseño responsive.
+
+ Fase 58:  Motor KPIs & HistoricoKPI
+-  58.1.  CRUD MetricaKPI.
+-  58.2.  Job Hangfire por frecuencia.
+-  58.3.  Queries optimizadas.
+-  58.4.  Configuración de alertas.
+-  58.5.  API REST de KPIs.
+-  58.6.  Export de histórico a Excel.
+
+ Fase 59:  Reportes PDF con QuestPDF
+-  59.1.  Informe ejecutivo mensual.
+-  59.2.  Informe de rentabilidad por cliente.
+-  59.3.  Informe de productividad por empleado.
+-  59.4.  Factura y albarán.
+-  59.5.  Nómina individual.
+-  59.6.  Informe de inventario.
+
+ Fase 60:  Reportes Excel con ClosedXML
+-  60.1.  Export de listados.
+-  60.2.  Plantillas Excel de importación.
+-  60.3.  Informe contable.
+-  60.4.  Reporte de asistencia.
+-  60.5.  Dashboard financiero en Excel.
+-  60.6.  Protección de celdas.
+
+ BLOQUE 15 --- GDPR & AUDITORÍA LEGAL 
+
+ Fase 61:  Consentimiento GDPR & Derechos ARCO
+-  61.1.  CRUD ConsentimientoGDPR.
+-  61.2.  Pantalla de bienvenida PWA.
+-  61.3.  CRUD SolicitudDerechosARCO.
+-  61.4.  Flujo de tramitación ARCO.
+-  61.5.  Generación de respuesta en PDF.
+-  61.6.  Audit trail de consentimientos.
+
+ Fase 62:  Anonimización datos personales
+-  62.1.  Servicio IAnonimizacionService.
+-  62.2.  Técnica de pseudonimización.
+-  62.3.  Campos anonimizados en Empleado.
+-  62.4.  Preservación de registros obligatorios.
+-  62.5.  CRUD RegistroAnonimizacionGDPR.
+-  62.6.  Verificación post-anonimización.
+
+ BLOQUE 16 --- INTEGRACIONES EXTERNAS 
+
+ Fase 63:  Email MailKit SMTP
+-  63.1.  Configurar MailKit.
+-  63.2.  Plantillas HTML responsive.
+-  63.3.  Cola de envío con Hangfire.
+-  63.4.  Registro en HistorialEmail.
+-  63.5.  Gestión de rebotes.
+-  63.6.  Test de conectividad.
+
+ Fase 64:  WhatsApp Business API
+-  64.1.  Integración con WhatsApp Cloud API.
+-  64.2.  Plantillas aprobadas.
+-  64.3.  Envío condicionado a consentimiento.
+-  64.4.  Registro en HistorialWhatsApp.
+-  64.5.  Gestión de opt-out.
+-  64.6.  Fallback a email/SMS.
+
+ Fase 65:  Stripe & pasarelas de pago
+-  65.1.  Integrar Stripe API.
+-  65.2.  Webhook para actualizar cobros.
+-  65.3.  Registro en PagoFactura.
+-  65.4.  Soporte Redsys/Bizum.
+-  65.5.  Gestión de disputas.
+-  65.6.  Dashboard de cobros online.
+
+ Fase 66:  Google Maps API & geocodificación
+-  66.1.  Geocodificación con caché.
+-  66.2.  Cálculo de distancia.
+-  66.3.  Optimización de ruta.
+-  66.4.  Mapa de calor Leaflet.
+-  66.5.  Autocompletado de dirección.
+-  66.6.  Gestión de cuota API.
+
+ BLOQUE 17 --- JOBS & NOTIFICACIONES EN TIEMPO REAL 
+
+ Fase 67:  Hangfire Jobs recurrentes
+-  67.1.  Configurar Hangfire con PostgreSQL.
+-  67.2.  Jobs diarios.
+-  67.3.  Jobs mensuales.
+-  67.4.  Jobs semanales.
+-  67.5.  Dashboard Hangfire con autenticación.
+-  67.6.  Monitorización de jobs fallidos.
+
+ Fase 68:  SignalR notificaciones en tiempo real
+-  68.1.  Hub NotificacionesHub con grupos.
+-  68.2.  Tipos de notificación.
+-  68.3.  Campana de notificaciones en topbar.
+-  68.4.  Persistencia en tabla Notificacion.
+-  68.5.  Notificación push PWA.
+-  68.6.  Configuración de preferencias.
+
+ Fase 69:  Alertas automáticas & recordatorios
+-  69.1.  Motor de alertas configurable.
+-  69.2.  Tipos de alertas.
+-  69.3.  Canal configurable.
+-  69.4.  Agrupación de alertas.
+-  69.5.  Escalado de alertas.
+-  69.6.  Dashboard de alertas activas.
+
+ BLOQUE 18 --- DESPLIEGUE & QA 
+
+ Fase 70:  Testing: Unit + Integration
+-  70.1.  Proyecto CruiserCat.Tests con xUnit.
+-  70.2.  Mocking de DbContexts.
+-  70.3.  Tests de integración con Testcontainers.
+-  70.4.  Coverage mínimo del 70% en Business.
+-  70.5.  Tests de regresión.
+-  70.6.  Test de carga básico con k6.
+
+ Fase 71:  CI/CD GitHub Actions + Railway + Go Live
+-  71.1.  Pipeline GitHub Actions.
+-  71.2.  Step "Migration Bundle".
+-  71.3.  Deploy automático a staging y manual a producción.
+-  71.4.  Variables de entorno en Railway Secrets.
+-  71.5.  Configurar dominio personalizado + HTTPS.
+-  71.6.  Runbook de Go Live.
+
 
 Arquitectura de Múltiples DbContext
 El sistema utiliza 10 DbContexts independientes, cada uno responsable de un dominio funcional. Todos comparten la misma base de datos PostgreSQL pero están aislados mediante schemas propios. Las relaciones entre dominios se resuelven por Guid (sin FK de base de datos), y la consistencia se garantiza en la capa de negocio (Business layer).

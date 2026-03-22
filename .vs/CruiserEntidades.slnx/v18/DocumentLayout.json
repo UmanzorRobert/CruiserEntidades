@@ -1,12 +1,37 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{254AFEB7-0329-AF49-FB51-15B2E337EB20}|Elementos de la soluci\u00F3n{254AFEB7-0329-AF49-FB51-15B2E337EB20}|C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Plan de Fases.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{254AFEB7-0329-AF49-FB51-15B2E337EB20}|Elementos de la soluci\u00F3n{254AFEB7-0329-AF49-FB51-15B2E337EB20}|solutionrelative:Plan de Fases.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Plan de Fases.txt",
+              "DocumentMoniker": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Plan de Fases.txt",
+              "RelativeDocumentMoniker": "Plan de Fases.txt",
+              "ToolTip": "C:\\Proyectos 2026\\Claude AI\\CruiserEntidades\\Plan de Fases.txt",
+              "RelativeToolTip": "Plan de Fases.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2026-03-22T21:13:38.974Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
